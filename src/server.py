@@ -1,4 +1,5 @@
 from flask import Flask
+from outbreak_location import location
 app = Flask(__name__)
 
 
@@ -6,7 +7,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-print("Hello World")
+
+@APP.route('/disease/location', methods=['GET'])
+def diseaselocation():
+
 
 
 if __name__ == "__main__":
