@@ -1,5 +1,7 @@
 This the repo for team FatDonkey for SENG3011.
 
-Deliverable 1 
+Phase 1 -> API
 
-Initial design document.
+Phase 2 -> Web App
+
+Reports -> Documentation
