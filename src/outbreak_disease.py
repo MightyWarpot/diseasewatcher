@@ -1,2 +1,3 @@
-def disease(disease_str):
+def disease_filter(disease_str, col):
+    return col
     
