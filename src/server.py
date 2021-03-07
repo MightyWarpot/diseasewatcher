@@ -9,11 +9,20 @@ app = Flask(__name__)
 #     return 'Hello, World!'
 
 
-@app.route('/outbreak/location', methods=['GET'])
-def diseaselocation():
+@app.route('/outbreak/search', methods=['GET'])
+def outbreaksearch():
     location = request.args.get('location')
-
+    disease = request.args.get('disease')
     res = location_filter(location)
+
+    return dumps(res)
+
+
+@app.route('/outbreak/location', methods=['GET'])
+def outbreaklocation():
+    location = request.args.get('location')
+    res = location_filter(location)
+
     return dumps(res)
 
 if __name__ == "__main__":
