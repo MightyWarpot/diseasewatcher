@@ -22,10 +22,22 @@ def location_filter(location_str):
         # print(doc['location'].strip())
         # print(doc['date'].strip())
 
+        # location_match = {
+        #     'id': doc['_id'],
+        #     'title': doc['title'].strip(),
+        #     'date': doc['date'].strip(),
+        #     'url': doc['url'].strip(),
+        #     'region': doc['region'].strip(),
+        #     'disease': doc['disease'].strip(),
+        #     'location': doc['location'].strip()
+        # }
         location_match = {
             'title': doc['title'].strip(),
+            'date': doc['date'].strip(),
             'location': doc['location'].strip(),
-            'date': doc['date'].strip()
+            'region': doc['region'].strip(),
+            'url': doc['url'].strip(),
+            'disease': doc['disease'].strip()
         }
 
         location_match_copy = location_match.copy()

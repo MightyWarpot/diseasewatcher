@@ -17,15 +17,18 @@ client = MongoClient(
 db = client.outbreak_articles
 col = db.outbreak_details
 
-# sadasd.com/outbreak/?location=China,date=20122020,disease=covid
 @api.route('/outbreak/')
 class endpoint(Resource):   
     def get(self):
         location = request.args.get('location')
         dtime = request.args.get('date')
         disease = request.args.get('disease')
-        res = location_filter(location)
+        # remove this when we get everything together
+        x = datetime.datetime(2020,2,28)
+        newcol = location_filter("China", col)
+        newcol = time_filter(x, newcol)
         return dumps(res)
+
 
 if __name__ == "__main__":
     app.run(port=0, debug=True)
