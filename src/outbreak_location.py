@@ -8,29 +8,26 @@ client = MongoClient(
 db = client.outbreak_articles
 col = db.outbreak_details
 
-test = col.find_one({'location': 'China'})
-
-print(test)
-# print(client.list_database_names())
-# Issue the serverStatus command and print the results
-serverStatusResult = db.command("serverStatus")
-# pprint(serverStatusResult)
 
 
 
-
-
-# with open('data.json') as f:
-#     entries = json.load(f)
-
-# print(entries[0]['location'])
-
-
-
-
+location_matches = []
 
 def location(location_str):
+    for doc in col.find({"location": location_str}):
+        print(doc)
+        print(doc['title'].strip())
+        print(doc['location'].strip())
+        print(doc['date'].strip())
 
+        location_match = {
+            'title': doc['title'].strip(),
+            'location': doc['location'].strip(),
+            'date': doc['date'].strip()
+        }
 
-    with open('data.json') as f:
-        entries = json.load(f)
+        location_match_copy = location_match.copy()
+
+        location_matches.append(location_match_copy)
+
+    return location_matches
