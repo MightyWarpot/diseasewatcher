@@ -13,12 +13,14 @@ col = db.outbreak_details
 
 location_matches = []
 
-def location(location_str):
+
+
+def location_filter(location_str):
     for doc in col.find({"location": location_str}):
-        print(doc)
-        print(doc['title'].strip())
-        print(doc['location'].strip())
-        print(doc['date'].strip())
+        # print(doc)
+        # print(doc['title'].strip())
+        # print(doc['location'].strip())
+        # print(doc['date'].strip())
 
         location_match = {
             'title': doc['title'].strip(),
