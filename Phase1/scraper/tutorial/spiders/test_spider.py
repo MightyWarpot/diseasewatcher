@@ -17,6 +17,7 @@ class QuotesSpider(scrapy.Spider):
             'date': response.css('div.datsingle::text').get(),
             'body': response.css('div.postcontent').css('p::text').getall(),
             'url': response.request.url,
+            'region': response.css('div.catsing').css('a::text').get(),
         } 
         nexturls = response.css('div.postcontent').css('ul').getall()
         print(nexturls)
