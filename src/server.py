@@ -30,10 +30,8 @@ class endpoint(Resource):
         location_results = location_filter(location, col)
 
 
-
-
-        print(location_results[0])
-        print(location_results[1])
+        # print(location_results[0])
+        # print(location_results[1])
 
 
         disease_results = disease_filter(disease, col)
@@ -45,16 +43,27 @@ class endpoint(Resource):
 
         combined_filtered = []
 
+        if location == '':
+            location = "\w"
+        if disease == '':
+            disease = "\w"
+        #temp_location == regexmatch everything
+
         for entry in combined:
-            if (entry['location'] == location and
-                entry['disease'] == disease):
+            if (re.search(location, entry['location']) and
+                re.search(disease, entry['disease'])):
                 combined_filtered.append(entry)
+
+
+            # if (entry['location'] == location and
+            #     entry['disease'] == disease):
+            #     combined_filtered.append(entry)
 
 
         # print(combined_filtered)
 
 
-        # return dumps(combined_filtered)
+        return dumps(combined_filtered)
 
 
 
