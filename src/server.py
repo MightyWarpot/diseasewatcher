@@ -21,6 +21,9 @@ col = db.outbreak_details
 
 
 @api.route('/outbreak/')
+@api.doc(params={'location' :'Country', 
+                'disease' : "Type of Disease", 
+                'date': 'Date of article'})
 class endpoint(Resource):   
     def get(self):
         location = request.args.get('location', default = '')
