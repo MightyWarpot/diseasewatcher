@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restx import Resource, Api
 from pymongo import MongoClient
 import datetime
+import re
 from outbreak_location import location_filter
 from outbreak_time import time_filter
 from outbreak_disease import disease_filter
@@ -18,17 +19,52 @@ client = MongoClient(
 db = client.outbreak_articles
 col = db.outbreak_details
 
+
 @api.route('/outbreak/')
 class endpoint(Resource):   
     def get(self):
         location = request.args.get('location')
-        dtime = request.args.get('date')
         disease = request.args.get('disease')
-        # remove this when we get everything together
-        newcol = location_filter(location, col)
-        newcol = time_filter(dtime, newcol)
-        newcol = disease_filter(disease, newcol)
-        return dumps(res)
+
+
+        location_results = location_filter(location, col)
+
+
+
+
+        print(location_results[0])
+        print(location_results[1])
+
+
+        disease_results = disease_filter(disease, col)
+
+
+
+        combined = location_results + disease_results
+        print(type(combined))
+
+        combined_filtered = []
+
+        for entry in combined:
+            if (entry['location'] == location and
+                entry['disease'] == disease):
+                combined_filtered.append(entry)
+
+
+        # print(combined_filtered)
+
+
+        # return dumps(combined_filtered)
+
+
+
+
+        # print(disease_results[0])
+        # dtime = request.args.get('date')
+
+
+
+
 
 
 if __name__ == "__main__":
