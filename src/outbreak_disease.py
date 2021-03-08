@@ -2,9 +2,11 @@ def disease_filter(disease_str, col):
     disease_matches = []
 
     if disease_str == '':
-        for doc in col.find({}):
+        return disease_matches
+    else:
+        for doc in col.find({"disease": disease_str}):
             # print(doc['location'])
-            location_match = {
+            disease_match = {
                 'title': doc['title'].strip(),
                 'date': doc['date'].strip(),
                 'location': doc['location'].strip(),
@@ -17,7 +19,7 @@ def disease_filter(disease_str, col):
 
             disease_matches.append(disease_match_copy)
 
-        return location_matches
+        return disease_matches
 
 
 

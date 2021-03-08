@@ -23,10 +23,26 @@ col = db.outbreak_details
 @api.route('/outbreak/')
 class endpoint(Resource):   
     def get(self):
-        location = request.args.get('location')
-        disease = request.args.get('disease')
+        location = request.args.get('location', default = '')
+        disease = request.args.get('disease', default = '')
+        time = request.args.get('time', default = '')
+        
+        if (time != ''):
+            
+            day = int(time[0:2])
+            month = int(time[2:4])
+            year = int(time[4:8])
 
+            dtime = datetime.datetime(year, month, day)
+            year = dtime.strftime("%Y")
+            month = dtime.strftime("%B")
+            time = month + " " + str(day) + ", " + year
+        else:
+            dtime = ''
 
+        print(time)
+        time_results = time_filter(time, col)
+        
         location_results = location_filter(location, col)
 
 
@@ -38,8 +54,7 @@ class endpoint(Resource):
 
 
 
-        combined = location_results + disease_results
-        print(type(combined))
+        combined = location_results + disease_results + time_results
 
         combined_filtered = []
 
@@ -47,11 +62,15 @@ class endpoint(Resource):
             location = "\w"
         if disease == '':
             disease = "\w"
+        if time == '':
+            time == "\w"
         #temp_location == regexmatch everything
 
         for entry in combined:
             if (re.search(location, entry['location']) and
-                re.search(disease, entry['disease'])):
+                re.search(disease, entry['disease']) and 
+                re.search(time, entry['date'])):
+
                 combined_filtered.append(entry)
 
 
@@ -62,6 +81,7 @@ class endpoint(Resource):
 
         # print(combined_filtered)
 
+        combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
         return dumps(combined_filtered)
 

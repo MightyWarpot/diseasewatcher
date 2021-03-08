@@ -9,21 +9,6 @@ from pprint import pprint
 def location_filter(location_str, col):
     location_matches = []
     if location_str == '':
-        for doc in col.find({}):
-            # print(doc['location'])
-            location_match = {
-                'title': doc['title'].strip(),
-                'date': doc['date'].strip(),
-                'location': doc['location'].strip(),
-                'region': doc['region'].strip(),
-                'url': doc['url'].strip(),
-                'disease': doc['disease'].strip()
-            }
-
-            location_match_copy = location_match.copy()
-
-            location_matches.append(location_match_copy)
-
         return location_matches
 
 
