@@ -5,6 +5,7 @@ Deliverable 1
 Initial design document.
 
 To run server:
+
 cd into src 
 
 python3 server.py 
