@@ -101,5 +101,5 @@ class endpoint(Resource):
 
 
 
-if __name__ == "__main__":
+def run():
     app.run(port=8000, debug=True)

@@ -1,1 +1,1 @@
-web: gunicorn server:app
+web: gunicorn --pythonpath  Phase1 server:app
