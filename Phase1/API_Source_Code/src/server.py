@@ -8,6 +8,7 @@ import re
 from outbreak_location import location_filter
 from outbreak_time import time_filter
 from outbreak_disease import disease_filter
+from outbreak_region import region_filter
 from json import dumps
 app = Flask(__name__)
 api = Api(app)
@@ -25,13 +26,14 @@ col = db.outbreak_details
 @api.route('/outbreak/')
 @api.doc(params={'location' :'Country', 
                 'disease' : "Type of Disease", 
-                'date': 'Date of article'})
+                'date': 'Date of article',
+                'region': 'Region of article'})
 class endpoint(Resource):   
     def get(self):
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
         time = request.args.get('time', default = '')
-        
+        region = requests.arg.get('region', default = '')
         if (time != ''):
             
             day = int(time[0:2])
@@ -57,9 +59,9 @@ class endpoint(Resource):
 
         disease_results = disease_filter(disease, col)
 
+        region_results = region_filter(region, col)
 
-
-        combined = location_results + disease_results + time_results
+        combined = location_results + disease_results + time_results + region_results
 
         combined_filtered = []
 
@@ -69,12 +71,15 @@ class endpoint(Resource):
             disease = "\w"
         if time == '':
             time == "\w"
+        if region == '':
+            time == "\w"
         #temp_location == regexmatch everything
 
         for entry in combined:
             if (re.search(location, entry['location']) and
                 re.search(disease, entry['disease']) and 
-                re.search(time, entry['date'])):
+                re.search(time, entry['date']) and
+                re.search(region, entry['region'])):
 
                 combined_filtered.append(entry)
 
