@@ -33,7 +33,7 @@ class endpoint(Resource):
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
         time = request.args.get('time', default = '')
-        region = requests.arg.get('region', default = '')
+        region = request.args.get('region', default = '')
         if (time != ''):
             
             day = int(time[0:2])
@@ -97,14 +97,10 @@ class endpoint(Resource):
 
 
 
-
         # print(disease_results[0])
         # dtime = request.args.get('date')
-
-
-
-
-
+if __name__ == "__main__":
+    app.run(port=8000, debug=True)
 
 def run():
     app.run(port=8000, debug=True)
