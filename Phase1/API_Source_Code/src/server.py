@@ -1,3 +1,5 @@
+import sys
+sys.path.append('C:\\Python38\\Lib\\site-packages')
 from flask import Flask, request
 from flask_restx import Resource, Api
 from pymongo import MongoClient
@@ -100,4 +102,4 @@ class endpoint(Resource):
 
 
 if __name__ == "__main__":
-    app.run(port=0, debug=True)
+    app.run(port=8000, debug=True)
