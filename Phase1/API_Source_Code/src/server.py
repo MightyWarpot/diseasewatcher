@@ -24,7 +24,8 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
 @api.route('/')
 @api.doc(params={'location' :'Country', 
                 'disease' : "Type of Disease", 
-                'date': 'Date of article',
+                'start date': 'Start date of article',
+                'end date': 'End date of article',
                 'region': 'Region of article',
                 'page': 'Page number'})
 class endpoint(Resource):
@@ -33,25 +34,31 @@ class endpoint(Resource):
     def get(self):
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
-        time = request.args.get('time', default = '')
+        startdate = request.args.get('start date', default = '')
+        enddate = request.args.get('end date', default = '')
         region = request.args.get('region', default = '')
         pageNo = request.args.get('page', default = '0')
 
-        if (time != ''):
+        if (startdate != ''):
+            
+            startdateArray = startdate.split("/")
+            day = startdateArray[0]
+            month = startdateArray[1]
+            year = startdateArray[2]
 
-            day = int(time[0:2])
-            month = int(time[2:4])
-            year = int(time[4:8])
-
-            dtime = datetime.datetime(year, month, day)
-            year = dtime.strftime("%Y")
-            month = dtime.strftime("%B")
-            time = month + " " + str(day) + ", " + year
+            startdtime = datetime.datetime(year, month, day)
         else:
-            dtime = ''
+            startdtime = ''
 
-        print(time)
+        if (enddate != ''):
+            enddateArray = enddate.split("/")
+            day = startdateArray[0]
+            month = startdateArray[1]
+            year = startdateArray[2]
 
+            startdtime = datetime.datetime(year, month, day)
+        else:
+            startdtime = ''
         #Get results by searching mongodb datebase
         time_results = time_filter(time, col)
         
