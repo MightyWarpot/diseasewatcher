@@ -5,7 +5,6 @@ def disease_filter(disease_str, col):
         return disease_matches
     else:
         for doc in col.find({"disease": disease_str}):
-            # print(doc['location'])
             disease_match = {
                 'title': doc['title'].strip(),
                 'date': doc['date'].strip(),
