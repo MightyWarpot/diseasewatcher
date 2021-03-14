@@ -61,3 +61,18 @@ def test_outbreak_pagination_http(url):
     print(resp)
     print(resp.json())
     assert resp.status_code == 200
+
+
+def test_outbreak_all_http(url):
+    outbreak_param = {
+        "location": '',
+        "diease": '',
+        "time": '',
+        "region": '',
+        "results": ''
+    }
+    print(url)
+    resp = requests.get(f"{url}outbreak/", params=outbreak_param)
+    print(resp)
+    print(resp.json())
+    assert resp.status_code == 200
