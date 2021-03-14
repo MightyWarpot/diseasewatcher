@@ -10,7 +10,8 @@ from outbreak_time import time_filter
 from outbreak_disease import disease_filter
 from outbreak_region import region_filter
 from json import dumps
-
+from logging import FileHandler, INFO, basicConfig, DEBUG
+from datetime import datetime
 import re
 app = Flask(__name__)
 api = Api(app)
@@ -141,6 +142,26 @@ class endpoint(Resource):
             return combined_filtered
         else:
             return combined_filtered[page_start:page_end]
+
+file_handler = FileHandler('simple.log')
+file_handler.setLevel(INFO)
+
+prev_time = datetime.now()
+@app.before_request
+def log_info():
+	app.logger.info('Original query data : %s', request.args.get)
+
+@app.after_request
+def log_response(response):
+	now = datetime.now()
+	op_time = now - prev_time
+	app.logger.info('Query took ' + str(op_time.microseconds/1000) + ' milliseconds')
+	app.logger.info('Response sent: %s', response.status_code)
+	app.logger.info('Response sent: %s', response.get_json())
+	return response
+
+app.logger.addHandler(file_handler)
+basicConfig(filename='detailed.log', level=DEBUG) 
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)

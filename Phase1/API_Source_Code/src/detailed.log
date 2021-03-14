@@ -1,0 +1,112 @@
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 193-348-907
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\seng3011-disease-watcher\\Phase1\\API_Source_Code\\src\\server.py', reloading
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 193-348-907
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+INFO:flask.app:Query took 4.784 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [14/Mar/2021 23:15:16] "GET / HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+INFO:flask.app:Query took 286.041 milliseconds
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: {'swagger': '2.0', 'basePath': '/', 'paths': {'/outbreak/': {'parameters': [{'description': 'Country or State/Province (e.g. China)', 'name': 'location', 'type': 'string', 'in': 'query'}, {'description': 'Type of Disease (e.g. Ebola)', 'name': 'disease', 'type': 'string', 'in': 'query'}, {'description': 'Date of article (dd/mm/yyyy)', 'name': 'date', 'type': 'string', 'in': 'query'}, {'description': 'Continent of outbreak (e.g. Europe)', 'name': 'region', 'type': 'string', 'in': 'query'}, {'description': 'Page number', 'name': 'page', 'type': 'string', 'in': 'query'}], 'get': {'responses': {'500': {'description': 'Internal Server Error'}, '400': {'description': 'Bad request', 'schema': {'$ref': '#/definitions/error'}}, '200': {'description': 'Success', 'schema': {'$ref': '#/definitions/article'}}}, 'description': "Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region. \n        User can also specify how many results they would like to see.\n        No fields are required but date must be in the format 'dd/mm/yyyy'. \n        Return object is a list of dictionaries with title, date, location, region, url, disease and body of the article.\n        Semantics of location, region, etc. are detailed below.", 'operationId': 'get_endpoint', 'tags': ['outbreak']}}}, 'info': {'title': 'API', 'version': '1.0'}, 'produces': ['application/json'], 'consumes': ['application/json'], 'tags': [{'name': 'outbreak', 'description': 'Outbreak Reports Service'}], 'definitions': {'error': {'properties': {'message': {'type': 'string', 'example': 'Date is incorrectly formatted'}}, 'type': 'object'}, 'article': {'properties': {'title': {'type': 'string', 'example': 'SARS, MERS ruled out in China pneumonia cluster'}, 'date': {'type': 'string', 'example': 'January 5, 2020'}, 'location': {'type': 'string', 'example': 'China'}, 'region': {'type': 'string', 'example': 'Asia'}, 'url': {'type': 'string', 'example': 'http://outbreaknewstoday.com/sars-mers-ruled-out-in-china-pneumonia-cluster-40965/'}, 'disease': {'type': 'string', 'example': 'SARS'}, 'body': {'type': 'array', 'items': {'type': 'string', 'example': 'Health officials in the city of Wuhan in Hubei province, China '}}}, 'type': 'object'}}, 'responses': {'ParseError': {'description': "When a mask can't be parsed"}, 'MaskError': {'description': 'When any error occurs on mask'}}}
+INFO:werkzeug:127.0.0.1 - - [14/Mar/2021 23:15:17] "GET /swagger.json HTTP/1.1" 200 -
+INFO:flask.app:Query took 288.042 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [14/Mar/2021 23:15:17] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
