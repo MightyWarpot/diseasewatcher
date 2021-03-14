@@ -21,12 +21,13 @@ client = MongoClient(
 db = client.outbreak_articles
 col = db.outbreak_details
 
-
-@api.route('/outbreak/')
+api = api.namespace('outbreak', description='Outbreak Reports Service')
+@api.route('/')
 @api.doc(params={'location' :'Country', 
                 'disease' : "Type of Disease", 
                 'date': 'Date of article'})
-class endpoint(Resource):   
+class endpoint(Resource):
+    @api.response(200, 'Success', post_id_details)   
     def get(self):
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
@@ -101,5 +102,5 @@ class endpoint(Resource):
 
 
 
-def run():
+if __name__ == "__main__":
     app.run(port=8000, debug=True)
