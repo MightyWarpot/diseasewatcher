@@ -66,20 +66,17 @@ class endpoint(Resource):
         startdate = request.args.get('start date', default = '')
         enddate = request.args.get('end date', default = '')
         region = request.args.get('region', default = '')
-        pageNo = request.args.get('page', default = '0')
-        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
-                                    
-            abort(400, "Date is incorrectly formatted")
         results = request.args.get('results', default = '')
-
-
-        max_len = col.count_documents({})
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
                                     
             abort(400, "Date is incorrectly formatted")
+
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):
                                     
             abort(400, "Date is incorrectly formatted")
+
+        max_len = col.count_documents({})
+
 
 
 
@@ -94,20 +91,13 @@ class endpoint(Resource):
             except:
                 abort(400, 'number of articles must be integer')
 
-        if(int(results) > max_len):
-            abort(400, 'invalid number of articles, exceeds amount stored in DB')
+            if(int(results) > max_len):
+                abort(400, 'invalid number of articles, exceeds amount stored in DB')
 
         #Set behaviour if user inputs 0
         if(results == 0):
             abort(400, 'number of articles > 0')
 
-       
-
-
-
-        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):
-                                    
-            abort(400, "Date is incorrectly formatted")
         if (startdate != ''):
             
             startdateArray = startdate.split("/")
@@ -150,9 +140,9 @@ class endpoint(Resource):
         if region == '':
             region == "\w"
         if startdtime == '': 
-            startdtime = datetime(1,1,0)
+            startdtime = datetime(1,1,1)
         if enddtime == '':
-            enddtime = datetime(1,1,4000)
+            enddtime = datetime(4000,1,1)
         #Filter results using regex such that the fields match user input
         for entry in combined:
             entrydate = datetime.strptime(entry['date'].strip(), '%B %d, %Y')
