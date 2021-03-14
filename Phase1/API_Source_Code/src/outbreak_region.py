@@ -10,7 +10,8 @@ def region_filter(region_str, col):
                 'location': doc['location'].strip(),
                 'region': doc['region'].strip(),
                 'url': doc['url'].strip(),
-                'disease': doc['disease'].strip()
+                'disease': doc['disease'].strip(),
+                'body': tuple(doc['body'])
             }
 
             region_match_copy = region_match.copy()
