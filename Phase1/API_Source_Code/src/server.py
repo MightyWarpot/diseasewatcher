@@ -13,15 +13,11 @@ from json import dumps
 app = Flask(__name__)
 api = Api(app)
 
-# @app.route('/')
-# def hello_world():
-#     return 'Hello, World!'
-
+#Connect to database
 client = MongoClient(
     "mongodb+srv://user:iBMu1UIQhIzoW8Qn@cluster0.uq4ht.mongodb.net/outbreak_articles?retryWrites=true&w=majority")
 db = client.outbreak_articles
 col = db.outbreak_details
-
 
 @api.route('/outbreak/')
 @api.doc(params={'location' :'Country', 
@@ -34,8 +30,10 @@ class endpoint(Resource):
         disease = request.args.get('disease', default = '')
         time = request.args.get('time', default = '')
         region = request.args.get('region', default = '')
+        pageNo = request.args.get('page', default = '0')
+
         if (time != ''):
-            
+
             day = int(time[0:2])
             month = int(time[2:4])
             year = int(time[4:8])
@@ -48,14 +46,11 @@ class endpoint(Resource):
             dtime = ''
 
         print(time)
+
+        #Get results by searching mongodb datebase
         time_results = time_filter(time, col)
         
         location_results = location_filter(location, col)
-
-
-        # print(location_results[0])
-        # print(location_results[1])
-
 
         disease_results = disease_filter(disease, col)
 
@@ -65,6 +60,7 @@ class endpoint(Resource):
 
         combined_filtered = []
 
+        #if no user input set variable as regex expression to match any string
         if location == '':
             location = "\w"
         if disease == '':
@@ -73,8 +69,9 @@ class endpoint(Resource):
             time == "\w"
         if region == '':
             time == "\w"
-        #temp_location == regexmatch everything
 
+
+        #Filter results using regex such that the fields match user input
         for entry in combined:
             if (re.search(location, entry['location']) and
                 re.search(disease, entry['disease']) and 
@@ -83,22 +80,34 @@ class endpoint(Resource):
 
                 combined_filtered.append(entry)
 
+        #Error for if user input is not integer
+        try:
+            pageNo = int(pageNo)
+        except ValueError:
+            print("Input must be integer")
 
-            # if (entry['location'] == location and
-            #     entry['disease'] == disease):
-            #     combined_filtered.append(entry)
+        if(pageNo == 0):
+            pageNo = 1
 
 
+        #Calculate indices for array slicing in pagination
+        page_start = 0
+        page_end = 0
+        if(pageNo != ''):
+            page_end = pageNo*10
+            page_start = page_end-10
         # print(combined_filtered)
 
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
-        return dumps(combined_filtered)
+        if(page_start > len(combined_filtered)):
+            raise ValueError('Invalid input')
 
+        if(pageNo == ''):
+            return dumps(combined_filtered)
+        else:
+            return dumps(combined_filtered[page_start:page_end])
 
-
-        # print(disease_results[0])
-        # dtime = request.args.get('date')
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
 
