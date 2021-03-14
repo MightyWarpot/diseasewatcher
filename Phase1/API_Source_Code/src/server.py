@@ -9,8 +9,10 @@ from outbreak_location import location_filter
 from outbreak_time import time_filter
 from outbreak_disease import disease_filter
 from outbreak_region import region_filter
+from outbreak_all import disease_all
 from json import dumps
-
+from logging import FileHandler, INFO, basicConfig, DEBUG
+from datetime import datetime
 import re
 app = Flask(__name__)
 api = Api(app)
@@ -44,11 +46,11 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
                 'start date': 'Start date of article (dd/mm/yyyy)',
                 'end date': 'End date of article (dd/mm/yyyy)',
                 'region': 'Continent of outbreak (e.g. Europe)',
-                'page': 'Page number'})
+                'results': 'Number of results'})
 class endpoint(Resource):
     @api.response(200, 'Success', article)
    
-    @api.response(400, 'Bad request', error_msg)   
+    @api.response(400, 'Bad request', error_msg)
     @api.response(500, 'Internal Server Error')
     @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region. 
         User can also specify how many results they would like to see.
@@ -57,6 +59,7 @@ class endpoint(Resource):
         Semantics of location, region, etc. are detailed below.''')   
 
     def get(self):
+
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
         startdate = request.args.get('start date', default = '')
@@ -66,6 +69,37 @@ class endpoint(Resource):
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
                                     
             abort(400, "Date is incorrectly formatted")
+        results = request.args.get('results', default = '')
+
+
+        max_len = col.count_documents({})
+
+
+        if(location == '' and disease == '' and startdate == ''
+            and enddate == '' and region == ''):
+
+            all_res = disease_all(col)
+
+            if results == '':
+                return all_res
+
+            elif results != '':
+                try:
+                    results = int(results)
+                except:
+                    abort(400, 'number of articles must be integer')
+
+            if(results > max_len):
+                abort(400, 'invalid number of articles, exceeds amount stored in DB')
+
+            #Set behaviour if user inputs 0
+            if(results == 0):
+                abort(400, 'number of articles > 0')
+
+            else:
+                return all_res[:results]
+
+
 
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):
                                     
@@ -100,7 +134,7 @@ class endpoint(Resource):
 
         region_results = region_filter(region, col)
 
-        combined = location_results + disease_results + time_results + region_results
+        combined = location_results + disease_results + region_results
 
         combined_filtered = []
 
@@ -126,34 +160,36 @@ class endpoint(Resource):
 
                 combined_filtered.append(entry)
 
-        #Error for if user input is not integer
-        try:
-            pageNo = int(pageNo)
-        except ValueError:
-            abort(400, "Page number not an integer")
-
-        #Set behaviour if user inputs 0
-        if(pageNo == 0):
-            pageNo = 1
-
-
-        #Calculate indices for array slicing in pagination
-        page_start = 0
-        page_end = 0
-        if(pageNo != ''):
-            page_end = pageNo*10
-            page_start = page_end-10
 
         #Code to remove duplicates
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
-        if(page_start > len(combined_filtered)):
-            raise ValueError('Invalid input')
-
-        if(pageNo == ''):
+        if(results == ''):
             return combined_filtered
         else:
-            return combined_filtered[page_start:page_end]
+            # print(results)
+            return combined_filtered[:int(results)]
+
+
+file_handler = FileHandler('simple.log')
+file_handler.setLevel(INFO)
+
+prev_time = datetime.now()
+@app.before_request
+def log_info():
+	app.logger.info('Original query data : %s', request.args.get)
+
+@app.after_request
+def log_response(response):
+	now = datetime.now()
+	op_time = now - prev_time
+	app.logger.info('Query took ' + str(op_time.microseconds/1000) + ' milliseconds')
+	app.logger.info('Response sent: %s', response.status_code)
+	app.logger.info('Response sent: %s', response.get_json())
+	return response
+
+app.logger.addHandler(file_handler)
+basicConfig(filename='detailed.log', level=DEBUG) 
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
