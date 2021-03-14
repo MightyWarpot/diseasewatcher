@@ -61,12 +61,12 @@ class endpoint(Resource):
 
     def get(self):
 
-        location = request.args.get('location', default = '')
-        disease = request.args.get('disease', default = '')
-        startdate = request.args.get('start date', default = '')
-        enddate = request.args.get('end date', default = '')
-        region = request.args.get('region', default = '')
-        results = request.args.get('results', default = '')
+        location = request.args.get('location', default = '').strip()
+        disease = request.args.get('disease', default = '').strip()
+        startdate = request.args.get('start date', default = '').strip()
+        enddate = request.args.get('end date', default = '').strip()
+        region = request.args.get('region', default = '').strip()
+        results = request.args.get('results', default = '').strip()
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
                                     
             abort(400, "Date is incorrectly formatted")
