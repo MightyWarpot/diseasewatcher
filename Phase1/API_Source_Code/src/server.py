@@ -116,7 +116,6 @@ class endpoint(Resource):
                 combined_filtered.append(entry)
 
 
-
         #Code to remove duplicates
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
@@ -125,9 +124,6 @@ class endpoint(Resource):
         else:
             # print(results)
             return combined_filtered[:int(results)]
-
-if __name__ == "__main__":
-    app.run(port=8000, debug=True)
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
