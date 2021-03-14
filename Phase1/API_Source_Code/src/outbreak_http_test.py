@@ -6,11 +6,10 @@ import requests
 def test_outbreak_location_http(url):
     outbreak_param = {
         "location": 'China',
-        "disease": '',
-        "start date": '',
-        "end date": '',
+        "diease": '',
+        "time": '',
         "region": '',
-        "results": ''
+        "page": ''
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -22,11 +21,10 @@ def test_outbreak_location_http(url):
 def test_outbreak_disease_http(url):
     outbreak_param = {
         "location": '',
-        "disease": 'COVID-19',
-        "start date": '',
-        "end date": '',
+        "diease": 'COVID-19',
+        "time": '',
         "region": '',
-        "results": ''
+        "page": ''
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -38,11 +36,10 @@ def test_outbreak_disease_http(url):
 def test_outbreak_region_http(url):
     outbreak_param = {
         "location": '',
-        "disease": '',
-        "start date": '',
-        "end date": '',
+        "diease": '',
+        "time": '',
         "region": 'Asia',
-        "results": ''
+        "page": ''
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -54,27 +51,10 @@ def test_outbreak_region_http(url):
 def test_outbreak_pagination_http(url):
     outbreak_param = {
         "location": '',
-        "disease": '',
-        "start date": '',
-        "end date": '',
+        "diease": '',
+        "time": '',
         "region": '',
-        "results": '1'
-    }
-    print(url)
-    resp = requests.get(f"{url}outbreak/", params=outbreak_param)
-    print(resp)
-    print(resp.json())
-    assert resp.status_code == 200
-
-
-def test_outbreak_all_http(url):
-    outbreak_param = {
-        "location": '',
-        "disease": '',
-        "start date": '',
-        "end date": '',
-        "region": '',
-        "results": ''
+        "page": '1'
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
