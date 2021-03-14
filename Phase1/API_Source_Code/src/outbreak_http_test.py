@@ -9,7 +9,7 @@ def test_outbreak_location_http(url):
         "diease": '',
         "time": '',
         "region": '',
-        "page": ''
+        "results": ''
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -24,7 +24,7 @@ def test_outbreak_disease_http(url):
         "diease": 'COVID-19',
         "time": '',
         "region": '',
-        "page": ''
+        "results": ''
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -39,7 +39,7 @@ def test_outbreak_region_http(url):
         "diease": '',
         "time": '',
         "region": 'Asia',
-        "page": ''
+        "results": ''
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -54,7 +54,7 @@ def test_outbreak_pagination_http(url):
         "diease": '',
         "time": '',
         "region": '',
-        "page": '1'
+        "results": '1'
     }
     print(url)
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)

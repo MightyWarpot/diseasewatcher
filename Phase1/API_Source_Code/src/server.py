@@ -1,7 +1,7 @@
 import sys
 sys.path.append('C:\\Python38\\Lib\\site-packages')
 from flask import Flask, request
-from flask_restx import Resource, Api
+from flask_restx import Resource, Api, abort
 from pymongo import MongoClient
 import datetime
 import re
@@ -9,6 +9,7 @@ from outbreak_location import location_filter
 from outbreak_time import time_filter
 from outbreak_disease import disease_filter
 from outbreak_region import region_filter
+from outbreak_all import disease_all
 from json import dumps
 app = Flask(__name__)
 api = Api(app)
@@ -26,16 +27,46 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
                 'disease' : "Type of Disease", 
                 'date': 'Date of article',
                 'region': 'Region of article',
-                'page': 'Page number'})
+                'results': 'Number of results'})
 class endpoint(Resource):
     @api.response(200, 'Success')   
 
     def get(self):
+
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
         time = request.args.get('time', default = '')
         region = request.args.get('region', default = '')
-        pageNo = request.args.get('page', default = '0')
+        results = request.args.get('results', default = '')
+
+
+        max_len = col.count_documents({})
+
+
+        if(location == '' and disease == '' and time == ''
+            and region == ''):
+
+            all_res = disease_all(col)
+
+            if results == '':
+                return all_res
+
+            elif results != '':
+                try:
+                    results = int(results)
+                except:
+                    abort(400, 'number of articles must be integer')
+
+            if(results > max_len):
+                abort(400, 'invalid number of articles, exceeds amount stored in DB')
+
+            #Set behaviour if user inputs 0
+            if(results == 0):
+                abort(400, 'number of articles > 0')
+
+            else:
+                return all_res[:results]
+
 
         if (time != ''):
 
@@ -84,34 +115,16 @@ class endpoint(Resource):
 
                 combined_filtered.append(entry)
 
-        #Error for if user input is not integer
-        try:
-            pageNo = int(pageNo)
-        except ValueError:
-            print("Input must be integer")
 
-        #Set behaviour if user inputs 0
-        if(pageNo == 0):
-            pageNo = 1
-
-
-        #Calculate indices for array slicing in pagination
-        page_start = 0
-        page_end = 0
-        if(pageNo != ''):
-            page_end = pageNo*10
-            page_start = page_end-10
 
         #Code to remove duplicates
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
-        if(page_start > len(combined_filtered)):
-            raise ValueError('Invalid input')
-
-        if(pageNo == ''):
-            return dumps(combined_filtered)
+        if(results == ''):
+            return combined_filtered
         else:
-            return dumps(combined_filtered[page_start:page_end])
+            # print(results)
+            return combined_filtered[:int(results)]
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
