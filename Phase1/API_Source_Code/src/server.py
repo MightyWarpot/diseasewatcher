@@ -9,6 +9,7 @@ from outbreak_location import location_filter
 from outbreak_time import time_filter
 from outbreak_disease import disease_filter
 from outbreak_region import region_filter
+from outbreak_all import disease_all
 from json import dumps
 
 import re
@@ -57,12 +58,13 @@ class endpoint(Resource):
         Semantics of location, region, etc. are detailed below.''')   
 
     def get(self):
+
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
         startdate = request.args.get('start date', default = '')
         enddate = request.args.get('end date', default = '')
         region = request.args.get('region', default = '')
-        pageNo = request.args.get('page', default = '0')
+        results = request.args.get('results', default = '0')
         print(time)
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', time) and time != ''):
                                     
@@ -76,6 +78,47 @@ class endpoint(Resource):
             year = startdateArray[2]
 
             startdtime = datetime.datetime(year, month, day)
+        results = request.args.get('results', default = '')
+
+
+        max_len = col.count_documents({})
+
+
+        if(location == '' and disease == '' and time == ''
+            and region == ''):
+
+            all_res = disease_all(col)
+
+            if results == '':
+                return all_res
+
+            elif results != '':
+                try:
+                    results = int(results)
+                except:
+                    abort(400, 'number of articles must be integer')
+
+            if(results > max_len):
+                abort(400, 'invalid number of articles, exceeds amount stored in DB')
+
+            #Set behaviour if user inputs 0
+            if(results == 0):
+                abort(400, 'number of articles > 0')
+
+            else:
+                return all_res[:results]
+
+
+        if (time != ''):
+
+            day = int(time[0:2])
+            month = int(time[2:4])
+            year = int(time[4:8])
+
+            dtime = datetime.datetime(year, month, day)
+            year = dtime.strftime("%Y")
+            month = dtime.strftime("%B")
+            time = month + " " + str(day) + ", " + year
         else:
             startdtime = ''
 
@@ -126,28 +169,15 @@ class endpoint(Resource):
         except ValueError:
             abort(400, "Page number not an integer")
 
-        #Set behaviour if user inputs 0
-        if(pageNo == 0):
-            pageNo = 1
-
-
-        #Calculate indices for array slicing in pagination
-        page_start = 0
-        page_end = 0
-        if(pageNo != ''):
-            page_end = pageNo*10
-            page_start = page_end-10
 
         #Code to remove duplicates
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
-        if(page_start > len(combined_filtered)):
-            raise ValueError('Invalid input')
-
-        if(pageNo == ''):
+        if(results == ''):
             return combined_filtered
         else:
-            return combined_filtered[page_start:page_end]
+            # print(results)
+            return combined_filtered[:int(results)]
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
