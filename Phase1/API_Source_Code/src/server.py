@@ -9,7 +9,6 @@ from outbreak_location import location_filter
 from outbreak_time import time_filter
 from outbreak_disease import disease_filter
 from outbreak_region import region_filter
-from outbreak_all import disease_all
 from json import dumps
 from logging import FileHandler, INFO, basicConfig, DEBUG
 from datetime import datetime
@@ -43,14 +42,17 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
 @api.route('/')
 @api.doc(params={'location' :'Country or State/Province (e.g. China)', 
                 'disease' : "Type of Disease (e.g. Ebola)", 
-                'start date': 'Start date of article (dd/mm/yyyy)',
-                'end date': 'End date of article (dd/mm/yyyy)',
+                'date': 'Date of article (dd/mm/yyyy)',
                 'region': 'Continent of outbreak (e.g. Europe)',
+<<<<<<< HEAD
                 'results': 'Number of results (Must be > 0)'})
+=======
+                'page': 'Page number'})
+>>>>>>> 4dda1a1048c655311e46c487684eb809c199c7ec
 class endpoint(Resource):
     @api.response(200, 'Success', article)
    
-    @api.response(400, 'Bad request', error_msg)
+    @api.response(400, 'Bad request', error_msg)   
     @api.response(500, 'Internal Server Error')
     @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region. 
         User can also specify how many results they would like to see.
@@ -59,66 +61,33 @@ class endpoint(Resource):
         Semantics of location, region, etc. are detailed below.''')   
 
     def get(self):
-
         location = request.args.get('location', default = '')
         disease = request.args.get('disease', default = '')
-        startdate = request.args.get('start date', default = '')
-        enddate = request.args.get('end date', default = '')
+        time = request.args.get('date', default = '')
         region = request.args.get('region', default = '')
-        results = request.args.get('results', default = '')
+        pageNo = request.args.get('page', default = '0')
+        print(time)
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', time) and time != ''):
+                                    
+            abort(400, "Date is incorrectly formatted")
 
+        if (time != ''):
 
-        max_len = col.count_documents({})
+            day = int(time[0:2])
+            month = int(time[3:5])
+            year = int(time[6:10])
 
-
-        if(location == '' and disease == '' and startdate == ''
-            and enddate == '' and region == ''):
-
-            all_res = disease_all(col)
-
-            if results == '':
-                return all_res
-
-            elif results != '':
-                try:
-                    results = int(results)
-                except:
-                    abort(400, 'number of articles must be integer')
-
-            if(results > max_len):
-                abort(400, 'invalid number of articles, exceeds amount stored in DB')
-
-            #Set behaviour if user inputs 0
-            if(results == 0):
-                abort(400, 'number of articles > 0')
-
-            else:
-                return all_res[:results]
-
-
-
-        if (startdate != ''):
-            
-            startdateArray = startdate.split("/")
-            day = startdateArray[0]
-            month = startdateArray[1]
-            year = startdateArray[2]
-
-            startdtime = datetime.datetime(year, month, day)
+            dtime = datetime.datetime(year, month, day)
+            year = dtime.strftime("%Y")
+            month = dtime.strftime("%B")
+            time = month + " " + str(day) + ", " + year
         else:
-            startdtime = ''
+            dtime = ''
 
-        if (enddate != ''):
-            enddateArray = enddate.split("/")
-            day = startdateArray[0]
-            month = startdateArray[1]
-            year = startdateArray[2]
+        print(time)
 
-            startdtime = datetime.datetime(year, month, day)
-        else:
-            startdtime = ''
         #Get results by searching mongodb datebase
-        # time_results = time_filter(time, col)
+        time_results = time_filter(time, col)
         
         location_results = location_filter(location, col)
 
@@ -126,7 +95,7 @@ class endpoint(Resource):
 
         region_results = region_filter(region, col)
 
-        combined = location_results + disease_results + region_results
+        combined = location_results + disease_results + time_results + region_results
 
         combined_filtered = []
 
@@ -135,31 +104,48 @@ class endpoint(Resource):
             location = "\w"
         if disease == '':
             disease = "\w"
-        # if time == '':
-        #     time == "\w"
+        if time == '':
+            time == "\w"
         if region == '':
-            region == "\w"
+            time == "\w"
 
         #Filter results using regex such that the fields match user input
         for entry in combined:
             if (re.search(location, entry['location']) and
-                re.search(disease, entry['disease']) and
+                re.search(disease, entry['disease']) and 
+                re.search(time, entry['date']) and
                 re.search(region, entry['region'])):
-                # re.search(time, entry['date']) and
-
 
                 combined_filtered.append(entry)
 
+        #Error for if user input is not integer
+        try:
+            pageNo = int(pageNo)
+        except ValueError:
+            abort(400, "Page number not an integer")
+
+        #Set behaviour if user inputs 0
+        if(pageNo == 0):
+            pageNo = 1
+
+
+        #Calculate indices for array slicing in pagination
+        page_start = 0
+        page_end = 0
+        if(pageNo != ''):
+            page_end = pageNo*10
+            page_start = page_end-10
 
         #Code to remove duplicates
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
-        if(results == ''):
+        if(page_start > len(combined_filtered)):
+            raise ValueError('Invalid input')
+
+        if(pageNo == ''):
             return combined_filtered
         else:
-            # print(results)
-            return combined_filtered[:int(results)]
-
+            return combined_filtered[page_start:page_end]
 
 file_handler = FileHandler('simple.log')
 file_handler.setLevel(INFO)
