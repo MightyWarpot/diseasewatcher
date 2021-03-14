@@ -23,7 +23,8 @@ col = db.outbreak_details
 @api.doc(params={'location' :'Country', 
                 'disease' : "Type of Disease", 
                 'date': 'Date of article',
-                'region': 'Region of article'})
+                'region': 'Region of article',
+                'page': 'Page number'})
 class endpoint(Resource):   
     def get(self):
         location = request.args.get('location', default = '')
@@ -70,7 +71,6 @@ class endpoint(Resource):
         if region == '':
             time == "\w"
 
-
         #Filter results using regex such that the fields match user input
         for entry in combined:
             if (re.search(location, entry['location']) and
@@ -86,6 +86,7 @@ class endpoint(Resource):
         except ValueError:
             print("Input must be integer")
 
+        #Set behaviour if user inputs 0
         if(pageNo == 0):
             pageNo = 1
 
@@ -96,8 +97,8 @@ class endpoint(Resource):
         if(pageNo != ''):
             page_end = pageNo*10
             page_start = page_end-10
-        # print(combined_filtered)
 
+        #Code to remove duplicates
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
         if(page_start > len(combined_filtered)):

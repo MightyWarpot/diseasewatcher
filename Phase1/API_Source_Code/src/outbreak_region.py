@@ -4,7 +4,6 @@ def region_filter(region_str, col):
         return region_matches
     else:
         for doc in col.find({"region": region_str}):
-            # print(doc['location'])
             region_match = {
                 'title': doc['title'].strip(),
                 'date': doc['date'].strip(),
