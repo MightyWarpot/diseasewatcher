@@ -12,7 +12,8 @@ def location_filter(location_str, col):
                 'location': doc['location'].strip(),
                 'region': doc['region'].strip(),
                 'url': doc['url'].strip(),
-                'disease': doc['disease'].strip()
+                'disease': doc['disease'].strip(),
+                'body': tuple(doc['body'])
             }
             location_match_copy = location_match.copy()
 

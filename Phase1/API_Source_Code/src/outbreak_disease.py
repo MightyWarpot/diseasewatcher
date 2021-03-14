@@ -11,7 +11,8 @@ def disease_filter(disease_str, col):
                 'location': doc['location'].strip(),
                 'region': doc['region'].strip(),
                 'url': doc['url'].strip(),
-                'disease': doc['disease'].strip()
+                'disease': doc['disease'].strip(),
+                'body': tuple(doc['body'])
             }
 
             disease_match_copy = disease_match.copy()

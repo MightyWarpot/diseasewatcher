@@ -26,7 +26,8 @@ def time_filter(dtime, col):
                 'location': doc['location'].strip(),
                 'region': doc['region'].strip(),
                 'url': doc['url'].strip(),
-                'disease': doc['disease'].strip()
+                'disease': doc['disease'].strip(),
+                'body': doc['body']
             }
 
             date_match_copy = date_match.copy()
