@@ -43,10 +43,10 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
 @api.route('/')
 @api.doc(params={'location' :'Country or State/Province (e.g. China)', 
                 'disease' : "Type of Disease (e.g. Ebola)", 
-                'start date': 'Start date of article (dd/mm/yyyy)',
-                'end date': 'End date of article (dd/mm/yyyy)',
+                'start date': 'Outbreak reported after this date (dd/mm/yyyy)',
+                'end date': 'Outbreak reported before this date (dd/mm/yyyy)',
                 'region': 'Continent of outbreak (e.g. Europe)',
-                'results': 'Number of results'})
+                'results': 'Number of results (e.g. 10)' })
 class endpoint(Resource):
     @api.response(200, 'Success', article)
    
@@ -54,7 +54,8 @@ class endpoint(Resource):
     @api.response(500, 'Internal Server Error')
     @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region. 
         User can also specify how many results they would like to see.
-        No fields are required but date must be in the format 'dd/mm/yyyy'. 
+        "location" or "disease" is required and date must be in the format 'dd/mm/yyyy'. If "results" is unspecified, all results are
+        returned.
         Return object is a list of dictionaries with title, date, location, region, url, disease and body of the article.
         Semantics of location, region, etc. are detailed below.''')   
 
@@ -73,31 +74,34 @@ class endpoint(Resource):
 
 
         max_len = col.count_documents({})
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
+                                    
+            abort(400, "Date is incorrectly formatted")
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):
+                                    
+            abort(400, "Date is incorrectly formatted")
 
 
-        if(location == '' and disease == '' and startdate == ''
-            and enddate == '' and region == ''):
 
-            all_res = disease_all(col)
+        if(location == '' and disease == '' and region == ''):
 
-            if results == '':
-                return all_res
+            abort(400, "Location, region and disease cannot all be empty")
 
-            elif results != '':
-                try:
-                    results = int(results)
-                except:
-                    abort(400, 'number of articles must be integer')
 
-            if(results > max_len):
-                abort(400, 'invalid number of articles, exceeds amount stored in DB')
+        if results != '':
+            try:
+                results = int(results)
+            except:
+                abort(400, 'number of articles must be integer')
 
-            #Set behaviour if user inputs 0
-            if(results == 0):
-                abort(400, 'number of articles > 0')
+        if(int(results) > max_len):
+            abort(400, 'invalid number of articles, exceeds amount stored in DB')
 
-            else:
-                return all_res[:results]
+        #Set behaviour if user inputs 0
+        if(results == 0):
+            abort(400, 'number of articles > 0')
+
+       
 
 
 
@@ -193,5 +197,4 @@ basicConfig(filename='detailed.log', level=DEBUG)
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
-
 
