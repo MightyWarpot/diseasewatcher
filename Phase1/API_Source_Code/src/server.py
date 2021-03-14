@@ -165,7 +165,7 @@ class endpoint(Resource):
 
         #Error for if user input is not integer
         try:
-            pageNo = int(pageNo)
+            results = int(results)
         except ValueError:
             abort(400, "Page number not an integer")
 
