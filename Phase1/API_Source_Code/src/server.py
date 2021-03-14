@@ -46,7 +46,7 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
                 'start date': 'Start date of article (dd/mm/yyyy)',
                 'end date': 'End date of article (dd/mm/yyyy)',
                 'region': 'Continent of outbreak (e.g. Europe)',
-                'results': 'Number of results'})
+                'results': 'Number of results (Must be > 0)'})
 class endpoint(Resource):
     @api.response(200, 'Success', article)
    
@@ -175,7 +175,7 @@ def log_response(response):
 	op_time = now - prev_time
 	app.logger.info('Query took ' + str(op_time.microseconds/1000) + ' milliseconds')
 	app.logger.info('Response sent: %s', response.status_code)
-	app.logger.info('Response sent: %s', response.get_json())
+	#app.logger.info('Response sent: %s', response.get_json())
 	return response
 
 app.logger.addHandler(file_handler)

@@ -10,3 +10,66 @@ Response sent: {'swagger': '2.0', 'basePath': '/', 'paths': {'/outbreak/': {'par
 Query took 288.042 milliseconds
 Response sent: 200
 Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 689.085 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 929.303 milliseconds
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Response sent: 200
+Response sent: {'swagger': '2.0', 'basePath': '/', 'paths': {'/outbreak/': {'parameters': [{'description': 'Country or State/Province (e.g. China)', 'name': 'location', 'type': 'string', 'in': 'query'}, {'description': 'Type of Disease (e.g. Ebola)', 'name': 'disease', 'type': 'string', 'in': 'query'}, {'description': 'Start date of article (dd/mm/yyyy)', 'name': 'start date', 'type': 'string', 'in': 'query'}, {'description': 'End date of article (dd/mm/yyyy)', 'name': 'end date', 'type': 'string', 'in': 'query'}, {'description': 'Continent of outbreak (e.g. Europe)', 'name': 'region', 'type': 'string', 'in': 'query'}, {'description': 'Number of results', 'name': 'results', 'type': 'string', 'in': 'query'}], 'get': {'responses': {'500': {'description': 'Internal Server Error'}, '400': {'description': 'Bad request', 'schema': {'$ref': '#/definitions/error'}}, '200': {'description': 'Success', 'schema': {'$ref': '#/definitions/article'}}}, 'description': "Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region. \n        User can also specify how many results they would like to see.\n        No fields are required but date must be in the format 'dd/mm/yyyy'. \n        Return object is a list of dictionaries with title, date, location, region, url, disease and body of the article.\n        Semantics of location, region, etc. are detailed below.", 'operationId': 'get_endpoint', 'tags': ['outbreak']}}}, 'info': {'title': 'API', 'version': '1.0'}, 'produces': ['application/json'], 'consumes': ['application/json'], 'tags': [{'name': 'outbreak', 'description': 'Outbreak Reports Service'}], 'definitions': {'error': {'properties': {'message': {'type': 'string', 'example': 'Date is incorrectly formatted'}}, 'type': 'object'}, 'article': {'properties': {'title': {'type': 'string', 'example': 'SARS, MERS ruled out in China pneumonia cluster'}, 'date': {'type': 'string', 'example': 'January 5, 2020'}, 'location': {'type': 'string', 'example': 'China'}, 'region': {'type': 'string', 'example': 'Asia'}, 'url': {'type': 'string', 'example': 'http://outbreaknewstoday.com/sars-mers-ruled-out-in-china-pneumonia-cluster-40965/'}, 'disease': {'type': 'string', 'example': 'SARS'}, 'body': {'type': 'array', 'items': {'type': 'string', 'example': 'Health officials in the city of Wuhan in Hubei province, China '}}}, 'type': 'object'}}, 'responses': {'ParseError': {'description': "When a mask can't be parsed"}, 'MaskError': {'description': 'When any error occurs on mask'}}}
+Query took 931.305 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 843.533 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 651.608 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 301.953 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 379.224 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 573.267 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 587.644 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 571.526 milliseconds
+Response sent: 200
+Query took 573.527 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 614.012 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 178.356 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 293.46 milliseconds
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 295.462 milliseconds
+Response sent: 200
+Query took 296.462 milliseconds
+Response sent: 200
+Query took 296.462 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 432.586 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 452.603 milliseconds
+Response sent: 200
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([])>
+Query took 102.77 milliseconds
+Response sent: 200
