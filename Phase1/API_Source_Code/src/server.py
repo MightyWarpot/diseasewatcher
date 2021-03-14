@@ -1,7 +1,7 @@
 import sys
 sys.path.append('C:\\Python38\\Lib\\site-packages')
 from flask import Flask, request
-from flask_restx import Resource, Api
+from flask_restx import Resource, Api, abort, fields
 from pymongo import MongoClient
 import datetime
 import re
@@ -10,6 +10,8 @@ from outbreak_time import time_filter
 from outbreak_disease import disease_filter
 from outbreak_region import region_filter
 from json import dumps
+
+import re
 app = Flask(__name__)
 api = Api(app)
 
@@ -18,18 +20,41 @@ client = MongoClient(
     "mongodb+srv://user:iBMu1UIQhIzoW8Qn@cluster0.uq4ht.mongodb.net/outbreak_articles?retryWrites=true&w=majority")
 db = client.outbreak_articles
 col = db.outbreak_details
+article_line = api.model('line', {
+    "line": fields.String()
+})
+error_msg = api.model('error', {
+    "message": fields.String(example="Date is incorrectly formatted")
+})
+article = api.model('article', {
+    "title": fields.String(example="SARS, MERS ruled out in China pneumonia cluster"),
+    "date": fields.String(example="January 5, 2020"),
+    "location": fields.String(example="China"),
+    "region": fields.String(example="Asia"),
+    "url": fields.String(example="http://outbreaknewstoday.com/sars-mers-ruled-out-in-china-pneumonia-cluster-40965/"),
+    "disease": fields.String(example="SARS"),
+    "body": fields.List(fields.String(example="Health officials in the city of Wuhan in Hubei province, China ")),
+  } )
 
 
 api = api.namespace('outbreak', description='Outbreak Reports Service')
 @api.route('/')
-@api.doc(params={'location' :'Country', 
-                'disease' : "Type of Disease", 
-                'start date': 'Start date of article',
-                'end date': 'End date of article',
-                'region': 'Region of article',
+@api.doc(params={'location' :'Country or State/Province (e.g. China)', 
+                'disease' : "Type of Disease (e.g. Ebola)", 
+                'start date': 'Start date of article (dd/mm/yyyy)',
+                'end date': 'End date of article (dd/mm/yyyy)',
+                'region': 'Continent of outbreak (e.g. Europe)',
                 'page': 'Page number'})
 class endpoint(Resource):
-    @api.response(200, 'Success')   
+    @api.response(200, 'Success', article)
+   
+    @api.response(400, 'Bad request', error_msg)   
+    @api.response(500, 'Internal Server Error')
+    @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region. 
+        User can also specify how many results they would like to see.
+        No fields are required but date must be in the format 'dd/mm/yyyy'. 
+        Return object is a list of dictionaries with title, date, location, region, url, disease and body of the article.
+        Semantics of location, region, etc. are detailed below.''')   
 
     def get(self):
         location = request.args.get('location', default = '')
@@ -38,6 +63,10 @@ class endpoint(Resource):
         enddate = request.args.get('end date', default = '')
         region = request.args.get('region', default = '')
         pageNo = request.args.get('page', default = '0')
+        print(time)
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', time) and time != ''):
+                                    
+            abort(400, "Date is incorrectly formatted")
 
         if (startdate != ''):
             
@@ -95,7 +124,7 @@ class endpoint(Resource):
         try:
             pageNo = int(pageNo)
         except ValueError:
-            print("Input must be integer")
+            abort(400, "Page number not an integer")
 
         #Set behaviour if user inputs 0
         if(pageNo == 0):
@@ -116,12 +145,11 @@ class endpoint(Resource):
             raise ValueError('Invalid input')
 
         if(pageNo == ''):
-            return dumps(combined_filtered)
+            return combined_filtered
         else:
-            return dumps(combined_filtered[page_start:page_end])
+            return combined_filtered[page_start:page_end]
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
 
-if __name__ == "__main__":
-    app.run(port=8000, debug=True)
+
