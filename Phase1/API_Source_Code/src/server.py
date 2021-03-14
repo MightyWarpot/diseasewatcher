@@ -3,7 +3,7 @@ sys.path.append('C:\\Python38\\Lib\\site-packages')
 from flask import Flask, request
 from flask_restx import Resource, Api, abort, fields
 from pymongo import MongoClient
-import datetime
+from datetime import *
 import re
 from outbreak_location import location_filter
 from outbreak_time import time_filter
@@ -63,33 +63,36 @@ class endpoint(Resource):
         enddate = request.args.get('end date', default = '')
         region = request.args.get('region', default = '')
         pageNo = request.args.get('page', default = '0')
-        print(time)
-        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', time) and time != ''):
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
                                     
             abort(400, "Date is incorrectly formatted")
 
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):
+                                    
+            abort(400, "Date is incorrectly formatted")
         if (startdate != ''):
             
             startdateArray = startdate.split("/")
-            day = startdateArray[0]
-            month = startdateArray[1]
-            year = startdateArray[2]
+            day = int(startdateArray[0])
+            month = int(startdateArray[1])
+            year = int(startdateArray[2])
 
-            startdtime = datetime.datetime(year, month, day)
+            startdtime = datetime(year, month, day)
         else:
             startdtime = ''
 
         if (enddate != ''):
             enddateArray = enddate.split("/")
-            day = startdateArray[0]
-            month = startdateArray[1]
-            year = startdateArray[2]
+            day = int(enddateArray[0])
+            month = int(enddateArray[1])
+            year = int(enddateArray[2])
 
-            startdtime = datetime.datetime(year, month, day)
+            enddtime = datetime(year, month, day)
         else:
-            startdtime = ''
+            enddtime = ''
+
         #Get results by searching mongodb datebase
-        time_results = time_filter(time, col)
+        time_results = time_filter(startdtime, enddtime, col)
         
         location_results = location_filter(location, col)
 
@@ -106,16 +109,19 @@ class endpoint(Resource):
             location = "\w"
         if disease == '':
             disease = "\w"
-        if time == '':
-            time == "\w"
         if region == '':
-            time == "\w"
-
+            region == "\w"
+        if startdtime == '': 
+            startdtime = datetime(1,1,0)
+        if enddtime == '':
+            enddtime = datetime(1,1,4000)
         #Filter results using regex such that the fields match user input
         for entry in combined:
+            entrydate = datetime.strptime(entry['date'].strip(), '%B %d, %Y')
             if (re.search(location, entry['location']) and
                 re.search(disease, entry['disease']) and 
-                re.search(time, entry['date']) and
+                startdtime <= entrydate and 
+                entrydate <= enddtime and 
                 re.search(region, entry['region'])):
 
                 combined_filtered.append(entry)

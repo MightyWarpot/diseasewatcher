@@ -1,5 +1,5 @@
 import json
-import datetime
+from datetime import *
 from pymongo import MongoClient
 # pprint library is used to make the output look more pretty
 from pprint import pprint
@@ -9,11 +9,16 @@ from pprint import pprint
 
 # def date(dtime):
 
-def time_filter(dtime, col):
+def time_filter(startdtime, enddtime, col):
     date_matches = []
-    if dtime == '': 
+    if startdtime == '' and enddtime == '': 
         return date_matches
-    else:
+    elif startdtime == '':
+        dtime = enddtime
+    elif enddtime == '':
+        dtime = startdtime
+
+    if startdtime == '' or enddtime == '':
 
         for doc in col.find({"date": dtime}):
             # print(doc['title'].strip())
@@ -27,11 +32,32 @@ def time_filter(dtime, col):
                 'region': doc['region'].strip(),
                 'url': doc['url'].strip(),
                 'disease': doc['disease'].strip(),
-                'body': doc['body']
+                'body': tuple(doc['body'])
             }
 
             date_match_copy = date_match.copy()
 
             date_matches.append(date_match_copy)
+
+        return date_matches
+    else:  # both endtime and starttime is a thing 
+        
+        for doc in col.find():
+            x = datetime.strptime(doc['date'].strip(), '%B %d, %Y')
+            if startdtime <= x and x <= enddtime:
+                date_match = {
+                    'title': doc['title'].strip(),
+                    'date': doc['date'].strip(),
+                    'location': doc['location'].strip(),
+                    'region': doc['region'].strip(),
+                    'url': doc['url'].strip(),
+                    'disease': doc['disease'].strip(),
+                    'body': tuple(doc['body'])
+                }
+                
+                date_match_copy = date_match.copy()
+                date_matches.append(date_match_copy)
+
+                x = ''
 
         return date_matches
