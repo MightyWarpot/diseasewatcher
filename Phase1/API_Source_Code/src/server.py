@@ -62,11 +62,8 @@ class endpoint(Resource):
         startdate = request.args.get('start date', default = '')
         enddate = request.args.get('end date', default = '')
         region = request.args.get('region', default = '')
-        pageNo = request.args.get('page', default = '0')
-        print(time)
-        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', time) and time != ''):
-                                    
-            abort(400, "Date is incorrectly formatted")
+        results = request.args.get('results', default = '0')
+
 
         if (startdate != ''):
             
@@ -122,7 +119,7 @@ class endpoint(Resource):
 
         #Error for if user input is not integer
         try:
-            pageNo = int(pageNo)
+            results = int(results)
         except ValueError:
             abort(400, "Page number not an integer")
 
