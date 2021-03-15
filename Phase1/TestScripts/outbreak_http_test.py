@@ -1,9 +1,12 @@
 import json
 import sys
 import requests
+import pytest
 
+url = 'http://127.0.0.1:8000/'
 
-def test_outbreak_location_http(url):
+def test_outbreak_location_http():
+    print(url)
     outbreak_param = {
         "location": 'China',
         "disease": '',
@@ -53,7 +56,7 @@ def test_outbreak_region_http(url):
 
 def test_outbreak_pagination_http(url):
     outbreak_param = {
-        "location": '',
+        "location": 'China',
         "disease": '',
         "start date": '',
         "end date": '',
@@ -69,7 +72,7 @@ def test_outbreak_pagination_http(url):
 
 def test_outbreak_all_http(url):
     outbreak_param = {
-        "location": '',
+        "location": 'Vietnam',
         "disease": '',
         "start date": '',
         "end date": '',
