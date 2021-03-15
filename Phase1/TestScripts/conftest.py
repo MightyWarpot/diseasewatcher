@@ -24,7 +24,7 @@ def url():  # pragma: no cover
 	# line = server.stderr.readline()
 	# local_url = url_re.match(line.decode())
 
-	server.send_signal(signal.SIGINT)
+	#server.send_signal(signal.SIGINT)
 	waited = 0
 	while server.poll() is None and waited < 5:
 		sleep(0.1)
