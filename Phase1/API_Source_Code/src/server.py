@@ -1,15 +1,24 @@
 import sys
 sys.path.append('C:\\Python38\\Lib\\site-packages')
+import os 
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+sys.path.append('...')
+sys.path.append('../../')
+sys.path.append('../../../')
+sys.path.append('../../../../')
+sys.path.append('C:\\Python38\\Lib\\site-packages')
 from flask import Flask, request
 from flask_restx import Resource, Api, abort, fields
 from pymongo import MongoClient
 from datetime import *
 import re
-from outbreak_location import location_filter
-from outbreak_time import time_filter
-from outbreak_disease import disease_filter
-from outbreak_region import region_filter
-from outbreak_all import disease_all
+from API_Source_Code.src.outbreak_location import location_filter
+from API_Source_Code.src.outbreak_time import time_filter
+from API_Source_Code.src.outbreak_disease import disease_filter
+from API_Source_Code.src.outbreak_region import region_filter
+from API_Source_Code.src.outbreak_all import disease_all
 from json import dumps
 from logging import FileHandler, INFO, basicConfig, DEBUG
 from datetime import datetime
@@ -39,6 +48,7 @@ article = api.model('article', {
   } )
 
 
+
 api = api.namespace('outbreak', description='Outbreak Reports Service')
 @api.route('/')
 @api.doc(params={'location' :'Country or State/Province (e.g. China)', 
@@ -60,25 +70,18 @@ class endpoint(Resource):
         Semantics of location, region, etc. are detailed below.''')   
 
     def get(self):
-
         location = request.args.get('location', default = '').strip()
         disease = request.args.get('disease', default = '').strip()
         startdate = request.args.get('start date', default = '').strip()
         enddate = request.args.get('end date', default = '').strip()
         region = request.args.get('region', default = '').strip()
         results = request.args.get('results', default = '').strip()
-        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
-                                    
-            abort(400, "Date is incorrectly formatted")
-
-        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):
-                                    
-            abort(400, "Date is incorrectly formatted")
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):                                 
+            abort(400, "Start date is incorrectly formatted")
+        if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):                    
+            abort(400, "End date is incorrectly formatted")
 
         max_len = col.count_documents({})
-
-
-
 
         if(location == '' and disease == '' and region == ''):
 
