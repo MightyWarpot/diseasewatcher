@@ -1,5 +1,5 @@
 import pytest
-from outbreak_disease import disease_filter
+from API_Source_Code.src.outbreak_region import region_filter
 from pymongo import MongoClient
 
 client = MongoClient(
@@ -9,6 +9,6 @@ col = db.outbreak_details
 
 
 def test_outbreak_location_basecase():
-    res = disease_filter('COVID-19', col)
+    res = region_filter('Asia', col)
     for entry in res:
-        assert entry['disease'] == 'COVID-19'
+        assert entry['region'] == 'Asia'

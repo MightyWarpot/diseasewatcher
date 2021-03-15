@@ -1,5 +1,5 @@
 import pytest
-from outbreak_all import disease_all
+from API_Source_Code.src.outbreak_disease import disease_filter
 from pymongo import MongoClient
 
 client = MongoClient(
@@ -7,9 +7,8 @@ client = MongoClient(
 db = client.outbreak_articles
 col = db.outbreak_details
 
-max_len = col.count_documents({})
 
-def test_outbreak_all():
-    res = disease_all(col)
-
-    assert max_len == len(res)
+def test_outbreak_location_basecase():
+    res = disease_filter('COVID-19', col)
+    for entry in res:
+        assert entry['disease'] == 'COVID-19'

@@ -1,5 +1,5 @@
 import pytest
-from outbreak_region import region_filter
+from API_Source_Code.src.outbreak_all import disease_all
 from pymongo import MongoClient
 
 client = MongoClient(
@@ -7,8 +7,9 @@ client = MongoClient(
 db = client.outbreak_articles
 col = db.outbreak_details
 
+max_len = col.count_documents({})
 
-def test_outbreak_location_basecase():
-    res = region_filter('Asia', col)
-    for entry in res:
-        assert entry['region'] == 'Asia'
+def test_outbreak_all():
+    res = disease_all(col)
+
+    assert max_len == len(res)
