@@ -124,3 +124,57 @@ def test_outbreak_all_http(url):
         assert article['disease'] == 'mosquito-borne Zika' and article['region'] == 'US News'
     
         
+def test_outbreak_400date_http(url):
+    outbreak_param = {
+        "location": '',
+        "disease": '',
+        "start date": 'INVALIDDATE',
+        "end date": 'INVALIDDATE',
+        "region": '',
+        "results": ''
+    }
+    resp = requests.get(f"{url}outbreak/", params=outbreak_param)
+
+    assert resp.status_code == 400
+
+
+def test_outbreak_400empty_http(url):
+    outbreak_param = {
+        "location": '',
+        "disease": '',
+        "start date": '',
+        "end date": '',
+        "region": '',
+        "results": ''
+    }
+    resp = requests.get(f"{url}outbreak/", params=outbreak_param)
+
+    assert resp.status_code == 400
+
+
+def test_outbreak_400results_http(url):
+    outbreak_param = {
+        "location": '',
+        "disease": '',
+        "start date": '',
+        "end date": '',
+        "region": '',
+        "results": '99999999999999999'
+    }
+    resp = requests.get(f"{url}outbreak/", params=outbreak_param)
+
+    assert resp.status_code == 400
+
+
+def test_outbreak_500_http(url):
+    outbreak_param = {
+        "location": '',
+        "disease": '',
+        "start date": '',
+        "end date": '',
+        "region": '',
+        "results": '0'
+    }
+    resp = requests.get(f"{url}outbreak/doesntexist", params=outbreak_param)
+
+    assert resp.status_code == 404
