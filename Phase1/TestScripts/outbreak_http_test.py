@@ -27,6 +27,7 @@ def test_outbreak_location_http(url):
             print(resp.json())
             assert resp.status_code == 200
             not_found = False
+            return
         except ConnectionError:
             sleep(1)
             i += 1
@@ -53,6 +54,7 @@ def test_outbreak_disease_http(url):
             print(resp.json())
             assert resp.status_code == 200
             not_found = False
+            return
         except ConnectionError:
             sleep(1)
             i += 1
@@ -79,6 +81,7 @@ def test_outbreak_region_http(url):
             print(resp.json())
             assert resp.status_code == 200
             not_found = False
+            return
         except ConnectionError:
             sleep(1)
             i += 1
@@ -103,6 +106,7 @@ def test_outbreak_pagination_http(url):
             print(resp.json())
             assert resp.status_code == 200
             not_found = False
+            return
         except ConnectionError:
             sleep(1)
             i += 1
@@ -127,6 +131,7 @@ def test_outbreak_all_http(url):
             print(resp.json())
             assert resp.status_code == 200
             not_found = False
+            return
         except ConnectionError:
             sleep(1)
             i += 1
