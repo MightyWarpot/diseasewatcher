@@ -95,22 +95,32 @@ def test_outbreak_date(url):
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
     assert resp.status_code == 200
     articles = resp.json()
-    x = datetime.strptime(articles[0]['date'].strip(), '%B %d, %Y')
     startdtime = datetime(2020, 4, 20)
-    assert  startdtime <=x 
+    endtime = datetime(2021, 4,20)
+    for article in articles:
+        x = datetime.strptime(article['date'].strip(), '%B %d, %Y')
+        
+        assert  startdtime <=x and x <= endtime 
 def test_outbreak_all_http(url):
     outbreak_param = {
-        "location": 'China',
-        "disease": 'COVID-19',
-        "start date": '',
-        "end date": '',
-        "region": '',
-        "results": ''
+        "location": 'United States',
+        "disease": 'mosquito-borne Zika',
+        "start date": '10/02/2016',
+        "end date": '10/02/2017',
+        "region": 'US News',
+        "results": '1'
     }
    
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
-    print(resp)
-    print(resp.json())
+  
     assert resp.status_code == 200
+    articles = resp.json()
+    startdtime = datetime(2016, 2, 10)
+    endtime = datetime(2017, 2,10)
+    for article in articles:
+        x = datetime.strptime(article['date'].strip(), '%B %d, %Y')
+        
+        assert  startdtime <=x and x <= endtime and article['location'] == 'United States'
+        assert article['disease'] == 'mosquito-borne Zika' and article['region'] == 'US News'
     
         

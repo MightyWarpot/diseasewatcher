@@ -67,8 +67,8 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
                 'disease' : "Type of Disease (e.g. Ebola)", 
                 'start date': 'Outbreak reported on or after this date (dd/mm/yyyy)',
                 'end date': 'Outbreak reported on or before this date (dd/mm/yyyy)',
-                'region': 'Continent of outbreak (e.g. Europe)',
-                'results': 'Number of results (e.g. 10)' })
+                'region': 'Geographic region of outbreak (e.g. Europe)',
+                'results': 'Number of results (Must be > 0)(e.g. 10)' })
 class endpoint(Resource):
     @api.response(200, 'Success', article)
 
@@ -76,10 +76,12 @@ class endpoint(Resource):
     @api.response(500, 'Internal Server Error')
     @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region.
         User can also specify how many results they would like to see.
-        "location" or "disease" is required and date must be in the format 'dd/mm/yyyy'. If "results" is unspecified, all results are
-        returned.
+        "location" or "disease" is required and date must be in the format 'dd/mm/yyyy'. If "results" is unspecified, all results are returned. 
+        Allowable inputs for "region": 'Africa', 'Asia', 'Australia', 'Canada', 'Europe', 'Indian subcontinent', 'Latin America and the Caribbean', 'Middle East',  'US News'.
         Return object is a list of dictionaries with title, date, location, region, url, disease and body of the article.
-        Semantics of location, region, etc. are detailed below.''')
+        Semantics of location, region, etc. are detailed below.
+    
+        ''')
 
     def get(self):
         location = request.args.get('location', default = '').strip()
@@ -94,6 +96,7 @@ class endpoint(Resource):
             abort(400, "End date is incorrectly formatted")
 
         max_len = col.count_documents({})
+        
 
         if(location == '' and disease == '' and region == ''):
 
