@@ -12,20 +12,32 @@ import json
 
 @pytest.fixture
 def url():  # pragma: no cover
-    url_re = re.compile(r' \* Running on ([^ ]*)')
+    # url_re = re.compile(r' \* Running on ([^ ]*)')
     server = Popen(["python3", "server.py"], stderr=PIPE, stdout=PIPE)
-    line = server.stderr.readline()
-    local_url = url_re.match(line.decode())
-    if local_url:
-        yield local_url.group(1)
-        # Terminate the server
-        server.send_signal(signal.SIGINT)
-        waited = 0
-        while server.poll() is None and waited < 5:
-            sleep(0.1)
-            waited += 0.1
-        if server.poll() is None:
-            server.kill()
-    else:
+    local_url = 'http://127.0.0.1:8000/'
+    yield local_url
+
+    # line = server.stderr.readline()
+    # local_url = url_re.match(line.decode())
+
+    server.send_signal(signal.SIGINT)
+    waited = 0
+    while server.poll() is None and waited < 5:
+        sleep(0.1)
+        waited += 0.1
+    if server.poll() is None:
         server.kill()
-        raise Exception("Couldn't get URL from local server")
+
+    # if local_url:
+    #     yield local_url.group(1)
+    #     # Terminate the server
+    #     server.send_signal(signal.SIGINT)
+    #     waited = 0
+    #     while server.poll() is None and waited < 5:
+    #         sleep(0.1)
+    #         waited += 0.1
+    #     if server.poll() is None:
+    #         server.kill()
+    # else:
+    #     server.kill()
+    #     raise Exception("Couldn't get URL from local server")

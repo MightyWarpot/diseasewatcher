@@ -49,15 +49,15 @@ api = api.namespace('outbreak', description='Outbreak Reports Service')
                 'results': 'Number of results (e.g. 10)' })
 class endpoint(Resource):
     @api.response(200, 'Success', article)
-   
+
     @api.response(400, 'Bad request', error_msg)
     @api.response(500, 'Internal Server Error')
-    @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region. 
+    @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region.
         User can also specify how many results they would like to see.
         "location" or "disease" is required and date must be in the format 'dd/mm/yyyy'. If "results" is unspecified, all results are
         returned.
         Return object is a list of dictionaries with title, date, location, region, url, disease and body of the article.
-        Semantics of location, region, etc. are detailed below.''')   
+        Semantics of location, region, etc. are detailed below.''')
 
     def get(self):
 
@@ -68,11 +68,11 @@ class endpoint(Resource):
         region = request.args.get('region', default = '').strip()
         results = request.args.get('results', default = '').strip()
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):
-                                    
+
             abort(400, "Date is incorrectly formatted")
 
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):
-                                    
+
             abort(400, "Date is incorrectly formatted")
 
         max_len = col.count_documents({})
@@ -121,7 +121,7 @@ class endpoint(Resource):
 
         #Get results by searching mongodb datebase
         time_results = time_filter(startdtime, enddtime, col)
-        
+
         location_results = location_filter(location, col)
 
         disease_results = disease_filter(disease, col)
@@ -148,7 +148,7 @@ class endpoint(Resource):
             entrydate = datetime.strptime(entry['date'].strip(), '%B %d, %Y')
             if (re.search(location, entry['location']) and
                 re.search(disease, entry['disease']) and 
-                startdtime <= entrydate and 
+                startdtime <= entrydate and
                 entrydate <= enddtime and 
                 re.search(region, entry['region'])):
 
