@@ -1,8 +1,8 @@
-# from API_Source_Code.src.outbreak_all import disease_all
+
 from datetime import datetime
-# from API_Source_Code.src.outbreak_all import disease_all
+
 from logging import FileHandler, INFO, basicConfig, DEBUG
-# from API_Source_Code.src.outbreak_all import disease_all
+
 from json import dumps
 # from API_Source_Code.src.outbreak_all import disease_all
 # from API_Source_Code.src.outbreak_region import region_filter
@@ -25,16 +25,16 @@ from flask_restx import Resource, Api, abort, fields
 from pymongo import MongoClient
 from datetime import *
 import re
-from API_Source_Code.src.outbreak_location import location_filter
-from API_Source_Code.src.outbreak_time import time_filter
-from API_Source_Code.src.outbreak_disease import disease_filter
-from API_Source_Code.src.outbreak_region import region_filter
-from API_Source_Code.src.outbreak_all import disease_all
-# from outbreak_location import location_filter
-# from outbreak_time import time_filter
-# from outbreak_disease import disease_filter
-# from outbreak_region import region_filter
-# from outbreak_all import disease_all
+# from API_Source_Code.src.outbreak_location import location_filter
+# from API_Source_Code.src.outbreak_time import time_filter
+# from API_Source_Code.src.outbreak_disease import disease_filter
+# from API_Source_Code.src.outbreak_region import region_filter
+# from API_Source_Code.src.outbreak_all import disease_all
+from outbreak_location import location_filter
+from outbreak_time import time_filter
+from outbreak_disease import disease_filter
+from outbreak_region import region_filter
+from outbreak_all import disease_all
 app = Flask(__name__)
 api = Api(app)
 
@@ -73,6 +73,7 @@ class endpoint(Resource):
     @api.response(200, 'Success', article)
 
     @api.response(400, 'Bad request', error_msg)
+    @api.response(404, 'URL not found')
     @api.response(500, 'Internal Server Error')
     @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region.
         User can also specify how many results they would like to see.
