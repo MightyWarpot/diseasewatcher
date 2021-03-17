@@ -91,6 +91,7 @@ class endpoint(Resource):
         enddate = request.args.get('end date', default = '').strip()
         region = request.args.get('region', default = '').strip()
         results = request.args.get('results', default = '').strip()
+        start_index = request.args.get('start_index', default='').strip()
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', startdate) and startdate != ''):                                 
             abort(400, "Start date is incorrectly formatted")
         if (not re.match('^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$', enddate) and enddate != ''):                    
@@ -112,10 +113,29 @@ class endpoint(Resource):
 
             if(int(results) > max_len):
                 abort(400, 'invalid number of articles, exceeds amount stored in DB')
+            if(results <= 0):
+                abort(400, 'number of articles > 0')
+
+        if start_index != '':
+            try:
+                start_index = int(start_index)
+            except:
+                abort(400, 'invalid starting point, exceeds amount stored in DB')
+
+            if(start_index > max_len):
+                abort(400, 'invalid starting index, exceeds amount stored in DB')
+            if(start_index < 0):
+                abort(400, 'starting index >= 0')
 
         #Set behaviour if user inputs 0
-        if(results == 0):
-            abort(400, 'number of articles > 0')
+        # if(results <= 0):
+        #     abort(400, 'number of articles > 0')
+
+        # if(start_index < 0):
+        #     abort(400, 'starting index >= 0')
+
+        end_index = start_index + results
+
 
         if (startdate != ''):
             
@@ -177,11 +197,19 @@ class endpoint(Resource):
         #Code to remove duplicates
         combined_filtered = [dict(t) for t in {tuple(d.items()) for d in combined_filtered}]
 
+        matches_total = len(combined_filtered)
+
+        if(start_index > matches_total):
+            abort(400, 'Invalid start index, only ' + str(matches_total) + ' matches')
+
+
+
         if(results == ''):
             return combined_filtered
         else:
             # print(results)
-            return combined_filtered[:int(results)]
+            return combined_filtered[start_index:end_index+1]
+            # return combined_filtered[:int(results)]
 
 
 file_handler = FileHandler('simple.log')
