@@ -120,7 +120,7 @@ class endpoint(Resource):
             try:
                 start_index = int(start_index)
             except:
-                abort(400, 'invalid starting point, exceeds amount stored in DB')
+                abort(400, 'start index must be integer')
 
             if(start_index > max_len):
                 abort(400, 'invalid starting index, exceeds amount stored in DB')
@@ -133,8 +133,6 @@ class endpoint(Resource):
 
         # if(start_index < 0):
         #     abort(400, 'starting index >= 0')
-
-        end_index = start_index + results
 
 
         if (startdate != ''):
@@ -182,6 +180,17 @@ class endpoint(Resource):
             startdtime = datetime(1,1,1)
         if enddtime == '':
             enddtime = datetime(4000,1,1)
+        if start_index == '':
+            start_index = 0
+            start_index = int(start_index)
+
+
+        #Define end_index variable such that its dependance on start_index is always valid
+        end_index = ''
+
+        end_index = start_index + results
+
+
         #Filter results using regex such that the fields match user input
         for entry in combined:
             entrydate = datetime.strptime(entry['date'].strip(), '%B %d, %Y')
@@ -208,7 +217,7 @@ class endpoint(Resource):
             return combined_filtered
         else:
             # print(results)
-            return combined_filtered[start_index:end_index+1]
+            return combined_filtered[start_index:end_index]
             # return combined_filtered[:int(results)]
 
 
