@@ -14,7 +14,7 @@ def test_outbreak_location_http(url):
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '',
+        "end_index": '',
         "start_index": ''
     }
     print(url)
@@ -37,7 +37,7 @@ def test_outbreak_disease_http(url):
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '',
+        "end_index": '',
         "start_index": ''
     }
     
@@ -58,7 +58,7 @@ def test_outbreak_region_http(url):
         "start date": '',
         "end date": '',
         "region": 'Asia',
-        "results": '',
+        "end_index": '',
         "start_index": ''
     }
    
@@ -77,8 +77,8 @@ def test_outbreak_pagination_http(url):
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '1',
-        "start_index": ''
+        "end_index": '0',
+        "start_index": '0'
     }
     
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -94,7 +94,7 @@ def test_outbreak_date(url):
         "start date": '20/04/2020',
         "end date": '20/04/2021',
         "region": '',
-        "results": '',
+        "end_index": '',
         "start_index": ''
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -113,8 +113,8 @@ def test_outbreak_all_http(url):
         "start date": '10/02/2016',
         "end date": '10/02/2017',
         "region": 'US News',
-        "results": '1',
-        "start_index": ''
+        "end_index": '0',
+        "start_index": '0'
     }
    
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -137,7 +137,7 @@ def test_outbreak_400date_http(url):
         "start date": 'INVALIDDATE',
         "end date": 'INVALIDDATE',
         "region": '',
-        "results": '',
+        "end_index": '',
         "start_index": ''
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -152,7 +152,7 @@ def test_outbreak_400empty_http(url):
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '',
+        "end_index": '',
         "start_index": ''
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -160,14 +160,14 @@ def test_outbreak_400empty_http(url):
     assert resp.status_code == 400
 
 
-def test_outbreak_400results_http(url):
+def test_outbreak_end_index_over(url):
     outbreak_param = {
         "location": '',
         "disease": '',
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '99999999999999999',
+        "end_index": '99999999999999999',
         "start_index": ''
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -182,7 +182,7 @@ def test_outbreak_404_http(url):
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '0',
+        "end_index": '0',
         "start_index": ''
     }
     resp = requests.get(f"{url}outbreak/doesntexist", params=outbreak_param)
@@ -197,7 +197,7 @@ def test_outbreak_pagination_http(url):
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '5',
+        "end_index": '5',
         "start_index": '5'
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -212,7 +212,7 @@ def test_outbreak_pagination_http_nootherinput(url):
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '5',
+        "end_index": '5',
         "start_index": '5'
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
@@ -220,30 +220,30 @@ def test_outbreak_pagination_http_nootherinput(url):
     assert resp.status_code == 400
 
 
-def test_outbreak_pagination_http_nostartindex(url):
+def test_outbreak_start_higher_end(url):
     outbreak_param = {
         "location": 'China',
         "disease": '',
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '5',
-        "start_index": ''
+        "end_index": '5',
+        "start_index": '8'
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
 
-    assert resp.status_code == 200
+    assert resp.status_code == 400
 
 
-def test_outbreak_pagination_http_noresultsinput(url):
+def test_outbreak_invalid_start(url):
     outbreak_param = {
         "location": 'China',
         "disease": '',
         "start date": '',
         "end date": '',
         "region": '',
-        "results": '',
-        "start_index": '5'
+        "end_index": '',
+        "start_index": '-1'
     }
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
 
