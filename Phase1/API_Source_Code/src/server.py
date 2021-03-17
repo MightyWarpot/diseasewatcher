@@ -214,8 +214,8 @@ class endpoint(Resource):
 
         matches_total = len(combined_filtered)
 
-        if(start_index > matches_total):
-            abort(400, 'Invalid start index, only ' + str(matches_total) + ' matches')
+        if(start_index >= matches_total):
+            abort(400, 'Invalid start index, ' + str(matches_total-1) + ' is last valid index')
 
 
 
