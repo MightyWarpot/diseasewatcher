@@ -104,6 +104,10 @@ class endpoint(Resource):
 
             abort(400, "Location, region and disease cannot all be empty")
 
+        if(start_index != '' and results == ''):
+            abort(400, "Results cannot be empty if start_index is empty")
+
+
 
         if results != '':
             try:
@@ -183,10 +187,12 @@ class endpoint(Resource):
         if start_index == '':
             start_index = 0
             start_index = int(start_index)
-
+        if results == '':
+            results = 0
+            results = int(results)
 
         #Define end_index variable such that its dependance on start_index is always valid
-        end_index = ''
+
 
         end_index = start_index + results
 
@@ -213,7 +219,9 @@ class endpoint(Resource):
 
 
 
-        if(results == ''):
+        # if(results == ''):
+        #     return combined_filtered
+        if(end_index == 0):
             return combined_filtered
         else:
             # print(results)
