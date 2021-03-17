@@ -64,7 +64,7 @@ article = api.model('article', {
 api = api.namespace('outbreak', description='Outbreak Reports Service')
 @api.route('/')
 @api.doc(params={'location' :'Country or State/Province (e.g. China)', 
-                'disease' : "Type of Disease (e.g. Ebola)", 
+                'disease' : "Type of Disease (e.g. Cholera)", 
                 'start date': 'Outbreak reported on or after this date (dd/mm/yyyy)',
                 'end date': 'Outbreak reported on or before this date (dd/mm/yyyy)',
                 'region': 'Geographic region of outbreak (e.g. Europe)',

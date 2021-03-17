@@ -166,7 +166,7 @@ def test_outbreak_400results_http(url):
     assert resp.status_code == 400
 
 
-def test_outbreak_500_http(url):
+def test_outbreak_404_http(url):
     outbreak_param = {
         "location": '',
         "disease": '',
