@@ -79,7 +79,7 @@ class endpoint(Resource):
     @api.response(500, 'Internal Server Error')
     @api.doc(description='''Retrieves articles from outbreaknewstoday.com based on location, disease, time period, region.
         User can also specify how many results they would like to see.
-        "location" or "disease" or "region" is required and date must be in the format 'dd/mm/yyyy'. If "results" is unspecified, all results are returned. 
+        "location" or "disease" or "region" is required and date must be in the format 'dd/mm/yyyy'. By default all results are returned. 
         Allowable inputs for "region": 'Africa', 'Asia', 'Australia', 'Canada', 'Europe', 'Indian subcontinent', 'Latin America and the Caribbean', 'Middle East',  'US News'.
         Return object is a list of dictionaries with title, date, location, region, url, disease and body of the article.
         Semantics of location, region, etc. are detailed below.

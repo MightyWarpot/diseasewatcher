@@ -233,6 +233,8 @@ def test_outbreak_start_higher_end(url):
     resp = requests.get(f"{url}outbreak/", params=outbreak_param)
 
     assert resp.status_code == 400
+    msg = resp.json()
+    assert msg['message'] == 'start_index cannot be greater than end_index'
 
 
 def test_outbreak_invalid_start(url):
