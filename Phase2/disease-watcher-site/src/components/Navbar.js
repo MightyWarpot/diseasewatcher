@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import { makeStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,31 +16,33 @@ export default function Navbar() {
         setClick(false)
     }
 
+    const styles = useStyles()
+
     return (
         <>
-            <nav style={styles.navbar}>
-                <div style = {styles.navbarContainer} >
-                    <Link to='/' style={styles.navbarLogo}>
-                        <h4 style={styles.heading}>DISEASE WATCHER</h4><FontAwesomeIcon icon={faUserSecret} />
+            <nav className={styles.navbar}>
+                <div className = {styles.navbarContainer} >
+                    <Link to='/' className={styles.navbarLogo}>
+                        <h4 className={styles.heading}>DISEASE WATCHER</h4><FontAwesomeIcon icon={faUserSecret} />
                     </Link>
-                    <ul style={styles.navMenu}>
-                        <li style={styles.navItem}>
-                            <Link to='/' style={styles.navLinks}>
-                                Home
+                    <ul className={styles.navMenu}>
+                        <li className={styles.navItem}>
+                            <Link to='/' className={styles.navLinks}>
+                                Outbreaks
                             </Link>
                         </li>
-                        <li style={styles.navItem}>
-                            <Link to='/' style={styles.navLinks}>
+                        <li className={styles.navItem}>
+                            <Link to='/' className={styles.navLinks}>
                                 Maps
                             </Link>
                         </li>
-                        <li style={styles.navItem}>
-                            <Link to='/' style={styles.navLinks}>
+                        <li className={styles.navItem}>
+                            <Link to='/' className={styles.navLinks}>
                                 Vaccinations
                             </Link>
                         </li>
-                        <li style={styles.navItem}>
-                            <Link to='/' style={styles.navLinks}>
+                        <li className={styles.navItem}>
+                            <Link to='/' className={styles.navLinks}>
                                 FAQ
                             </Link>
                         </li>  
@@ -51,7 +54,8 @@ export default function Navbar() {
 }
 
 
-var styles = {
+
+var useStyles = makeStyles({
     navbar: {
         background: '#000',
         height: '100px',
@@ -94,6 +98,8 @@ var styles = {
         marginRight: '2rem',
         marginBottom: '2rem',
       },
+
+
       
     navLinks: {
         color: '#fff',
@@ -102,8 +108,10 @@ var styles = {
         textDecoration: 'none',
         padding: '0.5rem 1rem',
         height: '100%',
+        transition: 'color 0.2s',
+
+        "&:hover": {
+            color: '#aef',
+        }
       }
-      
-
-
-  }
+  });

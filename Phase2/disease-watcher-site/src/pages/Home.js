@@ -1,21 +1,25 @@
 import { Button } from '@material-ui/core'
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles';
 
 import Map from './img/map.jpg'
 
 export default function Home() {
+
+    const styles = useStyles()
+
     return (
         <div>
-            <div style={styles.banner}>
-                <img style={styles.center} src={Map}/>
-                <div style={styles.overlay}>
-                    <h2 style={styles.text}>Providing you with all the information you need</h2>
-                    <Button style = {styles.buttonAbs} variant="outlined" color="Primary" href="#contained-buttons">
+            <div className={styles.banner}>
+                <img className={styles.center} src={Map}/>
+                <div className={styles.overlay}>
+                    <h2 className={styles.text}>Providing you with all the information you need</h2>
+                    <Button className = {styles.buttonAbs} variant="outlined" color="Primary" href="#contained-buttons">
                           Find out more
                     </Button>
                 </div>
             </div> 
-            <div style={styles.pageDisplay}>
+            <div className={styles.pageDisplay}>
                 
             </div>
         </div>
@@ -23,7 +27,7 @@ export default function Home() {
 }
 
 
-const styles = {
+var useStyles = makeStyles({
     banner: {
         background: '#000',
         color: '#fff',
@@ -53,8 +57,13 @@ const styles = {
         left: '45%',
         borderColor: '#8e3fb5',
         color: '#8e3fb5',
-        backgroundColor: 'rgba(142, 63, 181, 0.1)',
-        padding: '0.4% 0.6%'
+        backgroundColor: 'rgba(142, 63, 181, 0.0)',
+        padding: '0.4% 0.6%',
+
+        "&:hover": {
+            border: '1px solid #9c4fc1',
+            backgroundColor: 'rgba(142, 63, 181, 0.2)'
+        }
     },
     pageDisplay: {
         backgroundColor: '#0e3c5d',
@@ -63,4 +72,4 @@ const styles = {
         
     }
     
-}
+});
