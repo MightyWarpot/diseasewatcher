@@ -27,7 +27,7 @@ export default function Navbar() {
                     </Link>
                     <ul className={styles.navMenu}>
                         <li className={styles.navItem}>
-                            <Link to='/' className={styles.navLinks}>
+                            <Link to='/outbreaks' className={styles.navLinks}>
                                 Outbreaks
                             </Link>
                         </li>
