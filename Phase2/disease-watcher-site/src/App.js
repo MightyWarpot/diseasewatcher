@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Outbreaks from './pages/Outbreaks'
 
+
+
 function App() {
   return (
     <Router className="App">

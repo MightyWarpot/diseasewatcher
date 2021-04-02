@@ -3,21 +3,23 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 
 import Map from './img/map.jpg'
-
+import Chart from './chart.js'
 export default function Home() {
 
     const styles = useStyles()
 
     return (
         <div>
+            
             <div className={styles.banner}>
+                <Chart> </Chart>
                 <img className={styles.center} src={Map}/>
-                <div className={styles.overlay}>
+                {/* <div className={styles.overlay}>
                     <h2 className={styles.text}>Providing you with all the information you need</h2>
                     <Button className = {styles.buttonAbs} variant="outlined" color="Primary" href="#contained-buttons">
                           Find out more
                     </Button>
-                </div>
+                </div> */}
             </div> 
             <div className={styles.pageDisplay}>
                 

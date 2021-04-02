@@ -8,24 +8,24 @@ db = client.outbreak_articles
 col = db.outbreak_details
 
 
-def test_outbreak_location_Asia():
+def test_outbreak_region_Asia():
     res = region_filter('Asia', col)
     for entry in res:
         assert entry['region'] == 'Asia'
 
 
-def test_outbreak_location_Europe():
+def test_outbreak_region_Europe():
     res = region_filter('Europe', col)
     for entry in res:
         assert entry['region'] == 'Europe'
 
 
-def test_outbreak_location_Africa():
+def test_outbreak_region_Africa():
     res = region_filter('Africa', col)
     for entry in res:
         assert entry['region'] == 'Africa'
 
 
-def test_outbreak_location_noinput():
+def test_outbreak_region_noinput():
     res = region_filter('', col)
     assert res == []
