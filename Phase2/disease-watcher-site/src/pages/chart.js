@@ -651,7 +651,7 @@ class Chart extends Component {
   valueAxis.renderer.grid.template.strokeOpacity = 0.25;
   valueAxis.renderer.minGridDistance = 30;
   valueAxis.renderer.maxLabelPosition = 0.98;
-  valueAxis.renderer.baseGrid.disabled = true;
+  //valueAxis.renderer.baseGrid.disabled = true;
   valueAxis.tooltip.disabled = true;
   valueAxis.extraMax = 0.05;
   valueAxis.maxPrecision = 0;
@@ -779,7 +779,7 @@ class Chart extends Component {
   let recoveredSeries = addSeries("recovered", recoveredColor);
   let deathsSeries = addSeries("deaths", deathsColor);
 
-  let series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
+  var series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
   // add series
   function addSeries(name, color) {
     let series = lineChart.series.push(new am4charts.LineSeries())
@@ -825,7 +825,7 @@ class Chart extends Component {
   }
 
 
-  series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
+  var series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
 
   let columnSeries;
 
@@ -1071,12 +1071,17 @@ class Chart extends Component {
 
   // change line chart data to the selected countries  
   function setCountryData(countryIndex) {
+      console.log(covid_world_timeline.length)
+
     // instead of setting whole data array, we modify current raw data so that a nice animation would happen
-    for (var i = 0; i < lineChart.data.length; i++) {
+    for (var i = 0; i < covid_world_timeline.length; i++) {
+        
       let di = covid_world_timeline[i].list;
 
       let countryData = di[countryIndex];
       let dataContext = lineChart.data[i];
+      console.log(countryData)
+      console.log(dataContext)
       if (countryData) {
         dataContext.recovered = countryData.recovered;
         dataContext.confirmed = countryData.confirmed;
@@ -1084,6 +1089,7 @@ class Chart extends Component {
         dataContext.active = countryData.confirmed - countryData.recovered - countryData.deaths;
         valueAxis.min = undefined;
         valueAxis.max = undefined;
+        console.log('hi')
       }
       else {
         dataContext.recovered = 0;
@@ -1649,7 +1655,7 @@ class Chart extends Component {
   
     render() {
       return (
-        <div id="chartdiv" style={{ width: "100%", height: "500px" }}></div>
+        <div id="chartdiv" style={{ width: "100%", height: "800px" }}></div>
       );
     }
   }
