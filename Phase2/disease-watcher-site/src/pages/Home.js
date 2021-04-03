@@ -13,7 +13,7 @@ export default function Home() {
             
             <div className={styles.banner}>
                 <Chart> </Chart>
-                <img className={styles.center} src={Map}/>
+                {/* <img className={styles.center} src={Map}/> */}
                 {/* <div className={styles.overlay}>
                     <h2 className={styles.text}>Providing you with all the information you need</h2>
                     <Button className = {styles.buttonAbs} variant="outlined" color="Primary" href="#contained-buttons">
@@ -21,9 +21,9 @@ export default function Home() {
                     </Button>
                 </div> */}
             </div> 
-            <div className={styles.pageDisplay}>
+            {/* <div className={styles.pageDisplay}>
                 
-            </div>
+            </div> */}
         </div>
     )
 }
@@ -31,8 +31,8 @@ export default function Home() {
 
 var useStyles = makeStyles({
     banner: {
-        background: '#000',
-        color: '#fff',
+        background: '#212327',
+        color: '#aaa',
         margin: 0,
         position: 'relative'
     },

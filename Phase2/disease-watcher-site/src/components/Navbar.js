@@ -23,7 +23,7 @@ export default function Navbar() {
             <nav className={styles.navbar}>
                 <div className = {styles.navbarContainer} >
                     <Link to='/' className={styles.navbarLogo}>
-                        <h4 className={styles.heading}>DISEASE WATCHER</h4><FontAwesomeIcon icon={faUserSecret} />
+                        <h4 className={styles.heading}> Travel Guard</h4><FontAwesomeIcon icon={faUserSecret} />
                     </Link>
                     <ul className={styles.navMenu}>
                         <li className={styles.navItem}>
