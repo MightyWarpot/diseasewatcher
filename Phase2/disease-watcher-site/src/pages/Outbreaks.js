@@ -25,8 +25,27 @@ export default function Outbreaks() {
         }
     })
 
+    const get3MonthDate = () =>{
+        var date = new Date(Date.now())
+        date.setMonth(date.getMonth() - 3)
+
+
+        return date.toLocaleString().split(",")[0];
+    }
+
     const requestInfo = (request) => {
-        API.get(`/outbreak/?location=${state.location}&disease=${state.disease}&start date=${state.reportAfter}&end date=${state.reportBefore}&region=${state.region}&start_index=${state.indexStart}&end_index=${state.indexEnd}`)
+        
+        var location = (typeof state.location === 'undefined') ? " ": state.location
+        var disease = (typeof state.disease === 'undefined') ? " ": state.disease
+        var reportAfter = (typeof state.reportAfter === 'undefined') ? get3MonthDate() : state.reportAfter
+        var reportBefore = (typeof state.reportBefore === 'undefined') ?" ": state.reportBefore
+        var region = (typeof state.region === 'undefined') ? " ": state.region
+        var indexStart = (typeof state.indexStart === 'undefined') ? " " : state.indexStart
+        var indexEnd = (typeof state.indexEnd === 'undefined') ? " ": state.indexEnd
+
+        console.log("searching")
+
+        API.get(`/outbreak/?location=${location}&disease=${disease}&start date=${reportAfter}&end date=${reportBefore}&region=${region}&start_index=${indexStart}&end_index=${indexEnd}`)
         .then((response) => {
             console.log(response.data)
             setTable(response.data)
@@ -98,21 +117,23 @@ export default function Outbreaks() {
         <div>
             <h2 className={styles.header}> Find Disease Information </h2>
             <p className={styles.header}> Simply fill out the form below and we'll return any relevant information </p>
-                <div className={styles.container}>
+            <div className={styles.container}>
                 <form className={styles.form} noValidate autoComplete="off">
                     <div>
                         <TextField id="location" label="Country" type="search" onChange={handleTextChange} />
                         <TextField id="disease" label="Type of Disease" type="search" onChange={handleTextChange} />
+                        {/* unnecesary input for now
                         <TextField id="region" label="Continent" type="search" onChange={handleTextChange}/>
                         <TextField id="indexStart" label="Article Start Index" type="search" onChange={handleTextChange} />
                         <TextField id="indexEnd" label="Article End Index" type="search" onChange={handleTextChange} />
+                        */}
                         <TextField id="reportAfter" label="Outbreak Reported After" type="search" helperText="(DD/MM/YYYY)" onChange={handleTextChange} />
                         <TextField id="reportBefore" label="Oubtreak Reported Before" type="search" helperText="(DD/MM/YYYY)"  onChange={handleTextChange}/>
                     </div>
                     <div className={styles.divB}>
                         <Button variant="contained" color="primary" onClick={requestInfo}>Submit</Button>
                     </div>
-                    <div>
+                    <div className={styles.divT}>
                         {BasicTable()}
                     </div>
                 </form>
@@ -128,21 +149,28 @@ const useStyles = makeStyles((theme) => ({
     form: {
         '& .MuiTextField-root': {
             margin: theme.spacing(1),
-            width: '25ch',
+            width: '20%',
+            marginLeft: "5%",
+            display: 'flex',
             
         },
     },
     container: {
-        textAlign: 'center'
+        textAlign: 'left',
+        
+
     },
     header: {
         marginLeft: '5%'
     },
     divB: {
-        marginLeft: '70%',
+        marginLeft: '5%',
         marginTop: '1%'
     },
     table: {
         minWidth: 650,
       },
+    divT: {
+        margin: theme.spacing(13),
+    }
   }));
