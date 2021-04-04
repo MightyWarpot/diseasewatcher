@@ -9,9 +9,8 @@ import covid_total_timeline from './total_timeline.js';
 import covid_world_timeline from './world_timeline.js';
 am4core.useTheme(am4themes_frozen);
 am4core.useTheme(am4themes_animated);
-const script = document.createElement("script");
-script.src = './world_timeline.js';
-document.body.appendChild(script);
+
+
 class Chart extends Component {
     componentDidMount() {
         
@@ -1080,8 +1079,7 @@ class Chart extends Component {
 
       let countryData = di[countryIndex];
       let dataContext = lineChart.data[i];
-      console.log(countryData)
-      console.log(dataContext)
+      
       if (countryData) {
         dataContext.recovered = countryData.recovered;
         dataContext.confirmed = countryData.confirmed;
@@ -1089,7 +1087,7 @@ class Chart extends Component {
         dataContext.active = countryData.confirmed - countryData.recovered - countryData.deaths;
         valueAxis.min = undefined;
         valueAxis.max = undefined;
-        console.log('hi')
+       
       }
       else {
         dataContext.recovered = 0;

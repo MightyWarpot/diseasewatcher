@@ -20,22 +20,26 @@ keywords = ["covid-19", "zika", "mers", "salmonella", "legionnaire", "measles", 
     "thypoid fever", "tuberculosis", "vaccinia", "cowpox", "varicella", "west nile virus", "yellow fever", "yersiniosis", "listeriosis", "legionares", 
     "listeriosis", "monkeypox", "2019 nCoV"]
 
-
+newdata = []
 with open('./articles.json') as f:
   data = json.load(f)
+#print(len(data[20:22]))
 
 for a in data:
     if a['title'] == None or a['region'] == 'Research':
-        data.remove(a)
+        print('removed')
+        
+        
     else:
         #parse first line of article
-        print(a['title'])
+        #print(a['title'])
+        #print(a)
         geo1 = nlp(a['title'])
         dis1 = nlp1(a['title'])
         
         a['disease'] = 'unknown'
         for X in dis1.ents:
-            print(X.text, X.label_)
+            #print(X.text, X.label_)
             if (X.label_ == 'DISEASE' or X.text == 'COVID-19')and 'death' not in X.text:
                 a['disease'] = X.text
                 
@@ -43,7 +47,7 @@ for a in data:
         if (a['disease'] == 'unknown' and len(a['body']) > 1):
             dis2 = nlp1(a['body'][1])
             for X in dis2.ents:
-                print(X.text, X.label_)
+                #print(X.text, X.label_)
                 if (X.label_ == 'DISEASE' or X.text == 'COVID-19')and 'death' not in X.text:
                     a['disease'] = X.text
                     
@@ -51,7 +55,7 @@ for a in data:
         if (a['disease'] == 'unknown' and len(a['body']) > 2):
             dis2 = nlp1(a['body'][2])
             for X in dis2.ents:
-                print(X.text, X.label_)
+                #print(X.text, X.label_)
                 if (X.label_ == 'DISEASE' or X.text == 'COVID-19')and 'death' not in X.text:
                     a['disease'] = X.text
                     
@@ -59,6 +63,7 @@ for a in data:
        
         loc = []
         a['location'] = 'unknown'
+        #print(a['location'])
         for X in geo1.ents:
             #print(X.text, X.label_)
             if X.label_ == 'GPE':
@@ -77,8 +82,9 @@ for a in data:
                     loc.append(X.text.lower())
                     break 
        # print(loc)
-    
+        #print(a['location'])
+        newdata.append(a)
 
 
-with open('taggedata.json', 'w') as json_file:
-  json.dump(data, json_file)
+with open('taggedata1.json', 'w') as json_file:
+  json.dump(newdata, json_file)

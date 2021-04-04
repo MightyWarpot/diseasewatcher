@@ -32,8 +32,8 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link to='/' className={styles.navLinks}>
-                                Maps
+                            <Link to='/diseasechart' className={styles.navLinks}>
+                                Disease Chart
                             </Link>
                         </li>
                         <li className={styles.navItem}>
