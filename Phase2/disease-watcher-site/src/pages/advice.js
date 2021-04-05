@@ -148,6 +148,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: 10,
         marginTop: 10,
         paddingRight: 5,
+        backgroundColor: "#f4f8fc",
     },
     header1: {
         marginLeft: '3%',
