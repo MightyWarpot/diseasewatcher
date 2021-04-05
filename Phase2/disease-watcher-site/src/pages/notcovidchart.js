@@ -53,7 +53,7 @@ class Notcovidchart extends Component {
         
             let perCapita = false;
             let countryIndexMap = {};
-            console.log(notcovid)
+            //console.log(notcovid)
             let list = notcovid[notcovid.length - 1].list;
             for (var i = 0; i < list.length; i++) {
             let country = list[i]
@@ -781,11 +781,11 @@ class Notcovidchart extends Component {
   activeSeries.tooltip.disabled = true;
   activeSeries.hidden = false;
 
-  let confirmedSeries = addSeries("confirmed", confirmedColor);
-  let recoveredSeries = addSeries("recovered", recoveredColor);
-  let deathsSeries = addSeries("deaths", deathsColor);
-
-  var series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
+  //let confirmedSeries = addSeries("confirmed", confirmedColor);
+  //let recoveredSeries = addSeries("recovered", recoveredColor);
+  //let deathsSeries = addSeries("deaths", deathsColor);
+  var series = { active: activeSeries };
+ // var series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
   // add series
   function addSeries(name, color) {
     let series = lineChart.series.push(new am4charts.LineSeries())
@@ -830,8 +830,8 @@ class Notcovidchart extends Component {
     return series;
   }
 
-
-  var series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
+  var series = { active: activeSeries };
+  // var series = { active: activeSeries, confirmed: confirmedSeries, recovered: recoveredSeries, deaths: deathsSeries };
 
   let columnSeries;
 
@@ -842,9 +842,9 @@ class Notcovidchart extends Component {
       updateColumnsFill();
     })
 
-    columnSeries.confirmed = addColumnSeries("confirmed", confirmedColor);
-    columnSeries.recovered = addColumnSeries("recovered", recoveredColor);
-    columnSeries.deaths = addColumnSeries("deaths", deathsColor);
+    //columnSeries.confirmed = addColumnSeries("confirmed", confirmedColor);
+   // columnSeries.recovered = addColumnSeries("recovered", recoveredColor);
+   // columnSeries.deaths = addColumnSeries("deaths", deathsColor);
   }
 
   // add series
@@ -973,7 +973,7 @@ class Notcovidchart extends Component {
     polygonSeries.dataFields.value = name + "PC";
     
     bubbleSeries.dataItems.each(function(dataItem) {
-      console.log(dataItem.dataContext[currentType])
+      //console.log(dataItem.dataContext[currentType])
       if (dataItem.dataContext['disease'] == 'Z') {
         dataItem.setValue("value", 0);
       }else{
@@ -1059,7 +1059,7 @@ class Notcovidchart extends Component {
     }
     // we delay change of data for better performance (so that data is not changed whil zooming)
     countryDataTimeout = setTimeout(function() {
-      setCountryData(countryIndex);
+      //setCountryData(countryIndex);
     }, 1000); // you can adjust number, 1000 is one second
 
     updateTotals(currentIndex);
@@ -1085,7 +1085,7 @@ class Notcovidchart extends Component {
 
   // change line chart data to the selected countries  
   function setCountryData(countryIndex) {
-      console.log(countryIndex)
+      //console.log(countryIndex)
 
     // instead of setting whole data array, we modify current raw data so that a nice animation would happen
     for (var i = 0; i < notcovid.length; i++) {
@@ -1198,10 +1198,10 @@ class Notcovidchart extends Component {
       let di = notcovid[i];
       let dataContext = lineChart.data[i];
 
-      dataContext.recovered = di.recovered;
-      dataContext.confirmed = di.confirmed;
-      dataContext.deaths = di.deaths;
-      dataContext.active = di.length - 115;
+      //dataContext.recovered = di.recovered;
+     // dataContext.confirmed = di.confirmed;
+     // dataContext.deaths = di.deaths;
+      dataContext.active = di.length;
       valueAxis.min = undefined;
       valueAxis.max = undefined;
     }

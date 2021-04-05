@@ -6,11 +6,11 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Outbreaks from './pages/Outbreaks'
 import Diseasepage from './pages/Diseasepage'
-
+import Advice from './pages/advice'
 
 function App() {
   return (
-    <Router className="App">
+    <Router className="App" >
         <Navbar></Navbar>
         <Switch>
           <Route path='/' exact >
@@ -21,6 +21,10 @@ function App() {
           </Route>
           <Route path='/diseasechart'>
               <Diseasepage> </Diseasepage>
+          </Route>
+          <Route path='/advice'>
+            <Advice> </Advice>
+
           </Route>
         </Switch>
     </Router>

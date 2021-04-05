@@ -36,7 +36,7 @@ class Chart extends Component {
             let currentCountry = "World";
         
             // last date of the data
-            console.log(covid_total_timeline)
+            //console.log(covid_total_timeline)
             let lastDate = new Date(covid_total_timeline[covid_total_timeline.length - 1].date);
             let currentDate = lastDate;
         
@@ -52,7 +52,7 @@ class Chart extends Component {
         
             let perCapita = false;
             let countryIndexMap = {};
-            console.log(covid_world_timeline)
+            //console.log(covid_world_timeline)
             let list = covid_world_timeline[covid_world_timeline.length - 1].list;
             for (var i = 0; i < list.length; i++) {
             let country = list[i]
@@ -1070,7 +1070,7 @@ class Chart extends Component {
 
   // change line chart data to the selected countries  
   function setCountryData(countryIndex) {
-      console.log(covid_world_timeline.length)
+      //console.log(covid_world_timeline.length)
 
     // instead of setting whole data array, we modify current raw data so that a nice animation would happen
     for (var i = 0; i < covid_world_timeline.length; i++) {
@@ -1507,7 +1507,7 @@ class Chart extends Component {
         image.dataItem.dataContext.recovered = di.recovered;
         image.dataItem.dataContext.active = di.confirmed - di.recovered - di.deaths;
       }
-        console.log(image)
+        //console.log(image)
         //previously if (polygon)
       if (polygon && image) {
         let population = Number(populations[image.dataItem.dataContext.id]);

@@ -21,13 +21,13 @@ keywords = ["covid-19", "zika", "mers", "salmonella", "legionnaire", "measles", 
     "listeriosis", "monkeypox", "2019 nCoV"]
 
 newdata = []
-with open('./articles.json') as f:
+with open('./chart.json') as f:
   data = json.load(f)
 #print(len(data[20:22]))
-
+i = 0
 for a in data:
     if a['title'] == None or a['region'] == 'Research':
-        print('removed')
+        i += 1
         
         
     else:
@@ -85,6 +85,6 @@ for a in data:
         #print(a['location'])
         newdata.append(a)
 
-
-with open('taggedata1.json', 'w') as json_file:
+print(i)
+with open('taggedchart.json', 'w') as json_file:
   json.dump(newdata, json_file)

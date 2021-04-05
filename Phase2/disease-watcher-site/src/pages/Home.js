@@ -9,7 +9,7 @@ export default function Home() {
     const styles = useStyles()
 
     return (
-        <div>
+        <div >
             
             <div className={styles.banner}>
                 <Chart> </Chart>
@@ -30,6 +30,9 @@ export default function Home() {
 
 
 var useStyles = makeStyles({
+    main: {
+        background: '#212327' 
+    },
     banner: {
         background: '#212327',
         color: '#aaa',
