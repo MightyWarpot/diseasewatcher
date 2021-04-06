@@ -30,21 +30,24 @@ export default function Advice() {
     return (
         <div>
             <h2 className={styles.header}> Travel Advice </h2>
-            <p className={styles.header}> Enter your destination country </p>
+            <p className={styles.header}> Enter your destination country/SAR </p>
             <div className={styles.container}>
                 <form className={styles.form} noValidate autoComplete="off">
                     <div>
-                        <TextField id="location" label="Country" type="search" onChange={handleTextChange} />
+                        <TextField id="location" label="Country/SAR" type="search" onChange={handleTextChange} />
                     
                     </div>
                     <div className={styles.divB}>
                         <Button variant="contained" color="primary" >Submit</Button>
                     </div>
                     <div className={styles.divT}>
+                    <h1 >
+                           Hong Kong
+                        </h1>
                         <h1 className={styles.overall}>
                             Overall advice: Do not travel   
                         </h1>
-                        <div className={styles.header}> Latest update: 05 April 2021</div>
+                        <div > Latest update: 05 April 2021</div>
                         <div className={styles.box} >
                             <h3 className={styles.header1}> Health </h3>
                             <Box >

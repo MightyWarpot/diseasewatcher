@@ -27,15 +27,16 @@ export default function Navbar() {
                     </Link>
                     <ul className={styles.navMenu}>
                         <li className={styles.navItem}>
-                            <Link to='/outbreaks' className={styles.navLinks}>
-                                Outbreaks
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
                             <Link to='/diseasechart' className={styles.navLinks}>
                                 Disease Chart
                             </Link>
                         </li>
+                        <li className={styles.navItem}>
+                            <Link to='/outbreaks' className={styles.navLinks}>
+                                Search
+                            </Link>
+                        </li>
+                        
                         <li className={styles.navItem}>
                             <Link to='/advice' className={styles.navLinks}>
                                 Travel Advice
