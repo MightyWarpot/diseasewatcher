@@ -1087,7 +1087,7 @@ class Chart extends Component {
         dataContext.active = countryData.confirmed - countryData.recovered - countryData.deaths;
         valueAxis.min = undefined;
         valueAxis.max = undefined;
-       
+        console.log('hi')
       }
       else {
         dataContext.recovered = 0;
@@ -1653,7 +1653,7 @@ class Chart extends Component {
   
     render() {
       return (
-        <div id="chartdiv" style={{ width: "100%", height: "800px" }}></div>
+        <div id="chartdiv" style={{ width: "100%", height: "1000px" }}></div>
       );
     }
   }

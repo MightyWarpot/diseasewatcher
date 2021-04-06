@@ -1675,7 +1675,7 @@ class Notcovidchart extends Component {
     render() {
       return (
         
-          <div id="chartdiv" style={{ width: "100%", height: "800px" }}></div>
+          <div id="chartdiv" style={{ width: "100%", height: "900px" }}></div>
        
         
       );
