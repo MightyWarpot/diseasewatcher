@@ -50,6 +50,7 @@ export default function Outbreaks() {
             console.log(response.data)
             setTable(response.data)
         })
+
     } 
     
     function BasicTable() {
