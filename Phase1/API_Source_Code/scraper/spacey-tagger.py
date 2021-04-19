@@ -6,7 +6,7 @@ import json
 from spacy import displacy
 from collections import Counter
 import en_core_web_sm
-
+import pycountry 
 nlp = en_core_web_sm.load()
 nlp1 = spacy.load("en_ner_bc5cdr_md")
 keywords = ["covid-19", "zika", "mers", "salmonella", "legionnaire", "measles", "anthrax", "botulism", "plague", "smallpox",
@@ -83,8 +83,15 @@ for a in data:
                     break 
        # print(loc)
         #print(a['location'])
-        newdata.append(a)
+        try:
+          country = pycountry.countries.search_fuzzy(a['location'])
+          
+          if  country != None:
+              a['location'] = country[0].name
+        except LookupError:
+            continue
+            
 
 print(i)
 with open('taggedchart.json', 'w') as json_file:
-  json.dump(newdata, json_file)
+  json.dump(data, json_file)

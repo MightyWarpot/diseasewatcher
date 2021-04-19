@@ -13,11 +13,14 @@ am4core.useTheme(am4themes_animated);
 
 
 class Notcovidchart extends Component {
+  
     componentDidMount() {
-        
+      const setCountry = this.props.setCountry
+      const setDisease = this.props.setDisease
+      const setDate = this.props.setDate
         am4core.ready(function() {
             let numberFormatter = new am4core.NumberFormatter();
-
+            
             let backgroundColor = am4core.color("#1e2128");
             let activeColor = am4core.color("#ff8726");
             let confirmedColor = am4core.color("#d21a1a");
@@ -82,7 +85,7 @@ class Notcovidchart extends Component {
               //for (var i = 0; i < data.list.length; i++) {
                   //data.list[i].name = idToName(data.list[i].id);
               //}
-          
+              setDate(data.date)
               return data;
             }
         
@@ -1035,7 +1038,7 @@ class Notcovidchart extends Component {
   function selectCountry(mapPolygon) {
     resetHover();
     polygonSeries.hideTooltip();
-
+    //setCountry
     // if the same country is clicked show world
     if (currentPolygon == mapPolygon) {
       currentPolygon.isActive = false;
@@ -1047,6 +1050,13 @@ class Notcovidchart extends Component {
     currentPolygon = mapPolygon;
     let countryIndex = countryIndexMap[mapPolygon.dataItem.id];
     currentCountry = mapPolygon.dataItem.dataContext.name;
+    setCountry(currentCountry)
+    let image = bubbleSeries.getImageById(mapPolygon.dataItem.id);
+    // console.log(image.dataItem.dataContext.disease)
+    if (image) {
+      setDisease(image.dataItem.dataContext.disease)
+    }
+    
 
     // make others inactive
     polygonSeries.mapPolygons.each(function(polygon) {
@@ -1143,6 +1153,7 @@ class Notcovidchart extends Component {
 
       // make bubble hovered too
       let image = bubbleSeries.getImageById(mapPolygon.dataItem.id);
+      
       if (image) {
         image.dataItem.dataContext.name = mapPolygon.dataItem.dataContext.name;
         image.isHover = true;
@@ -1517,7 +1528,7 @@ class Notcovidchart extends Component {
       let polygon = polygonSeries.getPolygonById(di.id);
     
       if (image) {
-        console.log(di)
+      
         let population = Number(populations[image.dataItem.dataContext.id]);
 
         image.dataItem.dataContext.confirmed = di.confirmed;
@@ -1666,20 +1677,22 @@ class Notcovidchart extends Component {
             
     }
   
-    componentWillUnmount() {
-      if (this.chart) {
-        this.chart.dispose();
-      }
-    }
-  
-    render() {
-      return (
-        
-          <div id="chartdiv" style={{ width: "100%", height: "900px" }}></div>
-       
-        
-      );
+  componentWillUnmount() {
+    if (this.chart) {
+      this.chart.dispose();
     }
   }
+  
+  render() {
+    return (
+      
+        <div id="chartdiv" style={{ width: "70%", height: "900px" }}>
+        </div>
+        
+      
+      
+    );
+  }
+}
   
   export default Notcovidchart;
