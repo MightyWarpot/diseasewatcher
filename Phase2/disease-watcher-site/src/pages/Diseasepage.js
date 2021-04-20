@@ -6,6 +6,10 @@ import Map from './img/map.jpg'
 import Notcovidchart from './notcovidchart.js'
 import Axios from 'axios'
 import Box from '@material-ui/core/Box';
+import Modal from '../components/Modal'
+import styled from 'styled-components';
+
+
 export default function Diseasepage() {
 
     const styles = useStyles()
@@ -14,6 +18,8 @@ export default function Diseasepage() {
     const [date, setDate] = useState()
     const [traveldata, setTravel] = useState()
     const [reportdata, setReport] = useState()
+    const [openM, setOpen] = useState(false)
+    const [moreinfo, setInfo] = useState()
     const API = Axios.create({
       baseURL: 'http://127.0.0.1:8000/',
       headers: {
@@ -30,25 +36,30 @@ export default function Diseasepage() {
 
       }
     })
-    let convertedtime
-    if (date) {
-      convertedtime = new Date(date)
-      let dd = convertedtime.getDate()
-      let month = convertedtime.getMonth() + 1
-      if(dd<10) {
-          dd='0'+dd;
+    
+    const convertdate = (date) => {
+      let convertedtime
+      if (date) {
+        convertedtime = new Date(date)
+        let dd = convertedtime.getDate()
+        let month = convertedtime.getMonth() + 1
+        if(dd<10) {
+            dd='0'+dd;
+        }
+        if(month<10) {
+          month='0'+month;
+        } 
+        convertedtime = dd + "/" + month + "/"  + convertedtime.getFullYear()
       }
-      if(month<10) {
-        month='0'+month;
-      } 
-      convertedtime = dd + "/" + month + "/"  + convertedtime.getFullYear()
+      return convertedtime
     }
+    
     
     const requestInfo = () => {
         
       var location = (typeof country === 'undefined') ? " ": country
       var disease2 = (typeof disease === 'undefined') ? " ": disease
-      var reportAfter = (typeof convertedtime === 'undefined') ? " " : convertedtime
+      var reportAfter = (typeof convertedtime === 'undefined') ? " " : convertdate(date)
       console.log("searching")
 
       API.get(`/outbreak/?location=${location}&disease=${disease2}&start date=${reportAfter}&end date=${reportAfter}`)
@@ -72,7 +83,17 @@ export default function Diseasepage() {
         travelData(country)
       }
     }, [country, disease, date])
-    
+    const moreInfo = (data) => {
+      setInfo(data)
+      setOpen(true)
+    }
+    const HoverText = styled.li`
+      color: #000;
+      :hover {
+        color: grey;
+        cursor: pointer;
+      }
+    `
     return (
         <div>
             
@@ -91,30 +112,50 @@ export default function Diseasepage() {
                     Disease Report
                   </Typography>                                           
                   <Typography paragraph>
-                    {reportdata[0] && <Typography > {reportdata[0].title}</Typography>}
-                    {reportdata[0] && <Box> {reportdata[0].body.slice(0,3).map(line => {
+                    {reportdata && reportdata[0] && <Typography > {reportdata[0].title}</Typography>}
+                    {reportdata && reportdata[0] &&  <Box> {reportdata[0].body.slice(0,3).map(line => {
                       return (<Typography> {line} </Typography>)
                     })} </Box> }
+                    {reportdata && reportdata[0] && <a href={reportdata[0].url}> Link to article </a>}
                   </Typography>
                   <Typography variant="h4" noWrap>
                     Travel Advice
                   </Typography>
                   <Typography paragraph>
-                  {traveldata && <Typography > {traveldata.advisories.description}</Typography>}
+                  {traveldata && <Typography > Published Date: {convertdate(traveldata.publishedDate)}</Typography>}
                     {traveldata && <Typography className={styles.advice}> {traveldata.advisoryText}</Typography>}
                   </Typography>
                   <div className={styles.box} >
-                    <h3 className={styles.header1}> Health Advisories </h3>
+                    <h3 className={styles.header1}> Food/Water Advisories </h3>
                     <Box >
                       
                         {traveldata && traveldata.health.diseasesAndVaccinesInfo
                           && <ul>{traveldata.health.diseasesAndVaccinesInfo['Food/Water'].map(region => {
-                          return (<li> {region.category} </li>)
-                }) }</ul>}
-                      
-                      
+                          return (<HoverText onClick={() => moreInfo(region)}> {region.category} </HoverText>)
+                        }) }</ul>}
                     </Box>
                     </div>
+                    <div className={styles.box} >
+                    <h3 className={styles.header1}> Person-to-Person Advisories </h3>
+                    <Box >
+                      
+                        {traveldata && traveldata.health.diseasesAndVaccinesInfo
+                          && <ul>{traveldata.health.diseasesAndVaccinesInfo['Person-to-Person'].map(region => {
+                          return (<HoverText onClick={() => moreInfo(region)}> {region.category} </HoverText>)
+                        }) }</ul>}
+                    </Box>
+                    </div>
+                    <div className={styles.box} >
+                    <h3 className={styles.header1}> General Health Advisories </h3>
+                    <Box >
+                      
+                        {traveldata && traveldata.health.healthInfo
+                          && <ul>{traveldata.health.healthInfo.map(region => {
+                          return (<HoverText onClick={() => moreInfo(region)}> {region.category} </HoverText>)
+                        }) }</ul>}
+                    </Box>
+                    </div>
+                    <Modal open={openM} handleClose = {() => setOpen(false)} info={moreinfo}> </Modal>
                 </div>
             </div>
             {/* <div className={styles.pageDisplay}>

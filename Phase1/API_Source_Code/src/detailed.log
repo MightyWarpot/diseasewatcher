@@ -2460,3 +2460,597 @@ DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:26:14] "GET /outbreak/?location=Norway&disease=%20&start%20date=20/03/2021&end%20date=20/03/2021 HTTP/1.1" 500 -
 INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United Kingdom'), ('disease', ' '), ('start date', '20/03/2021'), ('end date', '20/03/2021')])>
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:26:24] "GET /outbreak/?location=United%20Kingdom&disease=%20&start%20date=20/03/2021&end%20date=20/03/2021 HTTP/1.1" 500 -
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:werkzeug: * Restarting with stat
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 193-348-907
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Norway'), ('disease', ' '), ('start date', '20/03/2021'), ('end date', '20/03/2021')])>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:26:44] "GET /outbreak/?location=Norway&disease=%20&start%20date=20/03/2021&end%20date=20/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 159.263 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:28:15] "GET /outbreak/?location=China&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 802.236 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:29:51] "GET /outbreak/?location=China&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 693.625 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:29:59] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 525.843 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:30:34] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 666.665 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:32:26] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 135.43 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:32:54] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 893.803 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:33:12] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 898.25 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:36:54] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 160.969 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:17] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '02/04/2021'), ('end date', '02/04/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '31/03/2021'), ('end date', '31/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '19/03/2021'), ('end date', '19/03/2021')])>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:31] "GET /outbreak/?location=India&disease=%20&start%20date=31/03/2021&end%20date=31/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Query took 953.872 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:32] "GET /outbreak/?location=India&disease=%20&start%20date=02/04/2021&end%20date=02/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 70.979 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:32] "GET /outbreak/?location=India&disease=%20&start%20date=19/03/2021&end%20date=19/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '20/03/2021'), ('end date', '20/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '26/03/2021'), ('end date', '26/03/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:47] "GET /outbreak/?location=India&disease=%20&start%20date=20/03/2021&end%20date=20/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '31/03/2021'), ('end date', '31/03/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:47] "GET /outbreak/?location=India&disease=%20&start%20date=31/03/2021&end%20date=31/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 176.617 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:48] "GET /outbreak/?location=India&disease=%20&start%20date=26/03/2021&end%20date=26/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 411.832 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:49] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '30/03/2021'), ('end date', '30/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '26/03/2021'), ('end date', '26/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '25/03/2021'), ('end date', '25/03/2021')])>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '24/03/2021'), ('end date', '24/03/2021')])>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:38:59] "GET /outbreak/?location=India&disease=%20&start%20date=25/03/2021&end%20date=25/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '23/03/2021'), ('end date', '23/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '15/03/2021'), ('end date', '15/03/2021')])>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:00] "GET /outbreak/?location=India&disease=%20&start%20date=23/03/2021&end%20date=23/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '05/03/2021'), ('end date', '05/03/2021')])>
+INFO:flask.app:Query took 207.465 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:00] "GET /outbreak/?location=India&disease=%20&start%20date=30/03/2021&end%20date=30/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '02/03/2021'), ('end date', '02/03/2021')])>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:flask.app:Query took 580.804 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:01] "GET /outbreak/?location=India&disease=%20&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '28/02/2021'), ('end date', '28/02/2021')])>
+INFO:flask.app:Query took 620.841 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:01] "GET /outbreak/?location=India&disease=%20&start%20date=26/03/2021&end%20date=26/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '27/02/2021'), ('end date', '27/02/2021')])>
+INFO:flask.app:Query took 239.405 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:01] "GET /outbreak/?location=India&disease=%20&start%20date=24/03/2021&end%20date=24/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:flask.app:Query took 116.943 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:04] "GET /outbreak/?location=India&disease=%20&start%20date=05/03/2021&end%20date=05/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 172.994 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:04] "GET /outbreak/?location=India&disease=%20&start%20date=02/03/2021&end%20date=02/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 221.038 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:04] "GET /outbreak/?location=India&disease=%20&start%20date=15/03/2021&end%20date=15/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 395.054 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:05] "GET /outbreak/?location=India&disease=%20&start%20date=28/02/2021&end%20date=28/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 412.069 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:05] "GET /outbreak/?location=India&disease=%20&start%20date=27/02/2021&end%20date=27/02/2021 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:05] "GET /outbreak/?location=India&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:10] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:11] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:39:12] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:flask.app:Query took 91.376 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:40] "OPTIONS /outbreak/?location=El%20Salvador&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:41] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '26/02/2021'), ('end date', '26/02/2021')])>
+INFO:flask.app:Query took 121.918 milliseconds
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '28/02/2021'), ('end date', '28/02/2021')])>
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Query took 123.92 milliseconds
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:54] "OPTIONS /outbreak/?location=El%20Salvador&disease=%20&start%20date=26/02/2021&end%20date=26/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:54] "OPTIONS /outbreak/?location=El%20Salvador&disease=%20&start%20date=28/02/2021&end%20date=28/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '26/02/2021'), ('end date', '26/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '28/02/2021'), ('end date', '28/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '05/03/2021'), ('end date', '05/03/2021')])>
+INFO:flask.app:Query took 254.039 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:54] "OPTIONS /outbreak/?location=El%20Salvador&disease=%20&start%20date=05/03/2021&end%20date=05/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '05/03/2021'), ('end date', '05/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '07/03/2021'), ('end date', '07/03/2021')])>
+INFO:flask.app:Query took 306.086 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:54] "OPTIONS /outbreak/?location=El%20Salvador&disease=%20&start%20date=07/03/2021&end%20date=07/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '07/03/2021'), ('end date', '07/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '08/03/2021'), ('end date', '08/03/2021')])>
+INFO:flask.app:Query took 364.138 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:55] "OPTIONS /outbreak/?location=El%20Salvador&disease=%20&start%20date=08/03/2021&end%20date=08/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '08/03/2021'), ('end date', '08/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:flask.app:Query took 421.191 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:55] "OPTIONS /outbreak/?location=El%20Salvador&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'El Salvador'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:flask.app:Query took 750.094 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:58] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=26/02/2021&end%20date=26/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 790.289 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:58] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=28/02/2021&end%20date=28/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 96.831 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Query took 110.843 milliseconds
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:58] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=07/03/2021&end%20date=07/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:58] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=05/03/2021&end%20date=05/03/2021 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:58] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=08/03/2021&end%20date=08/03/2021 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:41:58] "GET /outbreak/?location=El%20Salvador&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:flask.app:Query took 876.553 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:43:19] "OPTIONS /outbreak/?location=Saudi%20Arabia&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 879.555 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:43:19] "OPTIONS /outbreak/?location=Saudi%20Arabia&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:43:20] "GET /outbreak/?location=Saudi%20Arabia&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:43:21] "GET /outbreak/?location=Saudi%20Arabia&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:43:21] "GET /outbreak/?location=Saudi%20Arabia&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:flask.app:Query took 523.189 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:43:57] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '10/03/2021'), ('end date', '10/03/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:43:57] "GET /outbreak/?location=China&disease=%20&start%20date=10/03/2021&end%20date=10/03/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 23.041 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:13] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 803.752 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:14] "GET /outbreak/?location=China&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 641.033 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:15] "OPTIONS /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'India'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 403.727 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'India: Chickenpox outbreak reported in Bihar’s Gaya district', 'date': 'April 3, 2021', 'location': 'India', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/india-chickenpox-outbreak-reported-in-bihars-gaya-district-57323/', 'disease': 'Chickenpox', 'body': ['By NewsDesk\xa0\xa0', ' are reporting a chickenpox outbreak that has affected hundreds of people across all age groups in Bihar’s Gaya district in eastern India.', 'Village officials say, “Health officials of Gaya have never visited our village since the chicken pox break out began.”', 'K.K. Rai, the civil surgeon of Gaya said: “We have learnt about the disease in villages falling under Pairaiya block and a team of medical officers were sent there for inspection on Friday.', '“We will take action after the reports from the medical team.”', '“We have asked villagers to keep the patients indoor and sanitize the area. It is equally important apart from medical assistance to the patients,” Rai said.', 'Chickenpox (varicella) is easily passed from one person to another through the air by coughing or sneezing or through the fluid from a blister of a person who has chickenpox.\xa0 Although it is usually not a serious illness, it often causes children and their parents to miss days at school and work. Most cases of chickenpox in healthy children are treated with bed rest, fluids, and fever control.', 'Chickenpox can be more severe and cause more complications in immunocompromised persons, children younger than 1 year of age and adults. Severe complications include bacterial skin infections, bloodstream infections, pneumonia, encephalitis (infection of the brain) and death.', 'It is important to be aware that even healthy children and adults may develop serious complications and die from varicella. Another high-risk group is pregnant women who, if they become ill with varicella, can have pregnancy complications.\xa0Not only is chickenpox painful, but once you have been infected with chickenpox, you are at risk of getting shingles later in life, which is also very painful and can cause lasting chronic pain in adults.', 'The chickenpox vaccine is the best way to prevent becoming ill and spreading the varicella virus. It is very safe and prevents almost all cases of severe illness.', '\xa0', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:16] "GET /outbreak/?location=India&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 879.327 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:35] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 629.009 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:36] "GET /outbreak/?location=China&disease=%20&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '16/03/2021'), ('end date', '16/03/2021')])>
+INFO:flask.app:Query took 361.083 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:41] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=16/03/2021&end%20date=16/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '16/03/2021'), ('end date', '16/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '04/03/2021'), ('end date', '04/03/2021')])>
+INFO:flask.app:Query took 434.149 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:41] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=04/03/2021&end%20date=04/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '04/03/2021'), ('end date', '04/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '27/02/2021'), ('end date', '27/02/2021')])>
+INFO:flask.app:Query took 504.213 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:41] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=27/02/2021&end%20date=27/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '27/02/2021'), ('end date', '27/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '26/02/2021'), ('end date', '26/02/2021')])>
+INFO:flask.app:Query took 624.323 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:41] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=26/02/2021&end%20date=26/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:flask.app:Query took 629.328 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:41] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '26/02/2021'), ('end date', '26/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '25/02/2021'), ('end date', '25/02/2021')])>
+INFO:flask.app:Query took 133.221 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:43] "GET /outbreak/?location=China&disease=%20&start%20date=16/03/2021&end%20date=16/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 422.233 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:44] "GET /outbreak/?location=China&disease=%20&start%20date=04/03/2021&end%20date=04/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 664.639 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:44] "GET /outbreak/?location=China&disease=%20&start%20date=27/02/2021&end%20date=27/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 698.67 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:44] "GET /outbreak/?location=China&disease=%20&start%20date=26/02/2021&end%20date=26/02/2021 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:44] "GET /outbreak/?location=China&disease=%20&start%20date=25/02/2021&end%20date=25/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '21/02/2021'), ('end date', '21/02/2021')])>
+INFO:flask.app:Query took 582.577 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:55] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=21/02/2021&end%20date=21/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '21/02/2021'), ('end date', '21/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '20/02/2021'), ('end date', '20/02/2021')])>
+INFO:flask.app:Query took 635.625 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:55] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=20/02/2021&end%20date=20/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '20/02/2021'), ('end date', '20/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '10/02/2021'), ('end date', '10/02/2021')])>
+INFO:flask.app:Query took 709.693 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:55] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=10/02/2021&end%20date=10/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '10/02/2021'), ('end date', '10/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '05/02/2021'), ('end date', '05/02/2021')])>
+INFO:flask.app:Query took 776.755 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:55] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=05/02/2021&end%20date=05/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '05/02/2021'), ('end date', '05/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '04/02/2021'), ('end date', '04/02/2021')])>
+INFO:flask.app:Query took 834.808 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:55] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=04/02/2021&end%20date=04/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '04/02/2021'), ('end date', '04/02/2021')])>
+INFO:flask.app:Query took 483.051 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:58] "GET /outbreak/?location=China&disease=%20&start%20date=21/02/2021&end%20date=21/02/2021 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:58] "GET /outbreak/?location=China&disease=%20&start%20date=20/02/2021&end%20date=20/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '11/02/2021'), ('end date', '11/02/2021')])>
+INFO:flask.app:Query took 810.337 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:58] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=11/02/2021&end%20date=11/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '11/02/2021'), ('end date', '11/02/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:58] "GET /outbreak/?location=China&disease=%20&start%20date=10/02/2021&end%20date=10/02/2021 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:58] "GET /outbreak/?location=China&disease=%20&start%20date=04/02/2021&end%20date=04/02/2021 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:58] "GET /outbreak/?location=China&disease=%20&start%20date=05/02/2021&end%20date=05/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '05/02/2021'), ('end date', '05/02/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 989.5 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:44:58] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:00] "GET /outbreak/?location=China&disease=%20&start%20date=11/02/2021&end%20date=11/02/2021 HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:00] "GET /outbreak/?location=China&disease=%20&start%20date=05/02/2021&end%20date=05/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Query took 986.317 milliseconds
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '05/02/2021'), ('end date', '05/02/2021')])>
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:00] "GET /outbreak/?location=China&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:01] "GET /outbreak/?location=China&disease=%20&start%20date=05/02/2021&end%20date=05/02/2021 HTTP/1.1" 500 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 589.061 milliseconds
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Query took 591.062 milliseconds
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:05] "OPTIONS /outbreak/?location=Democratic%20Republic%20of%20Congo&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:05] "OPTIONS /outbreak/?location=Democratic%20Republic%20of%20Congo&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 355.758 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:06] "GET /outbreak/?location=Democratic%20Republic%20of%20Congo&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 87.917 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:06] "GET /outbreak/?location=Democratic%20Republic%20of%20Congo&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'South Africa'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 884.805 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'South Africa'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:34] "OPTIONS /outbreak/?location=South%20Africa&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 887.808 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:34] "OPTIONS /outbreak/?location=South%20Africa&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'South Africa'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 651.503 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Illinois reports B.1.351 COVID-19 variant, ‘We expected to see more cases of variants’', 'date': 'February 12, 2021', 'location': 'South Africa', 'region': 'US News', 'url': 'http://outbreaknewstoday.com/illinois-reports-b-1-351-covid-19-variant-we-expected-to-see-more-cases-of-variants-95594/', 'disease': 'coronavirus disease', 'body': ['By NewsDesk\xa0\xa0', 'The Illinois Department of Public Health (IDPH)\xa0 announced Thursday the first case of coronavirus disease (COVID-19) variant B.1.351, which was first identified in South Africa.\xa0 The Centers for Disease Control and Prevention (CDC) confirmed the variant in a Rock Island resident. \xa0Illinois is currently reporting 22 cases of the B.1.1.7 variant, first identified in the United Kingdom.', '“We expected to see more cases of variants detected in Illinois, including the B.1.351 strain,” said IDPH Director Dr. Ngozi Ezike.\xa0 “These variants seem to spread more rapidly, which can lead to more cases of COVID-19 and even another surge.\xa0 Our best path to defeating this virus as quickly as possible remains wearing our masks and getting vaccinated when it’s our turn.”', '“Having this new variant in our community underscores the need to take personal precautions to prevent further spread. \xa0Please continue to wear your mask when away from home, watch your distance when around others and wash your hands frequently,” said Rock Island County Health Department Administrator Nita Ludwig.', 'Cases of the B.1.351 were first reported in the U.S. at the end of January.\xa0 So far, studies suggest that antibodies generated through the current COVID-19 vaccines recognize these variants and may offer some protection.\xa0 Additional studies are underway.', 'Viruses constantly change and new variants are expected. \xa0In addition to the B.1.1.7 and B.1.351 variants, the P.1 variant has emerged in Brazil.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:35] "GET /outbreak/?location=South%20Africa&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'South Africa'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 408.905 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Illinois reports B.1.351 COVID-19 variant, ‘We expected to see more cases of variants’', 'date': 'February 12, 2021', 'location': 'South Africa', 'region': 'US News', 'url': 'http://outbreaknewstoday.com/illinois-reports-b-1-351-covid-19-variant-we-expected-to-see-more-cases-of-variants-95594/', 'disease': 'coronavirus disease', 'body': ['By NewsDesk\xa0\xa0', 'The Illinois Department of Public Health (IDPH)\xa0 announced Thursday the first case of coronavirus disease (COVID-19) variant B.1.351, which was first identified in South Africa.\xa0 The Centers for Disease Control and Prevention (CDC) confirmed the variant in a Rock Island resident. \xa0Illinois is currently reporting 22 cases of the B.1.1.7 variant, first identified in the United Kingdom.', '“We expected to see more cases of variants detected in Illinois, including the B.1.351 strain,” said IDPH Director Dr. Ngozi Ezike.\xa0 “These variants seem to spread more rapidly, which can lead to more cases of COVID-19 and even another surge.\xa0 Our best path to defeating this virus as quickly as possible remains wearing our masks and getting vaccinated when it’s our turn.”', '“Having this new variant in our community underscores the need to take personal precautions to prevent further spread. \xa0Please continue to wear your mask when away from home, watch your distance when around others and wash your hands frequently,” said Rock Island County Health Department Administrator Nita Ludwig.', 'Cases of the B.1.351 were first reported in the U.S. at the end of January.\xa0 So far, studies suggest that antibodies generated through the current COVID-19 vaccines recognize these variants and may offer some protection.\xa0 Additional studies are underway.', 'Viruses constantly change and new variants are expected. \xa0In addition to the B.1.1.7 and B.1.351 variants, the P.1 variant has emerged in Brazil.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:45:36] "GET /outbreak/?location=South%20Africa&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'South Africa'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 472.989 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:51:03] "OPTIONS /outbreak/?location=South%20Africa&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'South Africa'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 263.002 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Illinois reports B.1.351 COVID-19 variant, ‘We expected to see more cases of variants’', 'date': 'February 12, 2021', 'location': 'South Africa', 'region': 'US News', 'url': 'http://outbreaknewstoday.com/illinois-reports-b-1-351-covid-19-variant-we-expected-to-see-more-cases-of-variants-95594/', 'disease': 'coronavirus disease', 'body': ['By NewsDesk\xa0\xa0', 'The Illinois Department of Public Health (IDPH)\xa0 announced Thursday the first case of coronavirus disease (COVID-19) variant B.1.351, which was first identified in South Africa.\xa0 The Centers for Disease Control and Prevention (CDC) confirmed the variant in a Rock Island resident. \xa0Illinois is currently reporting 22 cases of the B.1.1.7 variant, first identified in the United Kingdom.', '“We expected to see more cases of variants detected in Illinois, including the B.1.351 strain,” said IDPH Director Dr. Ngozi Ezike.\xa0 “These variants seem to spread more rapidly, which can lead to more cases of COVID-19 and even another surge.\xa0 Our best path to defeating this virus as quickly as possible remains wearing our masks and getting vaccinated when it’s our turn.”', '“Having this new variant in our community underscores the need to take personal precautions to prevent further spread. \xa0Please continue to wear your mask when away from home, watch your distance when around others and wash your hands frequently,” said Rock Island County Health Department Administrator Nita Ludwig.', 'Cases of the B.1.351 were first reported in the U.S. at the end of January.\xa0 So far, studies suggest that antibodies generated through the current COVID-19 vaccines recognize these variants and may offer some protection.\xa0 Additional studies are underway.', 'Viruses constantly change and new variants are expected. \xa0In addition to the B.1.1.7 and B.1.351 variants, the P.1 variant has emerged in Brazil.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:51:03] "GET /outbreak/?location=South%20Africa&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 49.274 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:51:25] "OPTIONS /outbreak/?location=China&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 815.971 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:51:26] "GET /outbreak/?location=China&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 964.57 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:51:48] "OPTIONS /outbreak/?location=United%20States&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 780.314 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Congenital syphilis in New Mexico: Updated legislation advances in Senate', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/congenital-syphilis-in-new-mexico-updated-legislation-advances-in-senate-73226/', 'disease': 'Congenital syphilis', 'body': ['The New Mexico Department of Health (DOH) on Thursday shared an update about key legislation intended to combat congenital syphilis in New Mexico.', 'Syphilis during pregnancy can lead to serious birth defects and infant death – and is entirely preventable with timely testing and treatment of pregnant mothers. In New Mexico, cases of congenital syphilis – meaning syphilis among newborns – have increased sharply in recent years, from just 6 cases in 2017 to an alarming 26 cases in 2019.\xa0 This follows national trends, with far more syphilis cases among heterosexual women of child-bearing age over the past five years.', 'In states with high syphilis prevalence, current guidelines from the federal Centers for Disease Control and Prevention (CDC) recommend testing of pregnant women on three separate occasions: 1) at the first prenatal visit, 2) during the third trimester, and 3) at delivery.', 'However, language in the New Mexico Public Health Act related to syphilis has not been revised in over 40 years. As such, the language is out of step with current medical knowledge and CDC guidance.', 'Senate Bill 184, carried by Senator Elizabeth “Liz” Stefanics (Santa Fe) and Representative Joanne J. Ferrary (Las Cruces), seeks to address this challenge. The proposed legislation will update the Public Health Act, Section 24-1-10, to remove outdated language requiring a single blood test as well as outdated language about how testing is implemented. In its place will be simple language directing all physicians who examine pregnant women for conditions related to pregnancy to follow current CDC guidelines, which reflect the best science and medical knowledge. Increased testing of pregnant women can catch syphilis early, allowing timely treatment that prevents infections from being passed to their children. By referencing CDC guidelines and best practices, this legislation will not need to be amended again as syphilis case rates rise and fall over time.', '\n']}, {'title': 'New Mexico reports 1st plague case of year in Los Alamos County cat', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Animal diseases', 'url': 'http://outbreaknewstoday.com/new-mexico-reports-1st-plague-case-of-year-in-los-alamos-county-cat-39505/', 'disease': 'unknown', 'body': ['By News Desk\xa0\xa0', 'A cat in Los Alamos County has been diagnosed with plague, making it the first plague case in New Mexico this year, according to the New Mexico Department of Health (', ').', 'The cat, which became ill in early January, has now recovered following veterinary treatment.', '“', 'said Secretary-Designate Dr. Tracie Collins.', 'Plague is a bacterial disease in wildlife and is generally transmitted to pets through the bites of infected fleas or after eating an infected animal. Humans can also contract plague via infected fleas or direct contact with infected animals.', 'Symptoms of plague in humans include sudden onset of fever, chills, headache, and weakness. In most cases there is a painful swelling of the lymph node in the groin, armpit or neck area. Plague symptoms in cats and dogs are fever, lethargy and loss of appetite; there may be swelling in the lymph nodes under the jaw. With prompt diagnosis and appropriate antibiotic treatment, the probability of death in people and pets can be greatly reduced.', 'To prevent plague, NMDOH advises:']}, {'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:51:49] "GET /outbreak/?location=United%20States&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 764.675 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:54:18] "OPTIONS /outbreak/?location=United%20States&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', ' '), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 612.193 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Congenital syphilis in New Mexico: Updated legislation advances in Senate', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/congenital-syphilis-in-new-mexico-updated-legislation-advances-in-senate-73226/', 'disease': 'Congenital syphilis', 'body': ['The New Mexico Department of Health (DOH) on Thursday shared an update about key legislation intended to combat congenital syphilis in New Mexico.', 'Syphilis during pregnancy can lead to serious birth defects and infant death – and is entirely preventable with timely testing and treatment of pregnant mothers. In New Mexico, cases of congenital syphilis – meaning syphilis among newborns – have increased sharply in recent years, from just 6 cases in 2017 to an alarming 26 cases in 2019.\xa0 This follows national trends, with far more syphilis cases among heterosexual women of child-bearing age over the past five years.', 'In states with high syphilis prevalence, current guidelines from the federal Centers for Disease Control and Prevention (CDC) recommend testing of pregnant women on three separate occasions: 1) at the first prenatal visit, 2) during the third trimester, and 3) at delivery.', 'However, language in the New Mexico Public Health Act related to syphilis has not been revised in over 40 years. As such, the language is out of step with current medical knowledge and CDC guidance.', 'Senate Bill 184, carried by Senator Elizabeth “Liz” Stefanics (Santa Fe) and Representative Joanne J. Ferrary (Las Cruces), seeks to address this challenge. The proposed legislation will update the Public Health Act, Section 24-1-10, to remove outdated language requiring a single blood test as well as outdated language about how testing is implemented. In its place will be simple language directing all physicians who examine pregnant women for conditions related to pregnancy to follow current CDC guidelines, which reflect the best science and medical knowledge. Increased testing of pregnant women can catch syphilis early, allowing timely treatment that prevents infections from being passed to their children. By referencing CDC guidelines and best practices, this legislation will not need to be amended again as syphilis case rates rise and fall over time.', '\n']}, {'title': 'New Mexico reports 1st plague case of year in Los Alamos County cat', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Animal diseases', 'url': 'http://outbreaknewstoday.com/new-mexico-reports-1st-plague-case-of-year-in-los-alamos-county-cat-39505/', 'disease': 'unknown', 'body': ['By News Desk\xa0\xa0', 'A cat in Los Alamos County has been diagnosed with plague, making it the first plague case in New Mexico this year, according to the New Mexico Department of Health (', ').', 'The cat, which became ill in early January, has now recovered following veterinary treatment.', '“', 'said Secretary-Designate Dr. Tracie Collins.', 'Plague is a bacterial disease in wildlife and is generally transmitted to pets through the bites of infected fleas or after eating an infected animal. Humans can also contract plague via infected fleas or direct contact with infected animals.', 'Symptoms of plague in humans include sudden onset of fever, chills, headache, and weakness. In most cases there is a painful swelling of the lymph node in the groin, armpit or neck area. Plague symptoms in cats and dogs are fever, lethargy and loss of appetite; there may be swelling in the lymph nodes under the jaw. With prompt diagnosis and appropriate antibiotic treatment, the probability of death in people and pets can be greatly reduced.', 'To prevent plague, NMDOH advises:']}, {'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:54:19] "GET /outbreak/?location=United%20States&disease=%20&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', 'pain'), ('start date', '12/02/2021')])>
+INFO:flask.app:Query took 200.055 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:55:27] "GET /outbreak/?location=United%20States&disease=pain&start%20date=12%2F02%2F2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', 'pain'), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 716.08 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:56:49] "OPTIONS /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', 'pain'), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 561.185 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:56:50] "GET /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', 'pain'), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 125.073 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:58:51] "OPTIONS /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', 'pain'), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 993.342 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:58:52] "GET /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', 'pain'), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 548.562 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:58:57] "OPTIONS /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'United States'), ('disease', 'pain'), ('start date', '12/02/2021'), ('end date', '12/02/2021')])>
+INFO:flask.app:Query took 401.339 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:58:58] "GET /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
