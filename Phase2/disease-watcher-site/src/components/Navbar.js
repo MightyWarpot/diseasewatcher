@@ -43,8 +43,8 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link to='/' className={styles.navLinks}>
-                                FAQ
+                            <Link to='/Learn' className={styles.navLinks}>
+                                Diseases
                             </Link>
                         </li>  
                     </ul>

@@ -3054,3 +3054,321 @@ INFO:flask.app:Query took 401.339 milliseconds
 INFO:flask.app:Response sent: 200
 INFO:flask.app:Response sent: [{'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:58:58] "GET /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+INFO:werkzeug: * Restarting with stat
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-875-245
+INFO:werkzeug: * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+DEBUG:pymongo.ocsp_support:OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+DEBUG:pymongo.ocsp_support:Verifying response
+DEBUG:pymongo.ocsp_support:Responder is issuer
+DEBUG:pymongo.ocsp_support:Caching OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 100.716 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:46:47] "[37mOPTIONS /outbreak/?location=Kenya&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+INFO:server:Query took 332.853 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:46:47] "[37mGET /outbreak/?location=Kenya&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 801.312 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:48:44] "[37mOPTIONS /outbreak/?location=Kenya&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 874.312 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:48:44] "[37mGET /outbreak/?location=Kenya&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Tanzania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 599.411 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:48:49] "[37mOPTIONS /outbreak/?location=Tanzania&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Tanzania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 655.044 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:48:49] "[37mGET /outbreak/?location=Tanzania&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 106.229 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:48:50] "[37mOPTIONS /outbreak/?location=Democratic%20Republic%20of%20Congo&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 181.129 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:48:50] "[37mGET /outbreak/?location=Democratic%20Republic%20of%20Congo&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 199.304 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:53:51] "[37mOPTIONS /outbreak/?location=Mauritania&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 254.308 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:53:51] "[37mGET /outbreak/?location=Mauritania&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mali'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 256.291 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:53:52] "[37mOPTIONS /outbreak/?location=Mali&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mali'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 324.354 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:53:52] "[37mGET /outbreak/?location=Mali&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 316.752 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:53:59] "[37mOPTIONS /outbreak/?location=Mauritania&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 377.189 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:53:59] "[37mGET /outbreak/?location=Mauritania&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Yemen'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 82.376 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 15:01:18] "[37mOPTIONS /outbreak/?location=Yemen&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Yemen'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 169.134 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 15:01:18] "[37mGET /outbreak/?location=Yemen&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Madagascar'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 499.099 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 15:01:38] "[37mOPTIONS /outbreak/?location=Madagascar&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Madagascar'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 558.674 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 15:01:39] "[37mGET /outbreak/?location=Madagascar&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Pakistan'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 748.426 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 15:03:13] "[37mOPTIONS /outbreak/?location=Pakistan&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+INFO:server:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Pakistan'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:server:Query took 857.301 milliseconds
+INFO:server:Response sent: 200
+INFO:server:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 15:03:13] "[37mGET /outbreak/?location=Pakistan&disease=Z&start%20date=%20&end%20date= HTTP/1.1[0m" 200 -
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>
+DEBUG:pymongo.ocsp_support:Peer did not staple an OCSP response
+DEBUG:pymongo.ocsp_support:Requesting OCSP data
+DEBUG:pymongo.ocsp_support:Trying http://r3.o.lencr.org
+DEBUG:pymongo.ocsp_support:Using cached OCSP response.
+DEBUG:pymongo.ocsp_support:OCSP cert status: <OCSPCertStatus.GOOD: 0>

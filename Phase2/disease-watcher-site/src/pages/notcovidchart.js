@@ -152,6 +152,7 @@ class Notcovidchart extends Component {
             mapChart.projection = new am4maps.projections.Miller();
   mapChart.panBehavior = "move";
 
+
   // when map is globe, beackground is made visible
   mapChart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.05;
   mapChart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");
@@ -183,6 +184,18 @@ class Notcovidchart extends Component {
   polygonTemplate.events.on("hit", handleCountryHit);
   polygonTemplate.events.on("over", handleCountryOver);
   polygonTemplate.events.on("out", handleCountryOut);
+
+  var tooltip = false
+
+  polygonTemplate.events.once("over", function() {
+    setTimeout(function() {
+      if(!tooltip){
+        mapChart.openPopup("Use the Slider to check outbreaks for different dates <br/> <br/>Outbreaks are labelled by orange circles, click on one of them to see details about the outbreak");
+      }
+      tooltip = true
+    }, 10);
+  }, this);
+
 
 
   polygonSeries.heatRules.push({

@@ -987,3 +987,83 @@ Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict
 Query took 401.339 milliseconds
 Response sent: 200
 Response sent: [{'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 100.716 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 332.853 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 801.312 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Kenya'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 874.312 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Tanzania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 599.411 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Tanzania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 655.044 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 106.229 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Democratic Republic of Congo'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 181.129 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 199.304 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 254.308 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mali'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 256.291 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mali'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 324.354 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 316.752 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Mauritania'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 377.189 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Yemen'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 82.376 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Yemen'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 169.134 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Madagascar'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 499.099 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Madagascar'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 558.674 milliseconds
+Response sent: 200
+Response sent: []
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Pakistan'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 748.426 milliseconds
+Response sent: 200
+Response sent: None
+Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Pakistan'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+Query took 857.301 milliseconds
+Response sent: 200
+Response sent: []

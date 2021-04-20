@@ -1,0 +1,318 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 64917,
+      "max": [
+        141.90046691894531,
+        144.98954772949219,
+        141.39035034179688
+      ],
+      "min": [
+        -134.11128234863281,
+        -132.77383422851562,
+        -130.08879089355469
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 779004,
+      "componentType": 5126,
+      "count": 64917,
+      "max": [
+        0.99999856948852539,
+        0.99992072582244873,
+        0.99985730648040771
+      ],
+      "min": [
+        -0.99992263317108154,
+        -0.9998658299446106,
+        -0.99997085332870483
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 64917,
+      "max": [
+        0.99691933393478394,
+        0.99999940395355225,
+        0.99999696016311646,
+        1
+      ],
+      "min": [
+        -0.99892479181289673,
+        -0.99842166900634766,
+        -0.9999086856842041,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 64917,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0.13400006294250488
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 272160,
+      "max": [
+        64916
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1558008,
+      "componentType": 5126,
+      "count": 6240,
+      "max": [
+        88.508377075195312,
+        91.984657287597656,
+        90.662895202636719
+      ],
+      "min": [
+        -92.172737121582031,
+        -96.803146362304688,
+        -99.104476928710938
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1632888,
+      "componentType": 5126,
+      "count": 6240,
+      "max": [
+        0.9993433952331543,
+        0.99935412406921387,
+        0.99986308813095093
+      ],
+      "min": [
+        -0.99923336505889893,
+        -0.99877321720123291,
+        -0.99993783235549927
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 1038672,
+      "componentType": 5126,
+      "count": 6240,
+      "max": [
+        0.99108004570007324,
+        0.99339073896408081,
+        0.99882477521896362,
+        1
+      ],
+      "min": [
+        -0.99371492862701416,
+        -0.99538683891296387,
+        -0.97069400548934937,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 519336,
+      "componentType": 5126,
+      "count": 6240,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1088640,
+      "componentType": 5125,
+      "count": 15072,
+      "max": [
+        6239
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "tumblindwnagain (https://sketchfab.com/tumblindwnagain)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/spore-c-ec0aafdd77b9450d80b0186ed4aa3d0c",
+      "title": "SPORE C"
+    },
+    "generator": "Sketchfab-4.61.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1148928,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 569256,
+      "byteOffset": 1148928,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1707768,
+      "byteOffset": 1718184,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1138512,
+      "byteOffset": 3425952,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 4564464,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "default",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        4
+      ],
+      "name": "SPORE_C.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    },
+    {
+      "mesh": 1,
+      "name": ""
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+
