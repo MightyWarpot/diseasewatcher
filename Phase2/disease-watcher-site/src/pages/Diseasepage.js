@@ -13,17 +13,20 @@ export default function Diseasepage() {
     const [disease, setDisease] = useState()
     const [date, setDate] = useState()
     const [traveldata, setTravel] = useState()
+    const [reportdata, setReport] = useState()
     const API = Axios.create({
-      baseURL: 'https://cors-anywhere.herokuapp.com/disease-watcher.herokuapp.com/',
+      baseURL: 'http://127.0.0.1:8000/',
       headers: {
-          'content-type': 'application/json'
+          'content-type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
       }
     })
     const TravelAPI = Axios.create({
       baseURL: 'https://api.tugo.com/v1/travelsafe/countries/',
       headers: {
           'content-type': 'application/json',
-          'X-Auth-API-Key': '2ndchevugmej6p4whk6zjebg'
+          'X-Auth-API-Key': '2ndchevugmej6p4whk6zjebg',
+          'Access-Control-Allow-Origin': '*',
 
       }
     })
@@ -44,14 +47,14 @@ export default function Diseasepage() {
     const requestInfo = () => {
         
       var location = (typeof country === 'undefined') ? " ": country
-      var disease = (typeof disease === 'undefined') ? " ": disease
+      var disease2 = (typeof disease === 'undefined') ? " ": disease
       var reportAfter = (typeof convertedtime === 'undefined') ? " " : convertedtime
       console.log("searching")
 
-      API.get(`/outbreak/?location=${location}&disease=${disease}&start date=${reportAfter}`)
+      API.get(`/outbreak/?location=${location}&disease=${disease2}&start date=${reportAfter}&end date=${reportAfter}`)
       .then((response) => {
-          console.log(response)
-          // setTable(response.data)
+          console.log(response.data)
+          setReport(response.data)
       })
     } 
     const travelData = (country) => {
@@ -68,7 +71,7 @@ export default function Diseasepage() {
         requestInfo()
         travelData(country)
       }
-    }, [country])
+    }, [country, disease, date])
     
     return (
         <div>
@@ -82,14 +85,18 @@ export default function Diseasepage() {
                           Find out more
                     </Button>
                 </div> */}
+                {/* <div> {country} {disease} {date}</div> */}
                 <div className={styles.content}>
-                  <Typography variant="h6" noWrap>
+                  <Typography variant="h4" noWrap>
                     Disease Report
-                  </Typography>
+                  </Typography>                                           
                   <Typography paragraph>
-                    {country} {disease} {date}
+                    {reportdata[0] && <Typography > {reportdata[0].title}</Typography>}
+                    {reportdata[0] && <Box> {reportdata[0].body.slice(0,3).map(line => {
+                      return (<Typography> {line} </Typography>)
+                    })} </Box> }
                   </Typography>
-                  <Typography variant="h6" noWrap>
+                  <Typography variant="h4" noWrap>
                     Travel Advice
                   </Typography>
                   <Typography paragraph>

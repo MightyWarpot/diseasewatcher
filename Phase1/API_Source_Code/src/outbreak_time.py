@@ -24,7 +24,7 @@ def time_filter(startdtime, enddtime, col):
             # print(doc['title'].strip())
             # print(doc['location'].strip())
             # print(doc['date'].strip())
-
+            print(doc)
             date_match = {
                 'title': doc['title'].strip(),
                 'date': doc['date'].strip(),

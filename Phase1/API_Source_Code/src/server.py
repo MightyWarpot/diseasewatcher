@@ -24,6 +24,7 @@ from flask import Flask, request
 from flask_restx import Resource, Api, abort, fields
 from pymongo import MongoClient
 from datetime import *
+from flask_cors import CORS
 import re
 #from API_Source_Code.src.outbreak_location import location_filter
 #from API_Source_Code.src.outbreak_time import time_filter
@@ -37,7 +38,7 @@ from outbreak_region import region_filter
 from outbreak_all import disease_all
 app = Flask(__name__)
 api = Api(app)
-
+CORS(app)
 #Connect to database
 client = MongoClient(
     "mongodb+srv://user:iBMu1UIQhIzoW8Qn@cluster0.uq4ht.mongodb.net/outbreak_articles?retryWrites=true&w=majority")
