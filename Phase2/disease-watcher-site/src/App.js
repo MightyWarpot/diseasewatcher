@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Outbreaks from './pages/Outbreaks'
 import Diseasepage from './pages/Diseasepage'
 import Advice from './pages/advice'
+import Learn from './pages/Learn'
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
           </Route>
           <Route path='/diseasechart'>
             <Home></Home>
+          </Route>
+          <Route path='/learn'>
+            <Learn> </Learn>
+
           </Route>
         </Switch>
     </Router>

@@ -152,6 +152,7 @@ class Notcovidchart extends Component {
             mapChart.projection = new am4maps.projections.Miller();
   mapChart.panBehavior = "move";
 
+
   // when map is globe, beackground is made visible
   mapChart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.05;
   mapChart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");

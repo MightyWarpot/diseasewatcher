@@ -12,54 +12,6 @@ export default function Home() {
 
     return (
         <div >
-
-            <Grid container>
-                <Grid item xs={12}>
-                    <h1 className={styles.text}>Current Outbreaks</h1>
-                    <Grid container justify="center">
-                        <Grid key={1} item>
-                        <Paper elevation={3} className={styles.paper}>
-                            <span className={styles.dateFirst}>March 2, 2021</span>
-                            <h2 className={styles.text}>Norovirus </h2>
-                            <p className={styles.textInner}>The Taiwan CDC is reporting the number of visits to hospitals for diarrhea has recently increased, and the pathogens detected in cluster incidents are mainly norovirus, and most of them occur in the catering and hotel industry.</p>
-                            <img
-                                className={styles.img}
-                                src="http://outbreaknewstoday.com/wp-content/uploads/2019/01/21348_lores.jpg"
-                                alt="new"
-                                />
-                        </Paper>
-                        </Grid>
-                        <Grid key={2} item>
-                        <Paper elevation={1} className={styles.paper}>
-                            <span className={styles.date}>November 21, 2020</span>
-                            <h2 className={styles.text}>Influenza</h2>
-                            <p className={styles.textInner}>Federal and state authorities say a case of low pathogenic avian influenza has been detected in a commercial poultry flock in western Kentucky.</p>
-                            <img
-                                className={styles.img}
-                                src="http://outbreaknewstoday.com/wp-content/uploads/2017/03/urica-1251980_640.jpg"
-                                alt="new"
-                                />
-                        </Paper>
-
-                        </Grid>
-                        <Grid key={3} item>
-                        <Paper elevation={1} className={styles.paper}>
-                            <span className={styles.date}>December 15, 2020</span>
-                            <h2 className={styles.text}>Polio</h2>
-                            <p className={styles.textInner}>Polio outbreaks have been reported in the following Asian countries: Afghanistan, Burma (Myanmar), China, Malaysia, Pakistan, The Philippines, Tajikistan and Yemen. </p>
-                            <img
-                                className={styles.img}
-                                src="http://outbreaknewstoday.com/wp-content/uploads/2021/02/Capture-2.png"
-                                alt="new"
-                                />
-                        </Paper>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </Grid>
-
-            <br/>
-
             <div className={styles.banner}>
                 <Chart> </Chart>
                 {/* <img className={styles.center} src={Map}/> */}
