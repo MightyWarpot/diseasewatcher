@@ -183,7 +183,10 @@ class Notcovidchart extends Component {
   polygonTemplate.events.on("hit", handleCountryHit);
   polygonTemplate.events.on("over", handleCountryOver);
   polygonTemplate.events.on("out", handleCountryOut);
-
+  
+  mapChart.openPopup("Use the slider below to check outbreaks for different dates <br/> <br/>Outbreaks are labelled by orange circles.");
+    
+         
 
   polygonSeries.heatRules.push({
     "target": polygonTemplate,

@@ -14,17 +14,13 @@ function App() {
         <Navbar></Navbar>
         <Switch>
           <Route path='/' exact >
-              <Home></Home>
+              <Diseasepage> </Diseasepage>
           </Route>
           <Route path='/outbreaks'>
               <Outbreaks></Outbreaks>
           </Route>
           <Route path='/diseasechart'>
-              <Diseasepage> </Diseasepage>
-          </Route>
-          <Route path='/advice'>
-            <Advice> </Advice>
-
+            <Home></Home>
           </Route>
         </Switch>
     </Router>

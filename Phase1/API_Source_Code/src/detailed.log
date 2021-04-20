@@ -3054,3 +3054,328 @@ INFO:flask.app:Query took 401.339 milliseconds
 INFO:flask.app:Response sent: 200
 INFO:flask.app:Response sent: [{'title': 'Marco Rubio sends letter to President Biden about plans to restrict travel to and from Florida', 'date': 'February 12, 2021', 'location': 'United States', 'region': 'Politics', 'url': 'http://outbreaknewstoday.com/marco-rubio-sends-letter-to-president-biden-about-plans-to-restrict-travel-to-and-from-florida-78608/', 'disease': 'pain', 'body': ['U.S. Senator Marco Rubio (R-FL) sent a letter to President Joe Biden calling\xa0', '\xa0that the Biden Administration plans to restrict travel to and from Florida “an outrageous, authoritarian move that has no basis in law or science.”', '“Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science. Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy,”\xa0', '\xa0“If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.”', 'Read the letter below:', 'Dear Mr. President:', 'I write with regard to recent reporting that your administration is considering implementing travel restrictions to my home State of Florida.\xa0 I cannot underscore enough how reckless and economically harmful this would be to my state and the country as a whole.', 'Instituting a travel ban, or any restriction of movement between the states, would be an outrageous, authoritarian move that has no basis in law or science.\xa0 Instead, it would only serve to inflict severe and devastating economic pain on an already damaged economy.\xa0 While we are all concerned that the pandemic continues to take a toll on our friends, family and communities, forbidding Americans from traveling across state lines will not force any strain of COVID-19 to cease.\xa0 It would instead starve Florida’s businesses of much needed tourism dollars, keep family and friends apart, and set an unprecedented use of power on the American people.', 'Instead of dictating where Americans can, or cannot travel, your administration should instead focus on increasing supply and availability of vaccines, especially to Florida, the third most populous state and a winter retreat.\xa0 I have already requested an increase of vaccines be allocated because of the numerous non-Floridians seeking inoculations.\xa0 If you are concerned about the coronavirus spread in Florida, I urge you to fast track additional vaccines to the state instead of attempting to cripple our economy.', 'I urge you to make clear to the American people that your administration will not pursue these reported draconian travel restrictions, and instead focus your efforts on increasing the supply of vaccines.\xa0 I look forward to working with you on this regard.', '\n']}]
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 12:58:58] "GET /outbreak/?location=United%20States&disease=pain&start%20date=12/02/2021&end%20date=12/02/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 763.244 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:05:50] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', '03/04/2021'), ('end date', '03/04/2021')])>
+INFO:flask.app:Query took 548.959 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:05:51] "GET /outbreak/?location=China&disease=Z&start%20date=03/04/2021&end%20date=03/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', '02/04/2021'), ('end date', '02/04/2021')])>
+INFO:flask.app:Query took 516.953 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:05:59] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=02/04/2021&end%20date=02/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', '02/04/2021'), ('end date', '02/04/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 592.022 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:05:59] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 819.138 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:06:00] "GET /outbreak/?location=China&disease=Z&start%20date=02/04/2021&end%20date=02/04/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 942.25 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:06:00] "GET /outbreak/?location=China&disease=Z&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Peru'), ('disease', 'Z'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 264.051 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Peru'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:06:04] "OPTIONS /outbreak/?location=Peru&disease=Z&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 267.054 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:06:04] "OPTIONS /outbreak/?location=Peru&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Peru'), ('disease', 'Z'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Peru'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 712.295 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:06:06] "GET /outbreak/?location=Peru&disease=Z&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Query took 915.478 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Peru: 40% of COVID-19 cases in Lima are the P.1 Brazil variant', 'date': 'March 28, 2021', 'location': 'Peru', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/peru-40-of-covid-19-cases-in-lima-are-the-p-1-brazil-variant-36819/', 'disease': 'COVID-19', 'body': ['By NewsDesk\xa0\xa0', 'Peru Minister of Health, Óscar Ugarte said a study by the National Institute of Health (INS) determined that approximately 40% of cases of the\xa0new coronavirus cases in Lima have been due to the Brazilian variant of this disease, or P.1.', '“This INS study is extremely important because it has made it possible to identify, through a sampling throughout Lima, that the main variant that causes\xa0COVID-19\xa0today in a percentage of 40% is the\xa0Brazilian variant\xa0,” ', '.', '“This is important to know, because it is the variant that we knew had arrived.\xa0We had identified in Loreto,\xa0Huánuco, weeks ago we identified a case of the Brazilian variant in\xa0Lima\xa0that was controlled ”, added the head of the\xa0Ministry of Health.', 'Minister Óscar Ugarte\xa0said that most of the cases are in East Lima, mainly in the districts of\xa0Ate\xa0,\xa0El Agustino\xa0,\xa0Lurigancho-Chosica\xa0and\xa0Santa Anita.\xa0He explained that this is because this area is the entry route for travelers arriving from the eastern part of the country to Lima.', 'The head of the Health sector argued, in this line, that said information should serve for citizens to redouble their care in order to avoid the spread of\xa0COVID-19, while the Executive will continue to work on improving the response of the health system.', '“This should not cause a special alarm, but what this tells us is that we must redouble care in the population to avoid contagion and therefore redouble hand washing measures, the use of\xa0masks\xa0, to avoid concentrations, to guarantee\xa0social distancing, as well as timely care, diagnosis, early isolation, to prevent the family from being infected and this is what we must guarantee,” he said.']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:06:06] "GET /outbreak/?location=Peru&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 699.081 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:07:37] "OPTIONS /outbreak/?location=China&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 719.008 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:07:38] "GET /outbreak/?location=China&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Peru'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 699.407 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:08:12] "OPTIONS /outbreak/?location=Peru&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Peru'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 704.322 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Peru: 40% of COVID-19 cases in Lima are the P.1 Brazil variant', 'date': 'March 28, 2021', 'location': 'Peru', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/peru-40-of-covid-19-cases-in-lima-are-the-p-1-brazil-variant-36819/', 'disease': 'COVID-19', 'body': ['By NewsDesk\xa0\xa0', 'Peru Minister of Health, Óscar Ugarte said a study by the National Institute of Health (INS) determined that approximately 40% of cases of the\xa0new coronavirus cases in Lima have been due to the Brazilian variant of this disease, or P.1.', '“This INS study is extremely important because it has made it possible to identify, through a sampling throughout Lima, that the main variant that causes\xa0COVID-19\xa0today in a percentage of 40% is the\xa0Brazilian variant\xa0,” ', '.', '“This is important to know, because it is the variant that we knew had arrived.\xa0We had identified in Loreto,\xa0Huánuco, weeks ago we identified a case of the Brazilian variant in\xa0Lima\xa0that was controlled ”, added the head of the\xa0Ministry of Health.', 'Minister Óscar Ugarte\xa0said that most of the cases are in East Lima, mainly in the districts of\xa0Ate\xa0,\xa0El Agustino\xa0,\xa0Lurigancho-Chosica\xa0and\xa0Santa Anita.\xa0He explained that this is because this area is the entry route for travelers arriving from the eastern part of the country to Lima.', 'The head of the Health sector argued, in this line, that said information should serve for citizens to redouble their care in order to avoid the spread of\xa0COVID-19, while the Executive will continue to work on improving the response of the health system.', '“This should not cause a special alarm, but what this tells us is that we must redouble care in the population to avoid contagion and therefore redouble hand washing measures, the use of\xa0masks\xa0, to avoid concentrations, to guarantee\xa0social distancing, as well as timely care, diagnosis, early isolation, to prevent the family from being infected and this is what we must guarantee,” he said.']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:08:13] "GET /outbreak/?location=Peru&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 664.962 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:08:29] "OPTIONS /outbreak/?location=China&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'COVID-19'), ('start date', '28/03/2021'), ('end date', '28/03/2021')])>
+INFO:flask.app:Query took 635.845 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:08:30] "GET /outbreak/?location=China&disease=COVID-19&start%20date=28/03/2021&end%20date=28/03/2021 HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', 'respiratory syndrome coronavirus'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 876.732 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:23:25] "OPTIONS /outbreak/?location=Saudi%20Arabia&disease=respiratory%20syndrome%20coronavirus&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', 'respiratory syndrome coronavirus'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 912.765 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Saudi Arabia reports 5 MERS cases in 2021 to date', 'date': 'March 10, 2021', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-reports-5-mers-cases-in-2021-to-date-18927/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'In Saudi Arabia, health officials have reported five Middle East respiratory syndrome coronavirus (MERS-CoV) cases during the first two months of 2021.', 'Of these five cases, all were primary cases, of whom three reported contact with camels. These five cases were reported in Riyadh (2), Makkah (2) and Eastern Province (1).', 'Of the five cases, three were fatal.', 'MERS is viral respiratory illness that was first reported in Saudi Arabia in 2012 and has since spread to several other countries (26).', 'Most people confirmed to have MERS-CoV infection have had severe respiratory illness with symptoms of: fever, cough and shortness of breath.', 'Some people also had diarrhea and nausea/vomiting. For many people with MERS, more severe complications followed, such as pneumonia and kidney failure. About 3 or 4 out of every 10 people reported with MERS have died. Most of the people who died had a pre-existing medical condition that weakened their immune system, or an underlying medical condition that hadn’t yet been discovered.', 'Since April 2012 and as of 1 March 2021, 2,586 cases of MERS-CoV, including 939 deaths, have been reported by health authorities worldwide.']}, {'title': 'Saudi Arabia health officials report two additional MERS cases in Riyadh', 'date': 'March 12, 2021', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-health-officials-report-two-additional-mers-cases-in-riyadh-14652/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'In a ', ' on Middle East respiratory syndrome coronavirus (MERS-CoV) situation in Saudi Arabia in 2021, on Thursday, the Saudi Arabia Ministry of Health (MOH) reported two additional cases in people from ', '.', 'The first patient is a 57-year-old man from Riyadh who had contact with camels and the second patient is a 56-year-old female from Riyadh with no contact with camels.', 'This brings the country total of MERS cases to seven for 2021.', 'The World Health Organization (WHO) says MERS-CoV \xa0is a virus transferred to humans from infected dromedary camels. It is a zoonotic virus, meaning it is transmitted between animals and people, and it is contractable through direct or indirect contact with infected animals. MERS-CoV has been identified in dromedaries in several countries in the Middle East, Africa and South Asia. In total, 27 countries have reported cases since 2012, leading to 858 known deaths due to the infection and related complications.', 'Human-to-human transmission is possible, but only a few such transmissions have been found among family members living in the same household. In health care settings, however, human-to-human transmission appears to be more frequent.', '\xa0']}, {'title': 'Saudi Arabia reports 18 additional MERS cases in February', 'date': 'April 10, 2020', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-reports-18-additional-mers-cases-in-february-66542/', 'disease': 'respiratory syndrome coronavirus', 'body': ['The ', ' of Saudi Arabia reported 18 additional cases of Middle East respiratory syndrome coronavirus (MERS-CoV) infection in February 2020.', 'The cases were reported from Riyadh (seven cases), Hafer Albatin (two cases), Najran (two cases), Eastern (two cases), Aljouf (one case), Makkah (one case), Hail (one case), Taif (one case) and Jeddah (one case) regions.', 'In addition, five additional deaths were reported.', 'Since MERS was first reported in 2012, the total number of laboratory-confirmed MERS-CoV infection cases reported globally to WHO is 2538 with 871 associated deaths through the end of February.', 'Infection with MERS-CoV can cause severe disease resulting in high mortality. Humans are infected with MERS-CoV from direct or indirect contact with dromedaries. MERS-CoV has demonstrated the ability to transmit between humans. So far, the observed non-sustained human-to-human transmission has occurred mainly in health care settings.', '\n']}, {'title': 'Saudi Arabia reports 15 MERS cases in March 2020', 'date': 'May 5, 2020', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-reports-15-mers-cases-in-march-2020/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'The ', ' reported 15\xa0Middle East respiratory syndrome coronavirus (MERS-CoV) cases in March 2020, including five deaths.', 'About half the cases were reported in Riyadh, while the rest were reported in Makkah, Najran, and Al Qassim regions.', 'Two had been exposed to camels or camel milk before they got sick, according to officials. The majority of cases (13) were in men and no healthcare workers were infected in March.', 'Nearly all the cases had underlying medical conditions to include diabetes mellitus, hypertension and/or chronic renal failure.', 'The World Health Organization (WHO) says infection with MERS-CoV can cause severe disease resulting in high mortality. Humans are infected with MERS-CoV from direct or indirect contact with dromedaries. MERS-CoV has demonstrated the ability to transmit between humans. So far, the observed non-sustained human-to-human transmission has occurred mainly in health care settings.', 'Since 2012 until 31 March 2020, the total number of laboratory-confirmed MERS-CoV infection cases reported globally to WHO is 2553 with 876 associated deaths.']}, {'title': 'MERS coronavirus 2020: 61 cases reported to date', 'date': 'October 9, 2020', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/mers-coronavirus-2020-61-cases-reported-to-date-77673/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'Since the beginning of the year, 61 total\xa0Middle East respiratory syndrome coronavirus (MERS-CoV) cases have been reported through October 6, mostly in Saudi Arabia. No new cases have been reported in several months.', 'Of the 61 cases, 57 were reported from Saudi Arabia (nearly half of the cases are from Riyadh), while the remaining cases were seen in the United Arab Emirates and Qatar.', 'Twenty fatalities have been reported in the Saudi Kingdom.', 'The vast majority of cases were primary (50), while the remaining are healthcare related. About a third of the primary cases reported contact with camels.', 'Since 2012, more than 2500 MERS cases have been reported globally, including 935 deaths.', 'Typical MERS\xa0symptoms include fever, cough and shortness of breath. Pneumonia is common, but not always present. Gastrointestinal symptoms, including diarrhea, have also been reported. Some laboratory-confirmed cases of MERS-CoV infection are reported as asymptomatic, meaning that they do not have any clinical symptoms, yet they are positive for MERS-CoV infection following a laboratory test. Most of these asymptomatic cases have been detected following aggressive contact tracing of a laboratory-confirmed case.', 'Approximately 35% of reported patients with MERS-CoV infection have died.', 'Although most of human cases of MERS-CoV infections have been attributed to human-to-human infections in health care settings, current scientific evidence suggests that dromedary camels are a major reservoir host for MERS-CoV and an animal source of MERS infection in humans. However, the exact role of dromedaries in transmission of the virus and the exact route(s) of transmission are unknown.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:23:25] "GET /outbreak/?location=Saudi%20Arabia&disease=respiratory%20syndrome%20coronavirus&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'respiratory syndrome coronavirus'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 348.995 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:23:52] "OPTIONS /outbreak/?location=China&disease=respiratory%20syndrome%20coronavirus&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'respiratory syndrome coronavirus'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 396.037 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:23:52] "GET /outbreak/?location=China&disease=respiratory%20syndrome%20coronavirus&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', 'respiratory syndrome coronavirus'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 150.59 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:36:18] "OPTIONS /outbreak/?location=Saudi%20Arabia&disease=respiratory%20syndrome%20coronavirus&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Saudi Arabia'), ('disease', 'respiratory syndrome coronavirus'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 194.631 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Saudi Arabia reports 5 MERS cases in 2021 to date', 'date': 'March 10, 2021', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-reports-5-mers-cases-in-2021-to-date-18927/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'In Saudi Arabia, health officials have reported five Middle East respiratory syndrome coronavirus (MERS-CoV) cases during the first two months of 2021.', 'Of these five cases, all were primary cases, of whom three reported contact with camels. These five cases were reported in Riyadh (2), Makkah (2) and Eastern Province (1).', 'Of the five cases, three were fatal.', 'MERS is viral respiratory illness that was first reported in Saudi Arabia in 2012 and has since spread to several other countries (26).', 'Most people confirmed to have MERS-CoV infection have had severe respiratory illness with symptoms of: fever, cough and shortness of breath.', 'Some people also had diarrhea and nausea/vomiting. For many people with MERS, more severe complications followed, such as pneumonia and kidney failure. About 3 or 4 out of every 10 people reported with MERS have died. Most of the people who died had a pre-existing medical condition that weakened their immune system, or an underlying medical condition that hadn’t yet been discovered.', 'Since April 2012 and as of 1 March 2021, 2,586 cases of MERS-CoV, including 939 deaths, have been reported by health authorities worldwide.']}, {'title': 'Saudi Arabia health officials report two additional MERS cases in Riyadh', 'date': 'March 12, 2021', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-health-officials-report-two-additional-mers-cases-in-riyadh-14652/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'In a ', ' on Middle East respiratory syndrome coronavirus (MERS-CoV) situation in Saudi Arabia in 2021, on Thursday, the Saudi Arabia Ministry of Health (MOH) reported two additional cases in people from ', '.', 'The first patient is a 57-year-old man from Riyadh who had contact with camels and the second patient is a 56-year-old female from Riyadh with no contact with camels.', 'This brings the country total of MERS cases to seven for 2021.', 'The World Health Organization (WHO) says MERS-CoV \xa0is a virus transferred to humans from infected dromedary camels. It is a zoonotic virus, meaning it is transmitted between animals and people, and it is contractable through direct or indirect contact with infected animals. MERS-CoV has been identified in dromedaries in several countries in the Middle East, Africa and South Asia. In total, 27 countries have reported cases since 2012, leading to 858 known deaths due to the infection and related complications.', 'Human-to-human transmission is possible, but only a few such transmissions have been found among family members living in the same household. In health care settings, however, human-to-human transmission appears to be more frequent.', '\xa0']}, {'title': 'Saudi Arabia reports 18 additional MERS cases in February', 'date': 'April 10, 2020', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-reports-18-additional-mers-cases-in-february-66542/', 'disease': 'respiratory syndrome coronavirus', 'body': ['The ', ' of Saudi Arabia reported 18 additional cases of Middle East respiratory syndrome coronavirus (MERS-CoV) infection in February 2020.', 'The cases were reported from Riyadh (seven cases), Hafer Albatin (two cases), Najran (two cases), Eastern (two cases), Aljouf (one case), Makkah (one case), Hail (one case), Taif (one case) and Jeddah (one case) regions.', 'In addition, five additional deaths were reported.', 'Since MERS was first reported in 2012, the total number of laboratory-confirmed MERS-CoV infection cases reported globally to WHO is 2538 with 871 associated deaths through the end of February.', 'Infection with MERS-CoV can cause severe disease resulting in high mortality. Humans are infected with MERS-CoV from direct or indirect contact with dromedaries. MERS-CoV has demonstrated the ability to transmit between humans. So far, the observed non-sustained human-to-human transmission has occurred mainly in health care settings.', '\n']}, {'title': 'Saudi Arabia reports 15 MERS cases in March 2020', 'date': 'May 5, 2020', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/saudi-arabia-reports-15-mers-cases-in-march-2020/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'The ', ' reported 15\xa0Middle East respiratory syndrome coronavirus (MERS-CoV) cases in March 2020, including five deaths.', 'About half the cases were reported in Riyadh, while the rest were reported in Makkah, Najran, and Al Qassim regions.', 'Two had been exposed to camels or camel milk before they got sick, according to officials. The majority of cases (13) were in men and no healthcare workers were infected in March.', 'Nearly all the cases had underlying medical conditions to include diabetes mellitus, hypertension and/or chronic renal failure.', 'The World Health Organization (WHO) says infection with MERS-CoV can cause severe disease resulting in high mortality. Humans are infected with MERS-CoV from direct or indirect contact with dromedaries. MERS-CoV has demonstrated the ability to transmit between humans. So far, the observed non-sustained human-to-human transmission has occurred mainly in health care settings.', 'Since 2012 until 31 March 2020, the total number of laboratory-confirmed MERS-CoV infection cases reported globally to WHO is 2553 with 876 associated deaths.']}, {'title': 'MERS coronavirus 2020: 61 cases reported to date', 'date': 'October 9, 2020', 'location': 'Saudi Arabia', 'region': 'Headlines', 'url': 'http://outbreaknewstoday.com/mers-coronavirus-2020-61-cases-reported-to-date-77673/', 'disease': 'respiratory syndrome coronavirus', 'body': ['By NewsDesk\xa0\xa0', 'Since the beginning of the year, 61 total\xa0Middle East respiratory syndrome coronavirus (MERS-CoV) cases have been reported through October 6, mostly in Saudi Arabia. No new cases have been reported in several months.', 'Of the 61 cases, 57 were reported from Saudi Arabia (nearly half of the cases are from Riyadh), while the remaining cases were seen in the United Arab Emirates and Qatar.', 'Twenty fatalities have been reported in the Saudi Kingdom.', 'The vast majority of cases were primary (50), while the remaining are healthcare related. About a third of the primary cases reported contact with camels.', 'Since 2012, more than 2500 MERS cases have been reported globally, including 935 deaths.', 'Typical MERS\xa0symptoms include fever, cough and shortness of breath. Pneumonia is common, but not always present. Gastrointestinal symptoms, including diarrhea, have also been reported. Some laboratory-confirmed cases of MERS-CoV infection are reported as asymptomatic, meaning that they do not have any clinical symptoms, yet they are positive for MERS-CoV infection following a laboratory test. Most of these asymptomatic cases have been detected following aggressive contact tracing of a laboratory-confirmed case.', 'Approximately 35% of reported patients with MERS-CoV infection have died.', 'Although most of human cases of MERS-CoV infections have been attributed to human-to-human infections in health care settings, current scientific evidence suggests that dromedary camels are a major reservoir host for MERS-CoV and an animal source of MERS infection in humans. However, the exact role of dromedaries in transmission of the virus and the exact route(s) of transmission are unknown.', '\n']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:36:18] "GET /outbreak/?location=Saudi%20Arabia&disease=respiratory%20syndrome%20coronavirus&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 50.275 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:39:29] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 98.319 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:39:29] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 910.923 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:39:58] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 958.967 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:39:58] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 733.736 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:52:51] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 779.777 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:52:51] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 138.515 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:56:58] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 184.557 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 13:56:58] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 223.419 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:00:06] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 268.46 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:00:06] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 116.813 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:01:27] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 163.857 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:01:27] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 867.818 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:05] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 914.861 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:05] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 67.601 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:44] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 114.644 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:44] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 208.729 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:44] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 293.807 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:44] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 518.941 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:48] "OPTIONS /outbreak/?location=Panama&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 520.944 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:48] "OPTIONS /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 548.969 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:48] "GET /outbreak/?location=Panama&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Query took 778.178 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Panama reports 1st case of COVID-19 reinfection', 'date': 'March 8, 2021', 'location': 'Panama', 'region': 'Latin America and the Caribbean', 'url': 'http://outbreaknewstoday.com/panama-reports-1st-case-of-covid-19-reinfection-81769/', 'disease': 'COVID-19', 'body': ['By NewsDesk\xa0\xa0', 'Last month, officials with the Gorgas Institute in Panama identified the first person with COVID-19 reinfection.', '“We have already reported the first case of reinfection confirmed at the molecular level, in a 36-year-old subject who presented a mild picture of COVID-19 in June and later in December presented another picture much milder than the first.\xa0Luckily we were able to keep both samples in good condition and the genetic analysis was carried out, the two complete viruses were sequenced and a reasonable difference between the two was observed to classify it as a reinfection ”according to Dr. Juan Miguel Pascale.', 'Dr. Alexander Martínez explained that in order to confirm that it is a reinfection, it must be ensured that the virus with which the person was infected for the first time has a difference from the second virus with which it was infected, that is, changes enough in your genome.\xa0It was observed in this subject that between the first virus and the second, there are more than 20 nucleotide changes, 10 of them are found in the surface protein, thus achieving confirmation of the case of reinfection.', 'Dr. Sandra López assured that with this second virus that is already under analysis, it will be possible to determine how it behaves, that is, if it infects cells better, if it replicates faster or if it escapes the antibody response when people they are infected with the other viruses that are already circulating in the country.', 'Dr. Pascale states that there are currently around 20 probable cases of reinfection.\xa0These cases appear to meet the requirements to be considered as reinfection but are still being analyzed.', 'Regarding whether people who have been infected should be vaccinated: “Definitely people who have had COVID-19 should be vaccinated to guarantee a more complete protection for the future and avoid reinfections, since it has been proven that people who have been infected and the vaccine is given, they develop a more robust immune response, ”said Dr. Pascale.', '\xa0', '\xa0']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:07:48] "GET /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 583.342 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:10:15] "OPTIONS /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 839.575 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Panama reports 1st case of COVID-19 reinfection', 'date': 'March 8, 2021', 'location': 'Panama', 'region': 'Latin America and the Caribbean', 'url': 'http://outbreaknewstoday.com/panama-reports-1st-case-of-covid-19-reinfection-81769/', 'disease': 'COVID-19', 'body': ['By NewsDesk\xa0\xa0', 'Last month, officials with the Gorgas Institute in Panama identified the first person with COVID-19 reinfection.', '“We have already reported the first case of reinfection confirmed at the molecular level, in a 36-year-old subject who presented a mild picture of COVID-19 in June and later in December presented another picture much milder than the first.\xa0Luckily we were able to keep both samples in good condition and the genetic analysis was carried out, the two complete viruses were sequenced and a reasonable difference between the two was observed to classify it as a reinfection ”according to Dr. Juan Miguel Pascale.', 'Dr. Alexander Martínez explained that in order to confirm that it is a reinfection, it must be ensured that the virus with which the person was infected for the first time has a difference from the second virus with which it was infected, that is, changes enough in your genome.\xa0It was observed in this subject that between the first virus and the second, there are more than 20 nucleotide changes, 10 of them are found in the surface protein, thus achieving confirmation of the case of reinfection.', 'Dr. Sandra López assured that with this second virus that is already under analysis, it will be possible to determine how it behaves, that is, if it infects cells better, if it replicates faster or if it escapes the antibody response when people they are infected with the other viruses that are already circulating in the country.', 'Dr. Pascale states that there are currently around 20 probable cases of reinfection.\xa0These cases appear to meet the requirements to be considered as reinfection but are still being analyzed.', 'Regarding whether people who have been infected should be vaccinated: “Definitely people who have had COVID-19 should be vaccinated to guarantee a more complete protection for the future and avoid reinfections, since it has been proven that people who have been infected and the vaccine is given, they develop a more robust immune response, ”said Dr. Pascale.', '\xa0', '\xa0']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:10:15] "GET /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 129.952 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:12:06] "OPTIONS /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 400.197 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Panama reports 1st case of COVID-19 reinfection', 'date': 'March 8, 2021', 'location': 'Panama', 'region': 'Latin America and the Caribbean', 'url': 'http://outbreaknewstoday.com/panama-reports-1st-case-of-covid-19-reinfection-81769/', 'disease': 'COVID-19', 'body': ['By NewsDesk\xa0\xa0', 'Last month, officials with the Gorgas Institute in Panama identified the first person with COVID-19 reinfection.', '“We have already reported the first case of reinfection confirmed at the molecular level, in a 36-year-old subject who presented a mild picture of COVID-19 in June and later in December presented another picture much milder than the first.\xa0Luckily we were able to keep both samples in good condition and the genetic analysis was carried out, the two complete viruses were sequenced and a reasonable difference between the two was observed to classify it as a reinfection ”according to Dr. Juan Miguel Pascale.', 'Dr. Alexander Martínez explained that in order to confirm that it is a reinfection, it must be ensured that the virus with which the person was infected for the first time has a difference from the second virus with which it was infected, that is, changes enough in your genome.\xa0It was observed in this subject that between the first virus and the second, there are more than 20 nucleotide changes, 10 of them are found in the surface protein, thus achieving confirmation of the case of reinfection.', 'Dr. Sandra López assured that with this second virus that is already under analysis, it will be possible to determine how it behaves, that is, if it infects cells better, if it replicates faster or if it escapes the antibody response when people they are infected with the other viruses that are already circulating in the country.', 'Dr. Pascale states that there are currently around 20 probable cases of reinfection.\xa0These cases appear to meet the requirements to be considered as reinfection but are still being analyzed.', 'Regarding whether people who have been infected should be vaccinated: “Definitely people who have had COVID-19 should be vaccinated to guarantee a more complete protection for the future and avoid reinfections, since it has been proven that people who have been infected and the vaccine is given, they develop a more robust immune response, ”said Dr. Pascale.', '\xa0', '\xa0']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:12:07] "GET /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 119.701 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:12:12] "OPTIONS /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'Panama'), ('disease', 'COVID-19'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 372.922 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: [{'title': 'Panama reports 1st case of COVID-19 reinfection', 'date': 'March 8, 2021', 'location': 'Panama', 'region': 'Latin America and the Caribbean', 'url': 'http://outbreaknewstoday.com/panama-reports-1st-case-of-covid-19-reinfection-81769/', 'disease': 'COVID-19', 'body': ['By NewsDesk\xa0\xa0', 'Last month, officials with the Gorgas Institute in Panama identified the first person with COVID-19 reinfection.', '“We have already reported the first case of reinfection confirmed at the molecular level, in a 36-year-old subject who presented a mild picture of COVID-19 in June and later in December presented another picture much milder than the first.\xa0Luckily we were able to keep both samples in good condition and the genetic analysis was carried out, the two complete viruses were sequenced and a reasonable difference between the two was observed to classify it as a reinfection ”according to Dr. Juan Miguel Pascale.', 'Dr. Alexander Martínez explained that in order to confirm that it is a reinfection, it must be ensured that the virus with which the person was infected for the first time has a difference from the second virus with which it was infected, that is, changes enough in your genome.\xa0It was observed in this subject that between the first virus and the second, there are more than 20 nucleotide changes, 10 of them are found in the surface protein, thus achieving confirmation of the case of reinfection.', 'Dr. Sandra López assured that with this second virus that is already under analysis, it will be possible to determine how it behaves, that is, if it infects cells better, if it replicates faster or if it escapes the antibody response when people they are infected with the other viruses that are already circulating in the country.', 'Dr. Pascale states that there are currently around 20 probable cases of reinfection.\xa0These cases appear to meet the requirements to be considered as reinfection but are still being analyzed.', 'Regarding whether people who have been infected should be vaccinated: “Definitely people who have had COVID-19 should be vaccinated to guarantee a more complete protection for the future and avoid reinfections, since it has been proven that people who have been infected and the vaccine is given, they develop a more robust immune response, ”said Dr. Pascale.', '\xa0', '\xa0']}]
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:12:13] "GET /outbreak/?location=Panama&disease=COVID-19&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 886.104 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:12:40] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 932.146 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:12:40] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 505.165 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:13:23] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 552.208 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:13:23] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 969.55 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:14:15] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 18.502 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:14:15] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 920.739 milliseconds
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Query took 922.741 milliseconds
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:32] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: None
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:32] "OPTIONS /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 969.784 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:32] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 6.819 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:32] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 44.853 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:32] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 204.998 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:32] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 291.077 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:32] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 384.161 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:33] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -
+INFO:flask.app:Original query data : <bound method TypeConversionDict.get of ImmutableMultiDict([('location', 'China'), ('disease', 'Z'), ('start date', ' '), ('end date', '')])>
+INFO:flask.app:Query took 484.252 milliseconds
+INFO:flask.app:Response sent: 200
+INFO:flask.app:Response sent: []
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2021 14:21:33] "GET /outbreak/?location=China&disease=Z&start%20date=%20&end%20date= HTTP/1.1" 200 -

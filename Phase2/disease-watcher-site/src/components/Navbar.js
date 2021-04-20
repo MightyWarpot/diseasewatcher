@@ -28,7 +28,7 @@ export default function Navbar() {
                     <ul className={styles.navMenu}>
                         <li className={styles.navItem}>
                             <Link to='/diseasechart' className={styles.navLinks}>
-                                Disease Chart
+                                COVID-19 Chart
                             </Link>
                         </li>
                         <li className={styles.navItem}>
@@ -37,11 +37,7 @@ export default function Navbar() {
                             </Link>
                         </li>
                         
-                        <li className={styles.navItem}>
-                            <Link to='/advice' className={styles.navLinks}>
-                                Travel Advice
-                            </Link>
-                        </li>
+                    
                         <li className={styles.navItem}>
                             <Link to='/' className={styles.navLinks}>
                                 FAQ

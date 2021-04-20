@@ -110,22 +110,33 @@ export default function Diseasepage() {
                 <div className={styles.content}>
                   <Typography variant="h4" noWrap>
                     Disease Report
-                  </Typography>                                           
+                  </Typography>
+                  {reportdata && reportdata[0] 
+                  ? <div>
                   <Typography paragraph>
                     {reportdata && reportdata[0] && <Typography > {reportdata[0].title}</Typography>}
                     {reportdata && reportdata[0] &&  <Box> {reportdata[0].body.slice(0,3).map(line => {
                       return (<Typography> {line} </Typography>)
                     })} </Box> }
-                    {reportdata && reportdata[0] && <a href={reportdata[0].url}> Link to article </a>}
+                    {reportdata && reportdata[0] && <a className={styles.linktext} href={reportdata[0].url}> Link to article </a>}
                   </Typography>
+                  </div>
+                  : <div> Click on a bubble to see the disease report!</div> }  
                   <Typography variant="h4" noWrap>
                     Travel Advice
                   </Typography>
+            
                   <Typography paragraph>
                   {traveldata && <Typography > Published Date: {convertdate(traveldata.publishedDate)}</Typography>}
                     {traveldata && <Typography className={styles.advice}> {traveldata.advisoryText}</Typography>}
                   </Typography>
-                  <div className={styles.box} >
+                  
+                                                          
+                  
+                  {traveldata  && traveldata.health
+                    ?
+                    <div> 
+                      <div className={styles.box} >
                     <h3 className={styles.header1}> Food/Water Advisories </h3>
                     <Box >
                       
@@ -136,7 +147,7 @@ export default function Diseasepage() {
                     </Box>
                     </div>
                     <div className={styles.box} >
-                    <h3 className={styles.header1}> Person-to-Person Advisories </h3>
+                    <h3 className={styles.header1}> Person-to-Person Diseases </h3>
                     <Box >
                       
                         {traveldata && traveldata.health.diseasesAndVaccinesInfo
@@ -146,7 +157,17 @@ export default function Diseasepage() {
                     </Box>
                     </div>
                     <div className={styles.box} >
-                    <h3 className={styles.header1}> General Health Advisories </h3>
+                    <h3 className={styles.header1}> Vaccines </h3>
+                    <Box >
+                      
+                        {traveldata && traveldata.health.healthInfo
+                          && <ul>{traveldata.health.diseasesAndVaccinesInfo['Vaccines'].slice(2).map(region => {
+                          return (<HoverText onClick={() => moreInfo(region)}> {region.category} </HoverText>)
+                        }) }</ul>}
+                    </Box>
+                    </div>
+                    <div className={styles.box} >
+                    <h3 className={styles.header1}> Medical Care  </h3>
                     <Box >
                       
                         {traveldata && traveldata.health.healthInfo
@@ -155,12 +176,12 @@ export default function Diseasepage() {
                         }) }</ul>}
                     </Box>
                     </div>
+                    
                     <Modal open={openM} handleClose = {() => setOpen(false)} info={moreinfo}> </Modal>
-                </div>
+                    </div>
+                  : <div> Click on a country to see travel advice!</div> }
+                </div> 
             </div>
-            {/* <div className={styles.pageDisplay}>
-                
-            </div> */}
         </div>
     )
 }
@@ -173,6 +194,9 @@ var useStyles = makeStyles({
         margin: 0,
         position: 'relative',
         display: 'flex',
+    },
+    linktext: {
+      color: '#dddfe8',
     },
     center: {
         display: 'block',
