@@ -23,5 +23,9 @@ Demo
 ## Deliverable 4
 TravelGuard web application
 
+cd into Phase_2/disease-watcher-site/src/ 
+
+npm start
+
 Final Report
 
