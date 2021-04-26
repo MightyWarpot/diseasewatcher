@@ -24,6 +24,7 @@ Demo
 TravelGuard web application
 
 cd into Phase_2/disease-watcher-site/src/ 
+Backend also needs to be running
 
 npm start
 
